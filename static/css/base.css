@@ -86,6 +86,11 @@ footer {
     color: #FFAE42;
 }
 
+.link-primary:hover {
+    color: white;
+    text-decoration: none;
+}
+
 .card1:hover {
   background:#00ffb6;
   border:1px solid #00ffb6;
