@@ -86,6 +86,10 @@ footer {
     color: #FFAE42;
 }
 
+.footer-icons:hover {
+    color: white;
+}
+
 .link-primary {
     color: #FFAE42;
 }
