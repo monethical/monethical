@@ -10,9 +10,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main-color {
-  background-color: #413877;
-  background-image: linear-gradient(to right bottom, #413877, #484786, #4e5695, #5565a4, #5d74b3, #5e80be, #608cc9, #6298d4, #5ea3dd, #5aaee5, #57b9ec, #55c4f2);
-}
+    background-color: black;
 
 .strike-through-td {
     text-decoration: line-through;
@@ -43,7 +41,7 @@ html body {
 
 .homepage {
     font-family: 'Roboto Mono', serif;
-    background-image: linear-gradient(to right bottom, #413877, #484786, #4e5695, #5565a4, #5d74b3, #5e80be, #608cc9, #6298d4, #5ea3dd, #5aaee5, #57b9ec, #55c4f2);
+    background-color: black;
     background-attachment: fixed;
 }
 
@@ -62,7 +60,7 @@ footer {
     bottom: 0;
     width: 100%;
     height: 140px;
-    background-image: linear-gradient(to right, #ffffff, #fafafa, #f5f5f5, #f1f1f1, #ececec, #ececec, #ececec, #ececec, #f1f1f1, #f5f5f5, #fafafa, #ffffff);
+    background-color: black;
     background-attachment: fixed;
     padding-left: 10px;
     padding-right: 10px;
@@ -144,7 +142,7 @@ body {
     color: white;
 
     /* Background styles */
-    background-image: url("/static/img/monethicalhome.svg");
+    background-image: url("static/img/monethicalhome.svg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
