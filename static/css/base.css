@@ -73,17 +73,17 @@ footer {
 .footer-links {
     text-align: center;
     font-size: 1rem;
-    color: var(--midnight-green-eagle-green);
+    color: #FFAE42;
 }
 
 .footer-icons {
     text-align: center;
     font-size: 1.2rem;
-    color: var(--midnight-green-eagle-green);
+    color: #FFAE42;
 }
 
 .link-primary {
-    color: var(--midnight-green-eagle-green);
+    color: #FFAE42;
 }
 
 .card1:hover {
