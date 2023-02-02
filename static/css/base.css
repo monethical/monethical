@@ -1,0 +1,185 @@
+
+body {
+  background: #fafafa;
+  color: #33333a;
+  padding-top: 70px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #323232;
+}
+
+.main-color {
+  background-color: #413877;
+  background-image: linear-gradient(to right bottom, #413877, #484786, #4e5695, #5565a4, #5d74b3, #5e80be, #608cc9, #6298d4, #5ea3dd, #5aaee5, #57b9ec, #55c4f2);
+}
+
+.strike-through-td {
+    text-decoration: line-through;
+}
+
+.col-1 {
+    padding-right: 20px;
+}
+.col-2 {
+    padding-left: 20px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-button {
+    align-self: center;
+}
+
+html body {
+    margin: 0;
+    background-color: #fafafa;
+    font-family: 'Roboto Mono', serif;
+}
+
+.homepage {
+    font-family: 'Roboto Mono', serif;
+    background-image: linear-gradient(to right bottom, #413877, #484786, #4e5695, #5565a4, #5d74b3, #5e80be, #608cc9, #6298d4, #5ea3dd, #5aaee5, #57b9ec, #55c4f2);
+    background-attachment: fixed;
+}
+
+.centered {
+  margin-top:100px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    clear: both;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 140px;
+    background-image: linear-gradient(to right, #ffffff, #fafafa, #f5f5f5, #f1f1f1, #ececec, #ececec, #ececec, #ececec, #f1f1f1, #f5f5f5, #fafafa, #ffffff);
+    background-attachment: fixed;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.copyright {
+    text-align: center;
+    color: black;
+}
+
+.footer-links {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--midnight-green-eagle-green);
+}
+
+.footer-icons {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--midnight-green-eagle-green);
+}
+
+.link-primary {
+    color: var(--midnight-green-eagle-green);
+}
+
+.card1:hover {
+  background:#00ffb6;
+  border:1px solid #00ffb6;
+}
+
+.card1:hover .list-group-item{
+  background:#00ffb6 !important
+}
+
+
+.card2:hover {
+  background: #13F4EF;
+  border:1px solid #00C9FF;
+}
+
+.card2:hover .list-group-item{
+  background:#13F4EF !important
+}
+
+
+.card3:hover {
+  background:#ff95e9;
+  border:1px solid #ff95e9;
+}
+
+.card3:hover .list-group-item{
+  background:#ff95e9 !important
+}
+
+
+.card:hover .btn-outline-dark{
+  color:white;
+  background:#212529;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.hero {
+    /* Sizing */
+    width: 100vw;
+    height: 100vh;
+
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Text styles */
+    text-align: center;
+    color: white;
+
+    /* Background styles */
+    background-image: url("/static/img/monethicalhome.svg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero h1 {
+    /* Text styles */
+    font-size: 5em;
+
+    /* Margins */
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.hero .btn {
+    /* Positioning and sizing */
+    display: block;
+    width: 200px;
+
+    /* Padding and margins */
+    padding: 0.5em;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* Text styles */
+    color: white;
+    text-decoration: none;
+    font-size: 1.4em;
+
+    /* Border styles */
+    border: 3px solid white;
+    border-radius: 10px;
+
+    /* Background styles */
+    background-color: rgba(147, 112, 219, 0.8);
+}
