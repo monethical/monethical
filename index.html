@@ -53,33 +53,30 @@
     </section>
     <div class="bodyimg" style="margin-top: 150px;">
         <h1 style="color: #FFAE42; text-align: center; color: #FFE0B2;">Servizi</h1>
-
-      <div style="margin-bottom: 10px;">
-        <div class="section" id="servizi">
-
-          <div class="row">
-            <div class="col-md-4 d-flex">
-                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.3);" onclick="redirectTo('https://monethicalconsulting.com/solutions#report')">
-                  <h2 style="color: #FFAE42;">Report finanziari</h2>
-                  <p>Realizziamo strumenti di reportistica automatizzati volti a colmare il gap informativo presente tra gli operatori di un settore e gli stakeholders quali enti, associazioni, enti creditizi. Il tutto al fine di aumentare la digitalizzazione delle imprese ed efficientarne la valutazione da parte di terzi ed il conseguente accesso ai servizi degli stessi.</p>
+        <div style="margin-bottom: 10px;">
+            <div class="section" id="servizi">
+                <div class="row">
+                    <div class="col-md-4 d-flex">
+                        <div class="card-body" style="background-color: rgba(0, 0, 0, 0.3);" onclick="redirectTo('https://monethicalconsulting.com/solutions#report')">
+                            <h2 style="color: #FFAE42;">Report finanziari</h2>
+                            <p>Realizziamo strumenti di reportistica automatizzati volti a colmare il gap informativo presente tra gli operatori di un settore e gli stakeholders quali enti, associazioni, enti creditizi. Il tutto al fine di aumentare la digitalizzazione delle imprese ed efficientarne la valutazione da parte di terzi ed il conseguente accesso ai servizi degli stessi.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex">
+                        <div class="card-body" style="background-color: rgba(0, 0, 0, 0.3);" onclick="redirectTo('https://monethicalconsulting.com/solutions#report')">
+                            <h2 style="color: #FFAE42;">Sistemi decentralizzati</h2>
+                            <p>Sviluppiamo e forniamo consulenza per sviluppare soluzioni software basate sulla tecnologia blockchain che possano ottimizzare ed efficientare i processi aziendali e produttivi in generale. Ci occupiamo delle diverse fasi di progettazione/ideazione, sviluppo e delivery, analizzando le diverse casistiche ed identificando le risposte più appropriate alle esigenze che ci vengono rappresentate.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex">
+                        <div class="card-body" style="background-color: rgba(0, 0, 0, 0.3);" onclick="redirectTo('https://monethicalconsulting.com/solutions#report')">
+                            <h2 style="color: #FFAE42;">Formazione</h2>
+                            <p>Ci occupiamo di erogare servizi di formazione a terzi, che siano società o singoli, volti ad approfondire i diversi temi legati alla tecnologia blockchain, al mondo finanziario e produttivo ed alle maniere in cui si interconnettono. Analogamente, eroghiamo formazione volta a permettere l’utilizzo delle soluzioni blockchain che sviluppiamo per i diversi sistemi produttivi agli attori interessati, permettendo di comprenderne appieno il funzionamento ed i vantaggi.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4 d-flex">
-                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.3);" onclick="redirectTo('https://monethicalconsulting.com/solutions#report')">
-                  <h2 style="color: #FFAE42;">Sistemi decentralizzati</h2>
-                  <p>Sviluppiamo e forniamo consulenza per sviluppare soluzioni software basate sulla tecnologia blockchain che possano ottimizzare ed efficientare i processi aziendali e produttivi in generale. Ci occupiamo delle diverse fasi di progettazione/ideazione, sviluppo e delivery, analizzando le diverse casistiche ed identificando le risposte più appropriate alle esigenze che ci vengono rappresentate.</p>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex">
-                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.3)" onclick="redirectTo('https://monethicalconsulting.com/solutions#report')">
-                  <h2 style="color: #FFAE42;">Formazione</h2>
-                  <p>Ci occupiamo di erogare servizi di formazione a terzi, che siano società o singoli, volti ad approfondire i diversi temi legati alla tecnologia blockchain, al mondo finanziario e produttivo ed alle maniere in cui si interconnettono. Analogamente, eroghiamo formazione volta a permettere l’utilizzo delle soluzioni blockchain che sviluppiamo per i diversi sistemi produttivi agli attori interessati, permettendo di comprenderne appieno il funzionamento ed i vantaggi.</p>
-                </div>
-            </div>
-          </div>
         </div>
-      </div>
-
     </div>
 
     <footer class="mt-auto">
@@ -119,7 +116,6 @@
 
         document.getElementById('current-year').innerText = new Date().getFullYear();
 
-
         document.querySelector('.hero-image').addEventListener('click', function() {
             document.querySelector('.hero-image').classList.add('fade-in');
             //document.getElementById('servizi').style.display = 'block';
@@ -128,7 +124,6 @@
         document.addEventListener('DOMContentLoaded', function() {
             var firstSection = document.querySelector('.section');
             var windowHeight = window.innerHeight;
-
 
             firstSection.classList.add('fade-in');
         });
