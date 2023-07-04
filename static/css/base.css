@@ -257,7 +257,7 @@ body {
 
 .section {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 50px;
     opacity: 0;
@@ -357,6 +357,10 @@ body {
   .hero-title {
     font-size: 14vw;
     text-shadow: 0 0 2vw black;
+  }
+
+  .section {
+    justify-content: space-around;
   }
 
   .word {
