@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="visibility: hidden;">
 <head>
     <link rel="stylesheet" type="text/css" href="static/css/base.css">
     <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
@@ -7,58 +7,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
-    <title>Monethical Consulting</title>
-
+     <title>Monethical Consulting</title>
 </head>
 <body class="d-flex flex-column min-vh-100 homepage">
-    <main role="main" class="flex-shrink-0">
-        <div>
-            <nav class="navbar navbar-expand-md navbar-dark homepage fixed-top">
-                <a class="navbar-brand" href="https://monethicalconsulting.com">
-                    <img src="static/css/img/mlogo.svg" width="80" height="40" class="d-inline-block align-top" alt="">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://monethicalconsulting.com">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://monethicalconsulting.com/solutions">Servizi</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://monethicalconsulting.com/about">ChiSiamo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://monethicalconsulting.com/contacts">Contatti</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-
-        <section class="hero">
-            <div class="hero-inner">
-                <h2 style="color: white; text-shadow: 0 0 10px black, 0 0 20px black;">Monethical Consulting</h2>
-                <h4 style="color: white; text-shadow: 0 0 10px black, 0 0 15px black;">Report finanziari, creditizi e ambientali</h4>
-                <a href="/monethical" class="btn">Sito in costruzione</a>
+    <div>
+        <nav class="navbar navbar-expand-md navbar-dark homepage fixed-top">
+            <a class="navbar-brand" href="https://monethicalconsulting.com">
+                <img src="static/css/img/mlogo.svg" width="80" height="40" class="d-inline-block align-top" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://monethicalconsulting.com">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://monethicalconsulting.com/solutions">Servizi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://monethicalconsulting.com/about">ChiSiamo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://monethicalconsulting.com/contacts">Contatti</a>
+                    </li>
+                </ul>
             </div>
-        </section>
+        </nav>
+    </div>
+    <section class="hero">
+        <div class="hero-inner">
+            <h2 class="hero-title">MONETHICAL</h2>
+            <h2 class="hero-title" style="margin-bottom: 40px;">CONSULTING</h2>
+            <div class="subtitle">
+                <h3 class="word" style="color: #FFCC80">Innovazione</h3><br>
+                <h3 class="word" style="color: #FFE0B2">Efficienza</h3><br>
+                <h3 class="word" style="color: #FFF3E0">Trasparenza</h3>
+            </div>
+            <a href="#servizi" class="hero-link">
+              <img class="hero-image" src="static\css\img\down.svg">
+            </a>
         </div>
-    </main>
-    <footer class="mt-auto" style="background-color: transparent;">
+    </section>
+    <div class="bodyimg" style="margin-top: 150px;">
+        <h1 style="color: #FFAE42; text-align: center; color: #FFE0B2;">Servizi</h1>
+
+      <div style="margin-bottom: 10px;">
+        <div class="section" id="servizi">
+
+          <div class="row">
+            <div class="col-md-4 d-flex">
+                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.3);" onclick="redirectTo('https://monethicalconsulting.com/solutions#report')">
+                  <h2 style="color: #FFAE42;">Report finanziari</h2>
+                  <p>Realizziamo strumenti di reportistica automatizzati volti a colmare il gap informativo presente tra gli operatori di un settore e gli stakeholders quali enti, associazioni, enti creditizi. Il tutto al fine di aumentare la digitalizzazione delle imprese ed efficientarne la valutazione da parte di terzi ed il conseguente accesso ai servizi degli stessi.</p>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.3);" onclick="redirectTo('https://monethicalconsulting.com/solutions#report')">
+                  <h2 style="color: #FFAE42;">Sistemi decentralizzati</h2>
+                  <p>Sviluppiamo e forniamo consulenza per sviluppare soluzioni software basate sulla tecnologia blockchain che possano ottimizzare ed efficientare i processi aziendali e produttivi in generale. Ci occupiamo delle diverse fasi di progettazione/ideazione, sviluppo e delivery, analizzando le diverse casistiche ed identificando le risposte più appropriate alle esigenze che ci vengono rappresentate.</p>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.3)" onclick="redirectTo('https://monethicalconsulting.com/solutions#report')">
+                  <h2 style="color: #FFAE42;">Formazione</h2>
+                  <p>Ci occupiamo di erogare servizi di formazione a terzi, che siano società o singoli, volti ad approfondire i diversi temi legati alla tecnologia blockchain, al mondo finanziario e produttivo ed alle maniere in cui si interconnettono. Analogamente, eroghiamo formazione volta a permettere l’utilizzo delle soluzioni blockchain che sviluppiamo per i diversi sistemi produttivi agli attori interessati, permettendo di comprenderne appieno il funzionamento ed i vantaggi.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="mt-auto">
         <div class="max-w-screen-md mx-auto" style="margin-top: 5px">
             <p class="copyright">
                 Monethical Consulting ©
-                <span id="copyright">
-                    <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
-                </span>
+                <span id="current-year"></span>
             </p>
         </div>
-
         <div class="footer-left">
             <p class="footer-links">
                 <a class="link-primary" href="https://monethicalconsulting.com">Home</a>
@@ -81,5 +111,45 @@
     <script src="static/js/jquery-slim.js"></script>
     <script src="static/js/popper.js"></script>
     <script src="static/js/bootstrap.js"></script>
+    <script>
+
+        window.addEventListener('load', function() {
+            document.documentElement.style.visibility = 'visible';
+        });
+
+        document.getElementById('current-year').innerText = new Date().getFullYear();
+
+
+        document.querySelector('.hero-image').addEventListener('click', function() {
+            document.querySelector('.hero-image').classList.add('fade-in');
+            //document.getElementById('servizi').style.display = 'block';
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var firstSection = document.querySelector('.section');
+            var windowHeight = window.innerHeight;
+
+
+            firstSection.classList.add('fade-in');
+        });
+
+        var heroLink = document.querySelector('.hero-link');
+        var targetElement = document.querySelector(heroLink.getAttribute('href'));
+        if (targetElement) {
+            var offset = targetElement.offsetTop - 160; // Adjust the offset as needed
+            heroLink.addEventListener('click', function(event) {
+                event.preventDefault();
+                window.scrollTo({
+                    top: offset,
+                    behavior: 'smooth'
+                });
+            });
+        }
+  function redirectTo(url) {
+    window.location.href = url;
+  }
+
+</script>
+
 </body>
 </html>

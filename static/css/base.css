@@ -1,16 +1,18 @@
 
 body {
-  background: #fafafa;
+  background: white;
   color: #33333a;
   padding-top: 70px;
+  overflow-x: hidden;
 }
+
 
 h1, h2, h3, h4, h5, h6 {
   color: #323232;
 }
 
 .main-color {
-  background-color: black;
+  background-color: white;
 }
 
 .strike-through-td {
@@ -36,13 +38,16 @@ h1, h2, h3, h4, h5, h6 {
 
 html body {
     margin: 0;
-    background-color: #fafafa;
+    background-color: #white;
     font-family: 'Roboto Mono', serif;
+    overflow-x: hidden;
+
 }
 
 .homepage {
     font-family: 'Roboto Mono', serif;
-    background-color: black;
+    background-color: #242C40;
+    background-image: linear-gradient(to right bottom, #242c40, #222a3c, #202739, #1e2535, #1c2232, #1a202e, #181e2b, #171c28, #151924, #131721);
 }
 
 .centered {
@@ -60,7 +65,7 @@ footer {
     bottom: 0;
     width: 100%;
     height: 140px;
-    background-color: black;
+    background-color: #242C40;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -142,20 +147,31 @@ body {
 
     /* Flexbox stuff */
     display: flex;
-    justify-content: center;
-    align-items: center;
 
     /* Text styles */
-    text-align: center;
     color: white;
 
     /* Background styles */
-    background-image: url("img/monethicalhome.svg");
+    position: relative;
+    z-index: 1;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("img/monethicalhome2.svg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    opacity: 1; /* Adjust the opacity value as needed */
+    z-index: -1;
 }
+
 
 .hero h1 {
     /* Text styles */
@@ -185,4 +201,159 @@ body {
     /* Border styles */
     border: 3px solid white;
     border-radius: 10px;
+}
+
+.form-check-input[type="checkbox"] {
+    transform: scale(2);
+}
+
+.bodyimg {
+    /* Text styles */
+    text-align: center;
+    color: white;
+}
+
+.bodyimg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("img/homepage3.svg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 1; /* Adjust the opacity value as needed */
+    z-index: -1;
+}
+
+.hero-inner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 20vh; /* Adjust the vertical position as needed */
+}
+
+.hero-title {
+  color: white;
+  padding: 0;
+  font-weight: 300;
+  font-size: 5vw; /* Adjust the font size based on the screen width */
+  text-shadow: 0 0 20vw black; /* Adjust the text shadow based on the screen width */
+  transform: translateY(20%); /* Remove or adjust this line */
+  font-family: 'Roboto Mono', sans-serif;
+  font-weight: 100;
+  margin-left: 5vw;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+
+.image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Added CSS for the fade-out effect */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.word {
+  display: inline-block;
+  margin-right: 10px;
+  color: white;
+  font-size: 2vw; /* Adjust the font size based on the screen width */
+  font-family: 'Roboto Mono', sans-serif;
+  font-weight: 100;
+  margin-left: 5vw;
+  margin-right: 5vw;
+
+  transform: translateY(-20%); /* Remove or adjust this line */
+  padding: 3px;
+}
+
+@keyframes breathing {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.hero-image {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 2vw;
+  animation: breathing 3s infinite;
+}
+
+.word:last-child {
+  margin-right: 0;
+}
+
+.word::after {
+  content: ".";
+  display: inline-block;
+  margin-left: 0vw; /* Adjust the margin based on the screen width */
+  color: white;
+  font-size: 2.5vw; /* Adjust the font size based on the screen width */
+  text-shadow: -0.02vw -0.02vw 0 white, 0.02vw -0.02vw 0 white, -0.02vw 0.02vw 0 white, 0.02vw 0.02vw 0 white; /* Adjust the text shadow based on the screen width */
+}
+
+
+.subtitle {
+  margin-bottom: 0;
+}
+
+.subtitle h3 {
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+  .card-body:hover {
+    background: rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid rgba(247, 169, 52, 0.8);
+    transform: translate3D(0, -1px, 0) scale(1.1);
+    cursor: pointer;
+  }
+
+  .card-body:hover .click-text {
+    display: block;
+  }
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 14vw;
+    text-shadow: 0 0 2vw black;
+  }
+
+  .word {
+    font-size: 7vw;
+  }
+
+  .subtitle {
+    margin-bottom: 12vw;
+  }
 }
