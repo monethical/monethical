@@ -381,4 +381,12 @@ body {
     margin-top: 14vw;
     animation: breathing 3s infinite;
   }
+
+  .word::after {
+    content: ".";
+    display: inline-block;
+    margin-left: 0vw; /* Adjust the margin based on the screen width */
+    color: white;
+    font-size: 12vw; /* Adjust the font size based on the screen width */
+  }
 }
