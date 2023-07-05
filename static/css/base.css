@@ -308,7 +308,7 @@ body {
 .hero-image {
   margin-left: 5vw;
   margin-right: 5vw;
-  margin-top: 2vw;
+  margin-top: 5vw;
   animation: breathing 3s infinite;
 }
 
@@ -360,7 +360,7 @@ body {
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 14vw;
+    font-size: 13vw;
     text-shadow: 0 0 2vw black;
   }
 
