@@ -296,7 +296,7 @@ body {
   margin-right: 5vw;
 
   transform: translateY(-20%); /* Remove or adjust this line */
-  padding: 3px;
+  padding: 4px;
 }
 
 @keyframes breathing {
@@ -308,7 +308,7 @@ body {
 .hero-image {
   margin-left: 5vw;
   margin-right: 5vw;
-  margin-top: 5vw;
+  margin-top: 7vw;
   animation: breathing 3s infinite;
 }
 
@@ -324,7 +324,6 @@ body {
   font-size: 2.5vw; /* Adjust the font size based on the screen width */
   text-shadow: -0.02vw -0.02vw 0 white, 0.02vw -0.02vw 0 white, -0.02vw 0.02vw 0 white, 0.02vw 0.02vw 0 white; /* Adjust the text shadow based on the screen width */
 }
-
 
 .subtitle {
   margin-bottom: 0;
@@ -369,11 +368,17 @@ body {
   }
 
   .word {
-    font-size: 7vw;
+    font-size: 11vw;
   }
 
   .subtitle {
     margin-bottom: 12vw;
   }
 
+  .hero-image {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 14vw;
+    animation: breathing 3s infinite;
+  }
 }
