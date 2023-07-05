@@ -39,13 +39,13 @@ h1, h2, h3, h4, h5, h6 {
 html body {
     margin: 0;
     background-color: #white;
-    font-family: 'Roboto Mono', serif;
+    font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
 
 }
 
 .homepage {
-    font-family: 'Roboto Mono', serif;
+    font-family: 'Montserrat', serif;
     background-color: #242C40;
     background-image: linear-gradient(to right bottom, #242c40, #222a3c, #202739, #1e2535, #1c2232, #1a202e, #181e2b, #171c28, #151924, #131721);
 }
@@ -243,8 +243,8 @@ body {
   font-size: 5vw; /* Adjust the font size based on the screen width */
   text-shadow: 0 0 20vw black; /* Adjust the text shadow based on the screen width */
   transform: translateY(20%); /* Remove or adjust this line */
-  font-family: 'Roboto Mono', sans-serif;
-  font-weight: 100;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
   margin-left: 5vw;
 }
 
@@ -285,8 +285,8 @@ body {
   margin-right: 10px;
   color: white;
   font-size: 2vw; /* Adjust the font size based on the screen width */
-  font-family: 'Roboto Mono', sans-serif;
-  font-weight: 100;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
   margin-left: 5vw;
   margin-right: 5vw;
 
