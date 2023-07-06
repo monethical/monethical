@@ -457,3 +457,8 @@ body {
   margin-left: 30px;
   margin-right: 30px;
 }
+
+.homepage-contacts {
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+    max-height: calc(100vh - 56px); /* Adjust the value as needed to account for the header's height */
+}
