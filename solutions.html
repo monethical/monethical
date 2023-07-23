@@ -9,49 +9,233 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300&family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">     <title>Monethical Consulting</title>
+        <style>
+            body {
+                padding-top: 70px;
+            }
+
+            section {
+                padding-top: 70px;  /* height of the navbar */
+                margin-top: -70px;
+            }
+
+        </style>
     </head>
-    <body class="d-flex flex-column min-vh-100 homepage">
-        <main role="main" class="flex-shrink-0">
-            <div>
-                <nav class="navbar navbar-expand-md navbar-dark homepage fixed-top">
-                    <h1 style="color: white;">M<span style="color: #FFCC80; margin-right: 20px;">.</span></h1>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://monethicalconsulting.com">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://monethicalconsulting.com/solutions">Servizi</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://monethicalconsulting.com/about">ChiSiamo</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://monethicalconsulting.com/contacts">Contatti</a>
-                            </li>
-                        </ul>
+    <body class="d-flex flex-column min-vh-100 homepage-solutions">
+        <div>
+            <nav class="navbar navbar-expand-md navbar-dark homepage fixed-top">
+                <h1 style="color: white;">M<span style="color: #FFCC80; margin-right: 20px;">.</span></h1>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://monethicalconsulting.com">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://monethicalconsulting.com/solutions">Servizi</a>
+                        </li>
+                        <!--<li class="nav-item">
+                            <a class="nav-link" href="https://monethicalconsulting.com/about">ChiSiamo</a>
+                        </li>-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://monethicalconsulting.com/contacts">Contatti</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="btn-group position-fixed d-flex justify-content-center" role="group" style="z-index: 1000; left: 25%; width: 50%;">
+            <button type="button" class="btn btn-color" onclick="window.location.href='#report'">Report Finanziari</button>
+            <button type="button" class="btn btn-color" onclick="window.location.href='#blockchain'">Sistemi Decentralizzati</button>
+            <button type="button" class="btn btn-color" onclick="window.location.href='#training'">Formazione</button>
+        </div>
+
+        <section id="report" class="report">
+            <h2 class="h1-responsive text-center" style="color:white; margin-top:70px; padding-bottom:20px;">Report Finanziari</h2>
+            <div id="carousel_report" class="carousel slide fullpage-carousel" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-md-7">
+                                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.5);">
+                                    <h2 style="color: #FFAE42;">Report settoriali per associazioni ed enti creditizi</h2>
+                                    <p>
+                                        Partendo da basi dati certificate, integriamo le informazioni base tradizionalmente disponibili per le aziende e le rielaboriamo in maniera rapida ed automatizzata, fornendo un output consistente in uno spaccato analitico dettagliato delle attività di un’azienda.
+                                        <br><br>
+                                        La tipologia di informazioni che vengono evidenziate può essere personalizzata sulla base delle esigenze dei soggetti terzi. Ciò consente di avere una fotografia precisa di quella che è la situazione di un’azienda in relazione a quelle che sono le sue specifiche nell’ambito del proprio settore.
+                                        <br><br>
+                                        Soggetti terzi interessati ad aspetti specifici quali ad esempio la situazione produttiva, finanziaria e debitoria entrano così in possesso di uno strumento che consente di semplificare processi interni nei quali la valutazione delle diverse caratteristiche aziendali riveste un ruolo chiave.
+                                        <br>
+                                        Il tutto in maniera automatizzata, dunque rapida ed efficiente in termini di tempo e costi.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </nav>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-7">
+                                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.5);">
+                                    <h2 style="color: #FFAE42;">Report settoriali per le aziende</h2>
+                                    <p>
+                                        Partendo da basi dati certificate affiancate da studi portati avanti da noi in prima persona, integriamo le informazioni base tradizionalmente disponibili e le rielaboriamo, fornendo un output consistente in uno spaccato analitico dettagliato delle attività di un’azienda.
+                                        <br><br>
+                                        Report su misura di questo tipo consentono di valutare il posizionamento dell’ azienda rispetto ai competitor ed individuare sacche di inefficienza.
+                                        <br><br>
+                                        Le indicazioni di tipo consuleziale, fornite anche in maniera automatizzata, possono essere approfondite su richiesta relativamente ad aspetti prescelti.
+                                    </p>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-7">
+                                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.5);">
+
+                                   <h2 style="color: #FFAE42;">Riclassificazione dati ed automatizzazione processi</h2>
+                                    <p>
+                                        Partendo dalle specifiche esigenze che ci vengono manifestate, riusciamo a strutturare soluzioni informatiche che possano automatizzare processi lunghi e farraginosi all’interno delle aziende quali ad esempio:
+                                        <br><br>
+                                        - la riclassificazione di bilanci secondo specifici criteri
+                                        <br><br>
+                                        - l’analisi di dati e la loro visualizzazione per garantire l'estrazione del maggior valore possibile
+                                        <br><br>
+                                        - la produzione di report ad uso interno o esterno, “liberando” le risorse aziendali da compiti che altrimenti sarebbero deleteri in termini di creazione di valore.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carousel_report" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel_report" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-            <section class="mb-4">
-                <h2 class="h1-responsive font-weight-bold text-center my-4">Servizi</h2>
-                <p class="text-center w-responsive mx-auto mb-5"></p>
-            </section>
-            <div id="report">
-                <h2>Sito in costruzione</h2>
+        </section>
+        <section id="blockchain" class="report">
+            <h2 class="h1-responsive text-center" style="color:white; margin-top:70px; padding-bottom:20px;">Sistemi Decentralizzati</h2>
+            <div id="carousel_blockchain" class="carousel slide fullpage-carousel" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-md-7">
+                                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.5);">
+                                    <h2 style="color: #FFAE42;">Tracciamento filiere e processi</h2>
+                                    <p>
+                                        Dopo aver analizzato le specifiche necessità di un’azienda o un settore, realizziamo sistemi basati sulla tecnologia blockchain finalizzati al tracciamento delle filiere produttive o dei processi produttivi, potendo contare su un’expertise importante in questo specifico campo.
+                                        <br><br>Il tracciamento basato su blockchain consente di sfruttare le potenzialità delle tecnologia per certificare prodotti e processi, garantendone trasparenza, integrità ed efficienza.
+                                        <br><br>Le soluzioni possibili variano in termini di costi e possibilità offerte, consentendo un livello di personalizzazione estremamente elevato.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-7">
+                                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.5);">
+                                    <h2 style="color: #FFAE42;">Consulenza operativa per gli asset digitali</h2>
+                                    <p>
+                                        Per aziende esposte o che vogliano avere esposizione al mondo degli asset digitali, forniamo assistenza operativa, seguendole lungo i diversi procedimenti necessari ad avere accesso a questo tipo di soluzioni.
+                                        <br><br>Ci occupiamo in particolare di evidenziare le diverse criticità e garantire che i rischi operativi siano ridotti al minimo, strutturando processi quanto più possibile privi di punti di vulnerabilità.
+                                    </p>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-7">
+                                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.5);">
+
+                                   <h2 style="color: #FFAE42;">Gestione del rischio e coperture per gli asset digitali</h2>
+                                    <p>
+                                        Realizziamo soluzioni volte alla gestione delle esposizioni già presenti agli asset digitali che possano minimizzare i rischi relativi a questo specifico mercato.
+                                        <br><br>In particolare, possiamo strutturare sistemi di copertura dalle oscillazioni dei prezzi e fornire consulenza relativa alla gestione di questo tipo di rischi, tramite soluzioni personalizzate sulle diverse esigenze.
+                                        <br><br>Che sia per investimento o semplicemente a causa dell'utilizzo di un sistema decentralizzato, una gestione ottimizzata delle coperture riguardarti i prezzi o le fees operative, costituisce un elemento fondamentale per sfruttare al meglio le innovazioni apportate da un'ecosistema decentralizzato.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carousel_blockchain" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel_blockchain" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-        </main>
-        <footer class="mt-auto">
+        </section>
+        <section id="training" class="report">
+            <h2 class="h1-responsive text-center" style="color:white; margin-top:70px; padding-bottom:20px;">Formazione</h2>
+            <div id="carousel_training" class="carousel slide fullpage-carousel-last" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-md-7">
+                                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.5);">
+                                    <h2 style="color: #FFAE42;">Formazione in ambito blockchain</h2>
+                                    <p>
+                                        Strutturiamo lezioni e corsi per accrescere la consapevolezza e le competenze circa la tecnologia blockchain e gli asset digitali, potendo vantare approfondita esperienza in questo campo.
+                                        <br><br>Siamo in grado di erogare formazione che venga incontro al diverso livello di conoscenza degli interlocutori circa lo specifico settore, che sia dunque formazione base o di livello universitario.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-7">
+                                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.5);">
+                                    <h2 style="color: #FFAE42;">Formazione per l’utilizzo dei sistemi</h2>
+                                    <p>
+                                        Ci occupiamo della fase di formazione aziendale volta a permettere l’utilizzo dei sistemi da noi strutturati, permettendo una transizione tra i processi operativi pre e post introduzione del sistema che possa essere quanto più rapida ed efficiente possibile.
+                                    </p>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-7">
+                                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.5);">
+
+                                   <h2 style="color: #FFAE42;">Formazione in ambito finanziario</h2>
+                                    <p>
+                                    Possiamo erogare formazione e strutturare corsi volti ad approfondire specifiche tematiche finanziarie, potendo vantare approfondita esperienza anche in questo campo. Focus particolare può essere fornito circa tutto ciò che riguarda i mercati finanziari e la gestione del rischio.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carousel_training" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel_training" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+            <!-- Existing footer code here... -->
+        <footer class="mt-auto" style="position: relative; margin-bottom: auto;">
             <div class="max-w-screen-md mx-auto" style="margin-top: 5px">
                 <p class="copyright">
                     Monethical Consulting ©
-                    <span id="copyright">
-                        <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
-                    </span>
+                    <span id="current-year"></span>
                 </p>
             </div>
             <div class="footer-left">
@@ -60,12 +244,11 @@
                      |
                     <a class="link-primary" href="https://monethicalconsulting.com/solutions">Servizi</a>
                      |
-                    <a class="link-primary" href="https://monethicalconsulting.com/about">ChiSiamo</a>
-                     |
+                    <!--<a class="link-primary" href="https://monethicalconsulting.com/about">ChiSiamo</a>
+                     |-->
                     <a class="link-primary" href="https://monethicalconsulting.com/contacts">Contatti</a>
                 </p>
             </div>
-
             <div class="footer-left">
                 <p class="footer-links">
                     <a href="#" class="footer-icons"><i class="bi bi-facebook"></i></a>

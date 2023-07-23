@@ -9,6 +9,7 @@ body {
 p {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
+  text-align: justify;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -65,6 +66,26 @@ html body {
     width: 100%;
     height: 100%;
     background-image: url("img/contacts.svg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 1; /* Adjust the opacity value as needed */
+    z-index: -1;
+}
+
+.homepage-solutions {
+    font-family: 'Montserrat', serif;
+    background-color: #242C40;
+    background-image: linear-gradient(to right bottom, #242c40, #222a3c, #202739, #1e2535, #1c2232, #1a202e, #181e2b, #171c28, #151924, #131721);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("img/solutions.svg");
+    background-opacity: 0.3;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -285,7 +306,7 @@ body {
     align-items: center;
     padding: 50px;
     opacity: 0;
-    transition: opacity 0.5s ease-in;
+    transition: opacity 0.6s ease-in;
 }
 
 .fade-in {
@@ -328,7 +349,7 @@ body {
   margin-left: 5vw;
   margin-right: 5vw;
   margin-top: 7vw;
-  animation: breathing 3s infinite;
+  animation: breathing 2s infinite;
 }
 
 .word:last-child {
@@ -364,7 +385,7 @@ body {
 }
 
   .card-body:hover {
-    background: rgba(0, 0, 0, 0.4) !important;
+    background: rgba(0, 0, 0, 0.7) !important;
     border: 1px solid rgba(247, 169, 52, 0.8);
     transform: translate3D(0, -1px, 0) scale(1.1);
     cursor: pointer;
@@ -411,7 +432,7 @@ body {
 
   .card-body:hover {
     background: rgba(0, 0, 0, 0.4) !important;
-    border: 1px solid rgba(247, 169, 52, 0.8);
+    border: 1px solid rgba(247, 169, 52, 0.7);
     transform: translate3D(0, -0px, 0) scale(1);
     cursor: pointer;
   }
@@ -461,4 +482,176 @@ body {
 .homepage-contacts {
     overflow-y: auto; /* Enable vertical scrolling if needed */
     max-height: calc(100vh - 56px); /* Adjust the value as needed to account for the header's height */
+}
+
+.homepage-solutions {
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+    max-height: calc(100vh - 56px); /* Adjust the value as needed to account for the header's height */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("img/solutions.svg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 1; /* Adjust the opacity value as needed */
+    z-index: -1;
+}
+
+.report {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    display: flex;
+    justify-content: center; /* Align horizontally */
+    align-items: center; /* Align vertically */
+    flex-wrap: wrap; /* Enable the cards to wrap to a new line if necessary */
+
+}
+
+.report::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("img/report1.svg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.5; /* Adjust the opacity value as needed */
+    z-index: -1;
+}
+
+.blockchain {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.blockchain::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("img/contacts.svg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.5; /* Adjust the opacity value as needed */
+    z-index: -1;
+}
+
+.training {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.training::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("img/training1.svg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.5; /* Adjust the opacity value as needed */
+    z-index: -1;
+}
+
+.fullpage-carousel {
+    height: calc(100vh - 160px);
+    width: 100%;
+}
+
+.fullpage-carousel-last {
+    height: calc(75vh - 160px);
+    width: 100%;
+}
+
+.carousel-item {
+    transition: transform 5s ease-in-out; /* Adjust the time as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sticky-footer-button {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.7); /* adjust as needed */
+}
+
+.btn-color {
+  color: white !important;
+  background-color: #1e2535 !important;
+  border-color: #1e2535;
+}
+
+.btn-color:hover {
+  color: white;
+  background-color: #131721 !important;
+  border-color: #131721;
+}
+
+.btn-color:focus, .btn-color.focus {
+  box-shadow: 0 0 0 0.2rem var(--midnight-green-eagle-green);
+}
+
+.btn-color.disabled, .btn-color:disabled {
+  color: #fff;
+  background-color: var(--midnight-green-eagle-green);
+  border-color: var(--midnight-green-eagle-green);
+}
+
+.btn-color:not(:disabled):not(.disabled):active, .btn-color:not(:disabled):not(.disabled).active,
+.show > .btn-color.dropdown-toggle {
+  color: #fff;
+  background-color: var(--midnight-green-eagle-green-2);
+  border-color: var(--midnight-green-eagle-green-2);
+}
+
+#report::before {
+    background: url('img/report_bg.svg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#blockchain {
+    background: url('img/blockchain_bg.svg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#training {
+    background: url('img/training_bg.svg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
