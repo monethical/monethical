@@ -21,7 +21,7 @@
 
         </style>
     </head>
-    <body class="d-flex flex-column min-vh-100 homepage-solutions">
+    <body class="solutions-page d-flex flex-column min-vh-100 homepage-solutions">
         <div>
             <nav class="navbar navbar-expand-md navbar-dark homepage fixed-top">
                 <h1 style="color: white;">M<span style="color: #FFCC80; margin-right: 20px;">.</span></h1>
@@ -260,5 +260,19 @@
         <script src="static/js/jquery-slim.js"></script>
         <script src="static/js/popper.js"></script>
         <script src="static/js/bootstrap.js"></script>
+        <script>
+            $(window).on('resize', function() {
+                if ($(window).width() < 768) { // change this to the desired screen width
+                    $('#carousel_report, #carousel_blockchain, #carousel_training').carousel({
+                        interval: false
+                    });
+                } else {
+                    $('#carousel_report, #carousel_blockchain, #carousel_training').carousel({
+                        interval: 5000 // change this to the desired interval in milliseconds
+                    });
+                }
+            }).trigger('resize'); // trigger the resize event on page load
+
+        </script>
     </body>
 </html>
