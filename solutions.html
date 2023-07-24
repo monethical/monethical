@@ -61,8 +61,8 @@
                     <div class="carousel-item active">
                         <div class="row justify-content-center">
                             <div class="col-md-7">
-                                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.4);">
-                                    <h2 style="color: #FFAE42;">Report settoriali per le aziende</h2>
+                                <div class="card-body-report" style="background-color: rgba(0, 0, 0, 0.4);">
+                                    <h2 style="color: #d5e897;">Report settoriali per le aziende</h2>
                                     <p>
                                         Partendo da basi dati certificate affiancate da studi portati avanti da noi in prima persona, integriamo le informazioni base tradizionalmente disponibili e le rielaboriamo, fornendo un output consistente in uno spaccato analitico dettagliato delle attività di un’azienda.
                                         <br><br>
@@ -77,8 +77,8 @@
                     <div class="carousel-item">
                         <div class="row justify-content-center">
                             <div class="col-md-7">
-                                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.4);">
-                                    <h2 style="color: #FFAE42;">Report settoriali per associazioni ed enti creditizi</h2>
+                                <div class="card-body-report" style="background-color: rgba(0, 0, 0, 0.4);">
+                                    <h2 style="color: #d5e897;">Report settoriali per associazioni ed enti creditizi</h2>
                                     <p>
                                         Partendo da basi dati certificate, integriamo le informazioni base tradizionalmente disponibili per le aziende e le rielaboriamo in maniera rapida ed automatizzata, fornendo un output consistente in uno spaccato analitico dettagliato delle attività di un’azienda.
                                         <br><br>
@@ -95,9 +95,9 @@
                     <div class="carousel-item">
                         <div class="row justify-content-center">
                             <div class="col-md-7">
-                                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.4);">
+                                <div class="card-body-report" style="background-color: rgba(0, 0, 0, 0.4);">
 
-                                   <h2 style="color: #FFAE42;">Riclassificazione dati ed automatizzazione processi</h2>
+                                   <h2 style="color: #d5e897;">Riclassificazione dati ed automatizzazione processi</h2>
                                     <p>
                                         Partendo dalle specifiche esigenze che ci vengono manifestate, riusciamo a strutturare soluzioni informatiche che possano automatizzare processi lunghi e farraginosi all’interno delle aziende quali ad esempio:
                                         <br><br>
@@ -129,8 +129,8 @@
                     <div class="carousel-item active">
                         <div class="row justify-content-center">
                             <div class="col-md-7">
-                                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.4);">
-                                    <h2 style="color: #FFAE42;">Tracciamento filiere e processi</h2>
+                                <div class="card-body-blockchain" style="background-color: rgba(0, 0, 0, 0.4);">
+                                    <h2 style="color: #e897dc;">Tracciamento filiere e processi</h2>
                                     <p>
                                         Dopo aver analizzato le specifiche necessità di un’azienda o un settore, realizziamo sistemi basati sulla tecnologia blockchain finalizzati al tracciamento delle filiere produttive o dei processi produttivi, potendo contare su un’expertise importante in questo specifico campo.
                                         <br><br>Il tracciamento basato su blockchain consente di sfruttare le potenzialità delle tecnologia per certificare prodotti e processi, garantendone trasparenza, integrità ed efficienza.
@@ -143,8 +143,8 @@
                     <div class="carousel-item">
                         <div class="row justify-content-center">
                             <div class="col-md-7">
-                                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.4);">
-                                    <h2 style="color: #FFAE42;">Consulenza operativa per gli asset digitali</h2>
+                                <div class="card-body-blockchain" style="background-color: rgba(0, 0, 0, 0.4);">
+                                    <h2 style="color: #e897dc;">Consulenza operativa per gli asset digitali</h2>
                                     <p>
                                         Per aziende esposte o che vogliano avere esposizione al mondo degli asset digitali, forniamo assistenza operativa, seguendole lungo i diversi procedimenti necessari ad avere accesso a questo tipo di soluzioni.
                                         <br><br>Ci occupiamo in particolare di evidenziare le diverse criticità e garantire che i rischi operativi siano ridotti al minimo, strutturando processi quanto più possibile privi di punti di vulnerabilità.
@@ -156,9 +156,9 @@
                     <div class="carousel-item">
                         <div class="row justify-content-center">
                             <div class="col-md-7">
-                                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.4);">
+                                <div class="card-body-blockchain" style="background-color: rgba(0, 0, 0, 0.4);">
 
-                                   <h2 style="color: #FFAE42;">Gestione del rischio e coperture per gli asset digitali</h2>
+                                   <h2 style="color: #e897dc;">Gestione del rischio e coperture per gli asset digitali</h2>
                                     <p>
                                         Realizziamo soluzioni volte alla gestione delle esposizioni già presenti agli asset digitali che possano minimizzare i rischi relativi a questo specifico mercato.
                                         <br><br>In particolare, possiamo strutturare sistemi di copertura dalle oscillazioni dei prezzi e fornire consulenza relativa alla gestione di questo tipo di rischi, tramite soluzioni personalizzate sulle diverse esigenze.
@@ -274,6 +274,45 @@
                     });
                 }
             }).trigger('resize'); // trigger the resize event on page load
+
+            window.onscroll = function() {
+                var reportSection = document.getElementById('report');
+                var blockchainSection = document.getElementById('blockchain');
+                var trainingSection = document.getElementById('training');
+                var scrollPosition = window.pageYOffset;
+
+                if (scrollPosition < 400) {
+                    reportSection.style.visibility = 'visible';
+                    reportSection.style.opacity = '1';
+                    blockchainSection.style.visibility = 'hidden';
+                    blockchainSection.style.opacity = '0';
+                    trainingSection.style.visibility = 'hidden';
+                    trainingSection.style.opacity = '0';
+                }
+
+                if (scrollPosition >= 400 && scrollPosition < 900) {
+                    reportSection.style.visibility = 'hidden';
+                    reportSection.style.opacity = '0';
+                    blockchainSection.style.visibility = 'visible';
+                    blockchainSection.style.opacity = '1';
+                    trainingSection.style.visibility = 'hidden';
+                    trainingSection.style.opacity = '0';
+                }
+
+                if (scrollPosition >= 900) { // adjust the value for 'training' section
+                    reportSection.style.visibility = 'hidden';
+                    reportSection.style.opacity = '0';
+                    blockchainSection.style.visibility = 'hidden';
+                    blockchainSection.style.opacity = '0';
+                    trainingSection.style.visibility = 'visible';
+                    trainingSection.style.opacity = '1';
+                }
+            };
+            window.onload = function() {
+                var reportSection = document.getElementById('report');
+                reportSection.style.visibility = 'visible';
+                reportSection.style.opacity = '1';
+            };
         </script>
     </body>
 </html>

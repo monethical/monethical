@@ -399,6 +399,50 @@ body {
     display: block;
   }
 
+.card-body-report {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.card-body-report:hover {
+   background: rgba(0, 0, 0, 0.7) !important;
+   border: 1px solid rgba(120, 220, 227, 0.8);
+   transform: translate3D(0, -1px, 0) scale(1.1);
+   cursor: pointer;
+}
+
+.card-body-report:hover .click-text {
+   display: block;
+}
+
+.card-body-blockchain {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.card-body-blockchain:hover {
+   background: rgba(0, 0, 0, 0.7) !important;
+   border: 1px solid rgba(232, 151, 220, 0.8);
+   transform: translate3D(0, -1px, 0) scale(1.1);
+   cursor: pointer;
+}
+
+.card-body-blockchain:hover .click-text {
+   display: block;
+}
+
 .centered-section {
   display: flex;
   align-items: left;
@@ -464,7 +508,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("img/report1.svg");
+    background-image: url("img/report_bg.svg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -486,7 +530,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("img/contacts.svg");
+    background-image: url("img/contacts_bg.svg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -508,7 +552,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("img/training1.svg");
+    background-image: url("img/training_bg.svg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -594,6 +638,12 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+#report, #blockchain, #training {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s, opacity 1s linear; /* transition effect */
 }
 
 
