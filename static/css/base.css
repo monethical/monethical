@@ -11,6 +11,18 @@ p {
   font-weight: 300;
 }
 
+.solutions-page .card-body-report p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  text-align: justify;
+}
+
+.solutions-page .card-body-blockchain p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  text-align: justify;
+}
+
 .solutions-page .card-body p {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
