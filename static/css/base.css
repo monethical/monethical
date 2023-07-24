@@ -688,6 +688,20 @@ body {
     cursor: pointer;
   }
 
+ .card-body-report:hover {
+    background: rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid rgba(120, 220, 227, 0.7);
+    transform: translate3D(0, -0px, 0) scale(1);
+    cursor: pointer;
+  }
+
+ .card-body-blockchain:hover {
+    background: rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid rgba(232, 151, 220, 0.7);
+    transform: translate3D(0, -0px, 0) scale(1);
+    cursor: pointer;
+  }
+
   .centered-section {
       display: flex;
       align-items: left;
@@ -706,6 +720,32 @@ body {
   .margin-big {
     margin-left: 5px;
     margin-right: 5px;
+  }
+
+  .solutions-page .card-body-report {
+    margin-left: 45px;
+    margin-right: 45px;
+  }
+
+  .solutions-page .card-body-report p {
+    font-size: 12px; /* adjust as needed */
+  }
+
+  .solutions-page .card-body-report h2 {
+    font-size: 20px; /* adjust as needed */
+  }
+
+  .solutions-page .card-body-blockchain {
+    margin-left: 45px;
+    margin-right: 45px;
+  }
+
+  .solutions-page .card-body-blockchain p {
+    font-size: 12px; /* adjust as needed */
+  }
+
+  .solutions-page .card-body-blockchain h2 {
+    font-size: 20px; /* adjust as needed */
   }
 
   .solutions-page .card-body {
