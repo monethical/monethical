@@ -1005,7 +1005,7 @@ footer {
     .mission-image {
         padding-top: 5vh;
         padding-right: 2vw;
-        max-width: 30%;
+        max-width: 50%;
         opacity: 1;
     }
 
@@ -1218,7 +1218,7 @@ footer {
     .mission-image {
         padding-top: 5vh;
         padding-right: 2vw;
-        max-width: 30%;
+        max-width: 55%;
         opacity: 1;
     }
 
@@ -1228,6 +1228,7 @@ footer {
         margin-top: 10vh;
         max-width: 100%;
         padding: 3%;
+        padding-bottom: 10%;
     }
 
     .product-image {
@@ -1290,7 +1291,7 @@ footer {
 
     .services {
         padding-top: 0%;
-        padding-bottom: 2%;
+        padding-bottom: 10%;
     }
 
     .services-title {
@@ -1435,7 +1436,7 @@ footer {
     .mission-image {
         padding-top: 5vh;
         padding-right: 2vw;
-        max-width: 35%;
+        max-width: 55%;
         opacity: 1;
     }
 
@@ -1445,6 +1446,7 @@ footer {
         margin-top: 10vh;
         max-width: 100%;
         padding: 3%;
+        padding-bottom: 10%;
     }
 
     .product-image {
@@ -1507,7 +1509,7 @@ footer {
 
     .services {
         padding-top: 0%;
-        padding-bottom: 2%;
+        padding-bottom: 10%;
     }
 
     .services-title {
@@ -1649,7 +1651,7 @@ footer {
     .mission-image {
         padding-top: 5vh;
         padding-right: 2vw;
-        max-width: 35%;
+        max-width: 55%;
         opacity: 1;
     }
 
@@ -1659,6 +1661,7 @@ footer {
         margin-top: 10vh;
         max-width: 100%;
         padding: 3%;
+        padding-bottom: 10%;
     }
 
     .product-image {
@@ -1721,7 +1724,7 @@ footer {
 
     .services {
         padding-top: 8%;
-        padding-bottom: 2%;
+        padding-bottom: 10%;
     }
 
     .services-title {
