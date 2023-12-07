@@ -575,19 +575,20 @@ footer {
 	}
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1367px) {
 
     .nav-size {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .home {
         padding: 2%;
-        padding-top: 0vh;
+        padding-top: 2%;
+        padding-bottom: 5%;
     }
 
     .home-title {
-        font-size: 3.7rem;
+        font-size: 3.5rem;
         margin-top: 10%;
         margin-bottom: 10%;
     }
@@ -597,11 +598,11 @@ footer {
         margin-left: 2vw;
         margin-right: 0vw;
         border: none !important;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .hp-card-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .mission {
@@ -611,13 +612,13 @@ footer {
     }
 
     .mission-title {
-        font-size: 3rem;
+        font-size: 2.7rem;
         margin-top: 8%;
         margin-bottom: 1vh;
     }
 
     .mission-subtitle {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         margin-left: 2vw;
         margin-right: 5vw;
     }
@@ -626,7 +627,7 @@ footer {
         padding-top: 0%;
         padding-right: 20%;
         padding-left: 0%;
-        max-width: 105%;
+        max-width: 100%;
         opacity: 1;
     }
 
@@ -639,11 +640,11 @@ footer {
     }
 
     .product-subtitle {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .product-subtitle-2 {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         margin: 5%;
         margin-top: 1%;
     }
@@ -670,7 +671,7 @@ footer {
     }
 
     .card-font {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .card-hover:hover {
@@ -696,24 +697,241 @@ footer {
         margin-bottom: 0%;
         padding-bottom: 0%;
         z-index: 1;
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         padding-top: 8%;
     }
 
     .services-subtitle {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .services-title-card {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         margin-bottom: 3%;
         text-align: left;
+    }
+
+    .services-title-font {
+        font-size: 2.5rem;
     }
 
     .service-card {
         margin-left: 10%;
         margin-right: 10%;
         margin-bottom: 8%;
+    }
+
+    .controller {
+        font-size: 1.4rem;
+    }
+
+    .contacts {
+        position: relative;
+        background-color: black;
+        left: 0;
+        right: 0;
+        top: 0;
+        max-width: 100%;
+        padding: 3%;
+        padding-top: 0%;
+        padding-bottom: 10%;
+    }
+
+    .contacts-image {
+        height: 2rem;
+    }
+
+    .contacts-title {
+        color: black;
+        padding: 0;
+        font-size: 1.8rem;
+        text-shadow: 0 0 20vw black;
+        transform: translateY(20%);
+        font-family: 'DM Serif Display', serif;
+        font-weight: 200;
+        margin-top: 2vh;
+        margin-bottom: 0vh;
+        text-align: center;
+    }
+
+    .contacts-padding {
+        padding-left: 0%;
+        margin-left: 5%;
+        padding-right: 0%;
+        border-right: 1px solid #B74E93ff;
+    }
+
+    .contacts-font-title {
+        font-family: 'DM Serif Display'; serif;
+        font-size: 2.6rem;
+        color:#efefef;
+    }
+
+    .contacts-font-subtitle {
+        font-family: 'Montserrat';
+        font-size: 1.4rem;
+        color:#efefef;
+    }
+
+    .circle img {
+        transition: 1s ease;
+    }
+
+    .circle img:hover {
+        content: url('img/lastimghover.png');
+        transition: 1s ease;
+    }
+
+}
+
+@media (min-width: 1024px) and (max-width: 1367px) {
+
+    .nav-size {
+        font-size: 1rem;
+    }
+
+    .home {
+        padding: 2%;
+        padding-top: 2%;
+        padding-bottom: 5%;
+    }
+
+    .home-title {
+        font-size: 3.5rem;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    .hp-card-container {
+        margin-top: 2vh;
+        margin-left: 2vw;
+        margin-right: 0vw;
+        border: none !important;
+        font-size: 1.2rem;
+    }
+
+    .hp-card-title {
+        font-size: 1.8rem;
+    }
+
+    .mission {
+        padding: 2vh;
+        padding-top: 0vh;
+        padding-bottom: 7%;
+    }
+
+    .mission-title {
+        font-size: 2.7rem;
+        margin-top: 8%;
+        margin-bottom: 1vh;
+    }
+
+    .mission-subtitle {
+        font-size: 1.2rem;
+        margin-left: 2vw;
+        margin-right: 5vw;
+    }
+
+    .mission-image {
+        padding-top: 0%;
+        padding-right: 20%;
+        padding-left: 0%;
+        max-width: 100%;
+        opacity: 1;
+    }
+
+    .product {
+        position: relative;
+        background-color: white;
+        margin-top: 10vh;
+        max-width: 100%;
+        padding: 3%;
+    }
+
+    .product-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .product-subtitle-2 {
+        font-size: 1.2rem;
+        margin: 5%;
+        margin-top: 1%;
+    }
+
+    .product-card-container {
+        margin-top: 0vh;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0vh;
+        border: none !important;
+        max-width: 100%;
+        opacity: 0.7;
+        transform: translateY(50px);
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+
+    .product-card-padding {
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+    }
+
+    .product-image-width {
+        width:10rem;
+    }
+
+    .card-font {
+        font-size: 1rem;
+    }
+
+    .card-hover:hover {
+        transform: scale(1.05);
+    }
+
+    .img-card {
+        max-width: 4rem;
+        padding-right: 1vw;
+    }
+
+    .services {
+        padding-top: 0%;
+        padding-bottom: 2%;
+    }
+
+    .services-title {
+        position: relative;
+        color: black;
+        font-weight: 400;
+        padding: 0;
+        border-radius: 0;
+        margin-bottom: 0%;
+        padding-bottom: 0%;
+        z-index: 1;
+        font-size: 1.7rem;
+        padding-top: 8%;
+    }
+
+    .services-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .services-title-card {
+        font-size: 1.6rem;
+        margin-bottom: 3%;
+        text-align: left;
+    }
+
+    .services-title-font {
+        font-size: 2.5rem;
+    }
+
+    .service-card {
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 8%;
+    }
+
+    .controller {
+        font-size: 1.4rem;
     }
 
     .contacts {
