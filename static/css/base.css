@@ -588,7 +588,7 @@ footer {
     }
 
     .home-title {
-        font-size: 3.5rem;
+        font-size: 3.8rem;
         margin-top: 10%;
         margin-bottom: 10%;
     }
@@ -627,7 +627,7 @@ footer {
         padding-top: 0%;
         padding-right: 20%;
         padding-left: 0%;
-        max-width: 100%;
+        max-width: 95%;
         opacity: 1;
     }
 
@@ -734,7 +734,7 @@ footer {
         max-width: 100%;
         padding: 3%;
         padding-top: 0%;
-        padding-bottom: 10%;
+        padding-bottom: 7%;
     }
 
     .contacts-image {
@@ -782,6 +782,13 @@ footer {
         transition: 1s ease;
     }
 
+    .copyright {
+        font-size: 1.2rem;
+    }
+
+    .link-primary {
+        font-size: 1.15rem;
+    }
 }
 
 @media (min-width: 1024px) and (max-width: 1367px) {
@@ -989,6 +996,14 @@ footer {
     .circle img:hover {
         content: url('img/lastimghover.png');
         transition: 1s ease;
+    }
+
+    .copyright {
+        font-size: 1.2rem;
+    }
+
+    .link-primary {
+        font-size: 1.15rem;
     }
 
 }
