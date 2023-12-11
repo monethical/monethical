@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it" style="visibility: hidden;">
+<html lang="it">
     <head>
         <link rel="stylesheet" type="text/css" href="static/css/base.css">
         <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
@@ -16,7 +16,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300&family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
     </head>
     <body class="d-flex flex-column min-vh-100">
-        <div>
+        <div id="loading-container">
+            <img src="static/css/img/loading.gif" alt="Loading..." style="width: 30%; height: 30%;">
+        </div>
+        <div id="website-content" style="display: none";>
             <nav class="navbar navbar-expand-md navbar-dark fixed-top nav-size" style="background-color: black;">
                 <div class="container-fluid" style="max-width: 100%">
                     <h4 class="mr-auto pr-4 d-flex align-items-center justify-content-center" style="color: white;">
@@ -283,14 +286,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="circle" style="text-align: center;padding-top:2%;">
-                        <a href="https://monethicalconsulting.com#home">
-                            <img src="static/css/img/lastimg.png" alt="Logo del sito" class="contacts-image">
-                        </a>
-                    </div>
                 </div>
             </section>
             <footer class="mt-auto">
+                <div class="circle" style="text-align: center;padding-top:2%;">
+                    <a href="https://monethicalconsulting.com#home">
+                        <img src="static/css/img/lastimg.png" alt="Logo del sito" class="contacts-image">
+                    </a>
+                </div>
                 <div class="max-w-screen-md mx-auto" style="margin-top: 5px">
                     <p class="copyright">
                         Monethical Consulting ©
@@ -325,9 +328,24 @@
         <script src="static/js/bootstrap.js"></script>
         <script>
 
-            window.addEventListener('load', function() {
-                document.documentElement.style.visibility = 'visible';
-            });
+            window.onload = function () {
+                function showWebsiteContent() {
+                    document.getElementById('loading-container').style.display = 'none';
+                    document.getElementById('website-content').style.display = 'block';
+
+                    var opacity = 0;
+                    var fadeInInterval = setInterval(function () {
+                        opacity += 0.1;
+                        document.getElementById('website-content').style.opacity = opacity;
+
+                        if (opacity >= 1) {
+                            clearInterval(fadeInInterval);
+                        }
+                    }, 100);
+                }
+                showWebsiteContent();
+            };
+
 
             document.getElementById('current-year').innerText = new Date().getFullYear();
 

@@ -11,6 +11,21 @@ html body {
     transition: background 0.5s ease-in-out;
 }
 
+#loading-container {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#website-content {
+    opacity: 0;
+}
+
 .section {
     display: flex;
     justify-content: space-between;
