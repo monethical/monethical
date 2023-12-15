@@ -11,17 +11,6 @@ html body {
     transition: background 0.5s ease-in-out;
 }
 
-#loading-container {
-    position: fixed;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
 #website-content {
     opacity: 0;
 }
@@ -124,7 +113,7 @@ footer {
 
 .home {
     position: relative;
-    background-image: url("img/consultancy.svg");
+    background-image: url("img/homepage.png");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
