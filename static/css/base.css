@@ -568,6 +568,11 @@ footer {
     transition: transform 0.3s ease;
 }
 
+.enlarge-less-on-hover:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
 .flash-on-hover:hover {
 	opacity: 1;
 	-webkit-animation: flash 1.5s;
