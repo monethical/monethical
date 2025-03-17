@@ -1201,7 +1201,7 @@ footer {
     }
 
     .contact-spacing {
-        margin-bottom: 32rem;
+        margin-bottom: 30rem;
     }
 
     .contact-button {
@@ -1446,6 +1446,7 @@ footer {
         background: none;
         padding: 0;
     }
+
     .navbar-toggler-img {
         width: 1.5rem;
         height: auto;
