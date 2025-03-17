@@ -28,8 +28,8 @@
   --midnight-green-eagle-green: #413877;
   --midnight-green-eagle-green-2: #6889C7;
   --midnight-green-eagle-green-3: #4e5695;
-  --primary: #55C4F2;
-  --secondary: #6c757d;
+  --primary: rgba(250, 227, 100, 0.7);
+  --secondary: #00798A;
   --success: #28a745;
   --info: #17a2b8;
   --warning: #ffc107;
@@ -89,7 +89,7 @@ hr {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.rem;
 }
 
 p {
@@ -375,7 +375,7 @@ template {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.rem;
   font-weight: 400;
   line-height: 1.2;
 }
@@ -2456,37 +2456,37 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: var(--midnight-green-eagle-green);
-  border-color: var(--midnight-green-eagle-green);
+  color: black;
+  background-color: var(--primary);
+  border-color: var(--primary);
 }
 
 .btn-primary:hover {
-  color: #fff;
-  background-color: var(--midnight-green-eagle-green-2);
-  border-color: var(--midnight-green-eagle-green-2);
+  color: var(--primary);
+  background-color: transparent;
+  border-color: var(--primary);
 }
 
 .btn-primary:focus, .btn-primary.focus {
-  box-shadow: 0 0 0 0.2rem var(--midnight-green-eagle-green);
+  box-shadow: 0 0 0 0.2rem var(--primary);
 }
 
 .btn-primary.disabled, .btn-primary:disabled {
   color: #fff;
-  background-color: var(--midnight-green-eagle-green);
-  border-color: var(--midnight-green-eagle-green);
+  background-color: var(--primary);
+  border-color: var(--primary);
 }
 
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: var(--midnight-green-eagle-green-2);
-  border-color: var(--midnight-green-eagle-green-2);
+  background-color: var(--primary);
+  border-color: var(--primary);
 }
 
 .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0rem var(--midnight-green-eagle-green);
+  box-shadow: 0 0 0 0rem var(--primary);
 }
 
 .btn-secondary {
@@ -2728,35 +2728,35 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-primary {
-  color:  var(--midnight-green-eagle-green);
-  border-color: var(--midnight-green-eagle-green);
+  color:  black;
+  border-color: black;
 }
 
 .btn-outline-primary:hover {
-  color: #fff;
-  background-color: var(--midnight-green-eagle-green);
-  border-color: var(--midnight-green-eagle-green);
+  color: black;
+  background-color: var(--primary);
+  border-color: var(--primary);
 }
 
 .btn-outline-primary:focus, .btn-outline-primary.focus {
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+  box-shadow: 0 0 0 0.2rem var(--primary);
 }
 
 .btn-outline-primary.disabled, .btn-outline-primary:disabled {
-  color: #007bff;
+  color: var(--primary);
   background-color: transparent;
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,
 .show > .btn-outline-primary.dropdown-toggle {
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: var(--primary);
+  border-color: var(--primary);
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+  box-shadow: 0 0 0 0.2rem var(--primary);
 }
 
 .btn-outline-secondary {
@@ -4602,7 +4602,7 @@ input[type="button"].btn-block {
   word-wrap: break-word;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
+  border-radius: 0;
 }
 
 .card > hr {
@@ -4611,13 +4611,13 @@ input[type="button"].btn-block {
 }
 
 .card > .list-group:first-child .list-group-item:first-child {
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
+  border-top-left-radius: 0rem;
+  border-top-right-radius: 0rem;
 }
 
 .card > .list-group:last-child .list-group-item:last-child {
-  border-bottom-right-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0rem;
+  border-bottom-left-radius: 0rem;
 }
 
 .card-body {
@@ -10083,18 +10083,6 @@ a.text-dark:hover, a.text-dark:focus {
 
 }
 
-#loading {
-    display: none;
-}
-
-.nav-link {
-    position: relative;
-    font-size: 1em;
-}
-
-.nav-item .nav-link:hover {
-    color: white !important;
-}
 
 
 

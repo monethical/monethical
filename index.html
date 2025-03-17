@@ -1,331 +1,759 @@
 <!DOCTYPE html>
+
 <html lang="it">
+
     <head>
         <link rel="stylesheet" type="text/css" href="static/css/base.css">
         <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
         <meta charset="utf-8">
-        <meta name="description" content="Monethical Consulting offre una vasta gamma di servizi, tra cui reportistica, consulenza e formazione per il settore primario e i soggetti ad esso interessati.">
-        <meta name="keywords" content="Agritech, Valutazione Aziendale, Intellingenza Artificiale, Bilanci riclassificati, ESG, Rotazioni colturali">
-        <meta property="og:image" content="static/css/img/bgimage.svg">
-        <title>Monethical Consulting | AGRI-INNOVATION-AS-A-SERVICE</title>
-        <link rel="icon" href="static/css/img/favicon.ico">
+
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="Monethical Consulting offre servizi specializzati per il settore primario, tra cui analisi, reportistica, sviluppo tecnologico, marketing, ESG e formazione per aziende agroalimentari.">
+        <meta name="author" content="Monethical Consulting">
+        <title>Monethical Consulting | Agri-Innovation al Servizio del Settore Primario</title>
+
+        <!-- Open Graph Meta Tags (Facebook, LinkedIn, etc.) -->
+        <meta property="og:title" content="Monethical Consulting | Agri-Innovation al Servizio del Settore Primario">
+        <meta property="og:description" content="Servizi specializzati per il settore primario: analisi, reportistica, sviluppo tecnologico, marketing, ESG e formazione per aziende agroalimentari.">
+        <meta property="og:image" content="https://monethicalconsulting.com/static/css/img/monethical_agrisolutions_mlogo.png">
+        <meta property="og:url" content="https://monethicalconsulting.com">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="it_IT">
+
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Monethical Consulting | Agri-Innovation al Servizio del Settore Primario">
+        <meta name="twitter:description" content="Servizi specializzati per il settore primario: analisi, reportistica, sviluppo tecnologico, marketing, ESG e formazione per aziende agroalimentari.">
+        <meta name="twitter:image" content="https://monethicalconsulting.com/static/css/img/monethical_agrisolutions_mlogo.png">
+        <meta name="twitter:url" content="https://monethicalconsulting.com">
+
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link href="https://fonts.googleapis.com/css2?League+Spartan:wght@900&family=DM+Serif+Display&family=Roboto+Mono:wght@100;200;300;400&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Cardo:ital,wght@0,400;0,700;1,400&family=DM+Serif+Display&family=DM+Serif+Text:ital@0;1&family=League+Spartan:wght@900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+        <link rel="icon" type="image/png" href="/static/css/img/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/static/css/img/favicon.svg" />
+        <link rel="shortcut icon" href="/static/css/img/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/css/img/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="Monethical Consulting" />
+        <link rel="manifest" href="/static/css/img/site.webmanifest" />
     </head>
+
     <body class="d-flex flex-column min-vh-100">
-        <div id="website-content" style="display: none";>
+        <div id="website-content" style="display: none">
             <nav class="navbar navbar-expand-md navbar-dark fixed-top nav-size" style="background-color: black;">
                 <div class="container-fluid" style="max-width: 100%">
-                    <h4 class="mr-auto pr-4 d-flex align-items-center justify-content-center" style="color: white;">
-                      <strong>Monethical</strong><span style="color: #8AE9F2ff; font-weight: 150;">Consulting.</span>
+                    <h4 class="mr-auto pr-4 d-flex align-items-center justify-content-center">
+                        <span class="nav-title-1"><strong>Monethical</strong></span>
+                        <span class="nav-title-2">Consulting</span>
                     </h4>
-
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
-                            style="position: absolute; top: 5px; right: 2px;">
+                    <button class="navbar-toggler nav-button" type="button" data-toggle="collapse" data-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                     </button>
-
-                    <div class="collapse navbar-collapse custom-navbar-collapse" id="navbarNav" style="left: 0; right: auto;">
+                    <div class="collapse navbar-collapse custom-navbar-collapse nav-padding" id="navbarNav">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="https://monethicalconsulting.com#home" style="color: #B74E93ff;">Home</a>
+                                <a class="nav-link nav-home" href="https://monethicalconsulting.com#home">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="https://monethicalconsulting.com#mission" style="color: #AE6DA6ff;">Mission</a>
+                                <a class="nav-link nav-mission" href="https://monethicalconsulting.com#mission">Mission</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="https://monethicalconsulting.com#agrianalyticsinsight" style="color: #A58CB9ff;">Agri-analytics Insight</a>
+                                <a class="nav-link nav-servizi" href="https://monethicalconsulting.com#servizi">Servizi</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="https://monethicalconsulting.com#servizi" style="color: #93CADFff;">Servizi</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://monethicalconsulting.com#contatti" style="color: #8AE9F2ff;">Contatti</a>
+                                <a class="nav-link nav-perche" href="https://monethicalconsulting.com#contatti">Perché Noi</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
             <section class="home" id="home">
-                <div>
-                    <div class="row align-items-center">
-                        <div class="col-md-5">
-                            <div>
-                                <div>
-                                    <h1 class="home-title">
-                                        <strong>La <span class="highlight" style="color: white;">tecnologia</span> al servizio del settore <span class="highlight" style="color: white;">agroalimentare</span></strong>
-                                    </h1>
-                                </div>
-                                <div class="card hp-card-container" style="background-color: transparent; border: none;">
-                                    <div class="hp-card" style="box-shadow: 0px 0px 0px #99B5D2; border-radius: 0">
-                                        <div style="padding-top: 8px; padding-bottom:5px">
-                                            <strong><span class="hp-card-title">Agri-Innovation-as-a-Service</span></strong><br>
-                                        </div>
-                                        <p><span style="font-weight: 400;">Un approccio avanzato e su misura per l'innovazione e la digitalizzazione, progettato per rispondere alle esigenze specifiche delle aziende agricole e zootecniche ed accelerare il loro progresso tecnologico.</span></p>
-                                    </div>
-                                </div>
+                <div class="container">
+                    <div class="row justify-content-center align-items-center h-spacing">
+                        <div class="col-lg-8 fade-scroll">
+                            <p class="home-suptitle text-uppercase text-center">
+                                AGRI·INNOVATION·AS·A·SERVICE<br>
+                            </p>
+                            <h1 class="home-title text-center">
+                                <strong>
+                                    <span class="typing-machine highlight"></span><br>
+                                    al servizio del settore <span class="highlight">agroalimentare</span>
+                                </strong>
+                            </h1>
+                            <div class="row justify-content-center align-items-center text-center fade-scroll home-buttons">
+                                <a href="#mission" class="btn btn-outline-primary home-button">SCOPRI DI +</a>
+                                <a href="mailto:info@monethicalconsulting.com" class="btn btn-outline-primary home-button">
+                                    CONTATTACI
+                                </a>
                             </div>
                         </div>
-                        <div class="col-md-7 d-flex align-items-center card-hp product-card-container fade-in" style="box-shadow: 0px 0px 0px #99B5D2; border-radius: 0">
-                            <img src="static/css/img/bgimage.svg" alt="Monethical workflow" class="img-fluid enlarge-less-on-hover" style="padding-right: 1%; object-fit: cover; max-width: auto; max-height: auto;">
-                        </div>
-                    </div>
-                    <div class="row" style="margin-left:5%; color:black;">
                     </div>
                 </div>
             </section>
+
             <section class="mission" id="mission">
-                <div class="product-card-container fade-in">
+                <h2 class="label-padding fade-scroll">MONETHICAL CONSULTING | <span class="label-color-1">MISSION</span></h2>
+                <div class="fade-scroll">
                     <div class="row">
-                        <h2 class="mission-title">
-                            <span style="font-weight: 500;">Uniamo la potenza della tecnologia alla saggezza della terra per aprire <span class="highlight">nuovi orizzonti</span></span>
-                        </h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-8" style="margin-left:0;">
+                        <div class="col-lg-8" style="margin-left:0;">
+                            <h2 class="mission-title">
+                                <span style="font-weight: 500;">Uniamo la potenza della tecnologia alla saggezza della terra per aprire <span class="highlight_verde_thin">nuovi</span> <span class="highlight_verde_thin">orizzonti</span></span>
+                            </h2>
                             <div class="mission-subtitle">
                                 Siamo mossi da una visione chiara: promuovere un'agricoltura sostenibile attraverso l'innovazione tecnologica. Poniamo le esigenze delle società agroalimentari <strong>al centro di ogni decisione</strong>, lavorando con passione e dedizione fianco a fianco con le comunità agricole e le associazioni di settore per affrontare insieme le loro sfide uniche.
                                 <br><br>
                                 La nostra missione è creare un <strong>ecosistema tecnologico avanzato</strong> che non solo risponda alle difficoltà quotidiane degli agricoltori, ma li equipaggi anche con gli strumenti necessari per <strong>massimizzare la produttività, ridurre gli sprechi e preservare le risorse naturali.</strong>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="img-col">
-                                <img src="static/css/img/missionimg.png" alt="La nostra mission" class="mx-auto d-block mission-image enlarge-on-hover">
+                        <div class="col-12 col-md-12 col-lg-4">
+                            <div>
+                                <img src="static/css/img/agri_circle.gif" alt="La nostra mission" class="d-block mission-image">
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="product product-card-container fade-in" id="agrianalyticsinsight">
-                <div class="row">
-                    <div class="col-sm-4 d-flex align-items-center">
-                        <div>
-                            <img src="static/css/img/agriimg.png" alt="Agri analytics insight Logo" class="enlarge-on-hover product-image">
-                        </div>
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="product-subtitle">
-                            Abbiamo progettato un sistema di reportistica <strong><span class="highlight-pink">automatizzata</span>, <span class="highlight-pink">immediata</span></strong> ed <strong><span class="highlight-pink">obiettiva</span></strong>, tramite cui intendiamo colmare il divario informativo nel complesso scenario agroalimentare.
-                            <br><br>
-                            Per raggiungere questo scopo, abbiamo costituito un <strong><span class="highlight-pink-long">centro di ricerca avanzata</span></strong> che si occupa di raccogliere, analizzare e rielaborare i dati colturali attraverso algoritmi di <strong><span class="highlight-pink-long">intelligenza artificiale</span></strong> proprietari dedicati al settore primario.
-                            <br><br>
-                            Il prodotto della nostra attività di ricerca favorisce la comprensione delle dinamiche settoriali e fornisce agli attori coinvolti gli strumenti affidabili e trasparenti per <strong><span class="highlight-pink-long">ottimizzare i processi interni</span></strong>.
-                            <br><br>
-                            Una <strong><span class="highlight-pink-long">visione complessiva</span></strong> dell'azienda è resa possibile grazie ad informazioni dettagliate, oggettive e tempestive, che sostengono un'analisi articolata a <strong><span class=""> 360°</span></strong>.
+
+            <section id="servizi" class="services">
+                <h2 class="label-padding fade-scroll" style="color: black;">MONETHICAL CONSULTING | <span class="label-color-1">SERVIZI</span></h2>
+                <div class="container">
+                    <div class="text-center mb-5 mt-3">
+                        <h2 class="services-title fw-bold fade-scroll" style="color:black;">Dalla Visione alla Realizzazione:</h2>
+                        <h3 class="services-title-font fade-scroll">Servizi che Fanno la Differenza</h3>
+                        <p class="services-subtitle fade-scroll">
+                            <strong>Sviluppiamo soluzioni avanzate per innovare e ottimizzare il <span class="highlight-text">settore agroalimentare</span></strong>
+                        </p>
+                        <div class="row fade-scroll services-text">
+                            <div class="col-lg-6">
+                                <p class="services-text-left">
+                                    <strong>L'agricoltura è il cuore pulsante della nostra società</strong>, e ogni azienda agricola merita soluzioni su misura
+                                    per affrontare le sfide del futuro. <strong>Monethical Consulting</strong> nasce con l'obiettivo di supportare
+                                    le imprese agricole a <strong>360 gradi</strong>, offrendo servizi integrati che combinano tecnologia, analisi dati
+                                    e strategie di crescita concrete.
+                                </p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p class="services-text-right">
+                                    Non siamo una semplice società di consulenza, ma un partner strategico che lavora al tuo fianco per
+                                    <strong>ottimizzare i processi produttivi, migliorare la sostenibilità e aumentare la competitività del tuo business.</strong>
+                                    Grazie a un approccio innovativo e pratico, ti aiutiamo a sfruttare al meglio le potenzialità del settore agricolo.
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div>
-                        <div class="row" style="margin:6.5%; margin-top:4%; margin-bottom:0%;">
-                            <div class="col-md-4 product-card-padding">
-                                <div class="card product-card-container fade-in" style="background-color: transparent; border: none; animation-delay: 0.5s; height:100%;">
-                                    <div class="card card-hover d-flex flex-column" style="box-shadow: 0 5px 10px #99B5D2; border-radius: 0; padding:1%; background-color: #B74E93ff; height:100%;">
-                                        <div class="row align-items-top padding-cards">
-                                            <div class="col-3">
-                                                <img src="static/css/img/agricard.svg" alt="Modulo colture ed allevamenti" class="img-card mx-auto d-block product-image-width">
+                        <div>
+                            <h3 class="service-title-font-1 text-center fade-scroll">
+                                Agrianalytics
+                            </h3>
+                        </div>
+
+                        <div class="row g-4 services-row-style fade-scroll">
+                            <!-- Card 1 -->
+                            <div class="col-12 col-md-12 col-lg-4 text-center">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">PRODUTTIVITÀ AGRICOLA</h5>
                                             </div>
-                                            <div class="col-9 card-font" id="settingColumn">
-                                                <strong>1. Produttività Agricola</strong><br>
-                                                Analizziamo in dettaglio i dati delle coltivazioni e degli allevamenti, mettendo in luce i punti di forza e di debolezza.                                            </div>
+                                            <div class="content-container">
+                                                <img src="static/css/img/agri-prod.gif" alt="Analisi produttività agricola - Monethical Consulting" class="service-image-single fade-scroll">
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">PRODUTTIVITÀ AGRICOLA</h5>
+                                            </div>
+                                            <div class="content-container">
+                                                <p>Analizziamo in dettaglio i dati delle <strong>coltivazioni</strong> e degli <strong>allevamenti</strong>, mettendo in luce i punti di forza e di debolezza con l'obiettivo di fornire <span class="highlight-text"><strong>scenari migliorativi</strong></span> riguardanti la produttività agricola aziendale.</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 product-card-padding">
-                                <div class="card product-card-container fade-in" style="background-color: transparent; border: none; animation-delay: 0.5s; height:100%;">
-                                    <div class="card card-hover d-flex flex-column" style="box-shadow: 0 5px 10px #99B5D2; border-radius: 0; padding:1%; background-color: #AE6DA6ff; height:100%;">
-                                        <div class="row align-items-top padding-cards">
-                                            <div class="col-3">
-                                                <img src="static/css/img/financecard.svg" alt="Modulo Finanziario" class="img-card mx-auto d-block product-image-width">
+
+                            <!-- Card 2 -->
+                            <div class="col-12 col-md-12 col-lg-4 text-center">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">STRUTTURA FINANZIARIA</h5>
                                             </div>
-                                            <div class="col-9 card-font">
-                                                <strong>2. Struttura finanziaria</strong><br>
-                                                Esaminiamo la sostenibilità della struttura finanziaria, valutando i rischi e proponendo soluzioni pratiche.
+                                            <div class="content-container">
+                                                <img src="static/css/img/analytics.gif" alt="Analisi struttura finanziaria - Monethical Consulting" class="service-image-single fade-scroll">
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">STRUTTURA FINANZIARIA</h5>
+                                            </div>
+                                            <div class="content-container">
+                                                <p>Analizziamo in profondità la <strong>situazione finanziaria</strong> dell'azienda con l'obiettivo di offrire raccomandazioni strategiche per ottimizzare la gestione delle risorse e garantire la <span class="highlight-text"><strong>sostenibilità finanziaria</strong></span> e la <span class="highlight-text"><strong>crescita</strong></span> a lungo termine.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 product-card-padding">
-                                <div class="card product-card-container fade-in" style="background-color: transparent; border: none; animation-delay: 0.5s; height:100%;">
-                                    <div class="card card-hover d-flex flex-column" style="box-shadow: 0 5px 10px #99B5D2; border-radius: 0; padding:1%; background-color: #A58CB9ff; height:100%;">
-                                        <div class="row align-items-top padding-cards">
-                                            <div class="col-3">
-                                                <img src="static/css/img/esgcard.svg" alt="Modulo ESG" class="img-card mx-auto d-block product-image-width">
+
+                            <!-- Card 3 -->
+                            <div class="col-12 col-md-12 col-lg-4 services-row-style">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">SOSTENIBILITÀ AZIENDALE</h5>
                                             </div>
-                                            <div class="col-9 card-font">
-                                                <strong>3. Sostenibilità Ambientale</strong><br>
-                                                Valutiamo la sostenibilità ambientale dell'azienda e proponiamo miglioramenti in ottica di costo/beneficio
+                                            <div class="content-container">
+                                                <img src="static/css/img/green-planet.gif" alt="Analisi sostenibilità aziendale - Monethical Consulting" class="service-image-single fade-scroll">
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">SOSTENIBILITÀ AZIENDALE</h5>
+                                            </div>
+                                            <div class="content-container">
+                                                <p>Esaminiamo le pratiche aziendali per valutare l'impatto ambientale e sociale, con l'obiettivo di <strong>promuovere una crescita sostenibile</strong> che rispetti gli standard del <span class="highlight-text"><strong>GRI 13</strong></span> (Global Reporting Initiative).</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row" style="margin-top:0vh;margin-bottom:0%;">
-                            <div class="col-md-12">
-                                <div class="product-subtitle-2">
-                                    La nostra analisi è stata appositamente sviluppata dal nostro team di esperti nei settori <strong><span class="highlight-pink">agricolo</span>, <span class="highlight-pink">finanziario</span> e <span class="highlight-pink">tecnologico</span></strong> per creare una soluzione in grado di esaminare ogni dettaglio, prima di presentare i dati nel formato desiderato.
-                                    <br><br>
-                                    Ogni attore coinvolto ha interessi specifici, ma una valutazione limitata a tali aspetti potrebbe generare una visione distorta e soggettiva della realtà aziendale, <strong>sottovalutando il potenziale dell'azienda nella sua totalità sinergica.</strong>
-                                    <br><br>
-                                    I benefici di un approccio completo si estendono a tutto il settore, garantendo valutazioni più accurate e una <strong>visione oggettiva trasparente</strong>, con conseguente <span class="highlight-pink-long"><strong>riduzione dei rischi</strong>.</span>
+
+                        <div class="row g-4 services-row-style">
+                            <!-- Card 4 -->
+                            <div class="col-12 col-md-12 col-lg-4 text-center">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">OTTIMIZZAZIONE PRODUTTIVA</h5>
+                                            </div>
+                                            <div class="content-container">
+                                                <img src="static/css/img/agri-rotation.gif" alt="Analisi rotazioni colturali - Monethical Consulting" class="service-image-single fade-scroll">
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">OTTIMIZZAZIONE PRODUTTIVA</h5>
+                                            </div>
+                                            <div class="content-container">
+                                                <p>Definiamo strategie colturali e gestionali, <strong>ottimizzando le <span class="highlight-text">rotazioni</span> delle colture</strong> per <strong>migliorare la competitività aziendale</strong> e facilitare l’accesso a <strong>finanziamenti e incentivi istituzionali</strong>.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 5 -->
+                            <div class="col-12 col-md-12 col-lg-4 text-center">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">CONSULENZA DEDICATA</h5>
+                                            </div>
+                                            <div class="content-container">
+                                                <img src="static/css/img/pie-chart.gif" alt="Consulenza dedicata - Monethical Consulting" class="service-image-single fade-scroll">
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">CONSULENZA DEDICATA</h5>
+                                            </div>
+                                            <div class="content-container">
+                                                <p>Forniamo consulenza a 360 gradi per le aziende agroalimentari, <span class="highlight-text"><strong>supportandole</strong></span> in ogni fase, dall’<strong>ottimizzazione delle filiere produttive</strong> alla <strong>strategia commerciale</strong>, fino all’accesso a <strong>finanziamenti, certificazioni e innovazioni tecnologiche</strong>.</p>                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 6 -->
+                            <div class="col-12 col-md-12 col-lg-4 text-center">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">FORMAZIONE SU MISURA</h5>
+                                            </div>
+                                            <div class="content-container">
+                                                <img src="static/css/img/classroom.gif" alt="Formazione su misura - Monethical Consulting" class="service-image-single fade-scroll">
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">FORMAZIONE SU MISURA</h5>
+                                            </div>
+                                            <div class="content-container">
+                                                <p>Progettiamo percorsi di formazione su misura, <span class="highlight-text"><strong>potenziando</strong></span> le competenze del personale in ambiti chiave come <strong>innovazione tecnologica, sostenibilità, sicurezza alimentare e gestione aziendale</strong>, per favorire la crescita e la competitività del business.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fade-scroll">
+                        <div>
+                            <h3 class="service-title-font-2 text-center">
+                                Sviluppo tecnologico
+                            </h3>
+                        </div>
+
+                        <div class="row g-4 services-row-style">
+                            <!-- Card 1 -->
+                            <div class="col-12 col-md-12 col-lg-4 text-center">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">SVILUPPO APP & WEBAPP</h5>
+                                            </div>
+                                            <div class="content-container">
+                                                <img src="static/css/img/farm-tech.gif" alt="Sviluppo app e webapp - Monethical Consulting" class="service-image-single fade-scroll">
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">SVILUPPO APP & WEBAPP</h5>
+                                            </div>
+                                            <div class="content-container">
+                                                <p>Progettiamo applicazioni mobile e web personalizzate, con l’obiettivo di <strong>digitalizzare i processi aziendali</strong> e offrire esperienze interattive grazie a un'architettura <span class="highlight-text"><strong>scalabile e sicura</strong></span>.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="col-12 col-md-12 col-lg-4 text-center">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">SVILUPPO SITI WEB</h5>
+                                            </div>
+                                            <div class="content-container">
+                                                <img src="static/css/img/digital-native.gif" alt="Sviluppo siti web - Monethical Consulting" class="service-image-single fade-scroll">
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">SVILUPPO SITI WEB</h5>
+                                            </div>
+                                            <div class="content-container">
+                                                <p>Progettiamo e realizziamo siti web moderni e performanti, con l'obiettivo di <strong>migliorare la visibilità online</strong> e offrire un'esperienza utente ottimale, grazie a tecnologie all'avanguardia e un design <span class="highlight-text"><strong>responsive</strong></span> e  <span class="highlight-text"><strong>SEO-friendly</strong></span>.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="col-12 col-md-12 col-lg-4 text-center">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">IA & AUTOMAZIONE</h5>
+                                            </div>
+                                            <div class="content-container">
+                                                <img src="static/css/img/3d.gif" alt="Intelligenza artificiale e automazione - Monethical Consulting" class="service-image-single fade-scroll">
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">IA & AUTOMAZIONE</h5>
+                                            </div>
+                                            <div class="content-container">
+                                                <p>Sviluppiamo soluzioni basate su AI per <strong>ottimizzare i processi aziendali</strong> e migliorare l’analisi dei dati, grazie a modelli di <span class="highlight-text"><strong>machine learning</strong></span> e <span class="highlight-text"><strong>automazione intelligente</strong></span>.</p>                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-4 services-row-style">
+                            <!-- Card 4 -->
+                            <div class="col-12 col-md-12 col-lg-4 text-center">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">BUSINESS INTELLIGENCE & ANALISI DATI</h5>
+                                            </div>
+                                            <div class="content-container">
+                                                <img src="static/css/img/bar-chart.gif" alt="Business intelligence e analisi dati - Monethical Consulting" class="service-image-single fade-scroll">
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">BUSINESS INTELLIGENCE & ANALISI DATI</h5>
+                                            </div>
+                                            <div class="content-container">
+                                                <p>Forniamo strumenti avanzati di analisi dati per <strong>trasformare le informazioni in insight strategici</strong>, supportando le decisioni aziendali attraverso <span class="highlight-text"><strong>dashboard interattive</strong></span> e <span class="highlight-text"><strong>modelli predittivi</strong></span>.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 5 -->
+                            <div class="col-12 col-md-12 col-lg-4 text-center">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">SISTEMI BLOCKCHAIN</h5>
+                                            </div>
+                                            <div class="content-container">
+                                                <img src="static/css/img/smart-contract.gif" alt="Sistemi blockchain - Monethical Consulting" class="service-image-single fade-scroll">
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">SISTEMI BLOCKCHAIN</h5>
+                                            </div>
+                                            <div class="content-container">
+                                                <p>Implementiamo soluzioni basate su <strong>blockchain</strong> per garantire <strong><span class="highlight-text">trasparenza</span>, <span class="highlight-text">sicurezza</span> e <span class="highlight-text">decentralizzazione</span></strong> nei processi aziendali, sfruttando <strong>smart contract</strong> e <strong>protocolli innovativi e affidabili</strong>.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 6 -->
+                            <div class="col-12 col-md-12 col-lg-4 text-center">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">SVILUPPO E-COMMERCE</h5>
+                                            </div>
+                                            <div class="content-container">
+                                                <img src="static/css/img/digital-economy.gif" alt="Sviluppo e-commerce - Monethical Consulting" class="service-image-single fade-scroll">
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">SVILUPPO E-COMMERCE</h5>
+                                            </div>
+                                            <div class="content-container">
+                                                <p>Creiamo soluzioni e-commerce <span class="highlight-text"><strong>su misura</strong></span>, integrando sistemi di pagamento sicuri e funzionalità avanzate per <strong>ottimizzare le vendite online</strong> e garantire un’esperienza d’acquisto intuitiva su qualsiasi dispositivo.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fade-scroll">
+                        <div>
+                            <h3 class="service-title-font-2 text-center">
+                                Marketing & Comunicazione
+                            </h3>
+                        </div>
+
+                        <div class="row g-4 services-row-style">
+                            <!-- Card 1 -->
+                            <div class="col-12 col-md-12 col-lg-4 text-center">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">STRATEGIE DI MARKETING TERRITORIALE</h5>
+                                            </div>
+                                            <div class="content-container">
+                                                <img src="static/css/img/target.gif" alt="Strategie di marketing territoriale - Monethical Consulting" class="service-image-single fade-scroll">
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">STRATEGIE DI MARKETING TERRITORIALE</h5>
+                                            </div>
+                                            <div class="content-container">
+                                                <p>Valorizziamo le aziende agricole attraverso la proposta di strategie di <span class="highlight-text"><strong>promozione del territorio</strong></span> e dei <span class="highlight-text"><strong>prodotti locali</strong></span>, creando campagne mirate, eventi e collaborazioni per rafforzare il legame con il <strong>mercato locale e internazionale</strong>.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="col-12 col-md-12 col-lg-4 text-center">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">GESTIONE SOCIAL & COMUNICAZIONE</h5>
+                                            </div>
+                                            <div class="content-container">
+                                                <img src="static/css/img/marketing.gif" alt="Gestione social e comunicazione - Monethical Consulting" class="service-image-single fade-scroll">
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">GESTIONE SOCIAL & COMUNICAZIONE</h5>
+                                            </div>
+                                            <div class="content-container">
+                                                <p>Creiamo strategie digitali su misura per <span class="highlight-text"><strong>rafforzare la presenza online</strong></span> delle aziende agricole, gestendo <strong>social media</strong>, <strong>campagne pubblicitarie</strong> e <strong>contenuti mirati</strong> per <span class="highlight-text"><strong>valorizzare il brand</strong></span> attraverso storie autentiche e coinvolgenti.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="col-12 col-md-12 col-lg-4 text-center">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">REBRANDING & IDENTITÀ VISIVA</h5>
+                                            </div>
+                                            <div class="content-container">
+                                                <img src="static/css/img/logo.gif" alt="Rebranding e identità visiva - Monethical Consulting" class="service-image-single fade-scroll">
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <div class="title-container">
+                                                <h5 class="service-title-single">REBRANDING & IDENTITÀ VISIVA</h5>
+                                            </div>
+                                            <div class="content-container">
+                                                <p>Ridisegniamo l’identità del brand per <strong>comunicare al meglio i valori e la qualità</strong> dei prodotti agricoli, attraverso un restyling grafico, un nuovo logo e una strategia di <strong><span class="highlight-text">posizionamento</span> <span class="highlight-text">efficace</span></strong>.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collab-spacing fade-scroll" style="display: none;">
+                        <h3 class="services-title-font text-center">Partner e Collaborazioni</h3>
+                        <div class="collab-text">
+                            Crediamo che la crescita del settore agricolo passi attraverso <strong>solide collaborazioni</strong>. Per questo, lavoriamo a stretto contatto con
+                            <strong>aziende, istituti di ricerca e partner tecnologici</strong> che <strong><span class="highlight-text">condividono</span> la nostra visione</strong> di un’agricoltura più <strong>moderna, efficiente e sostenibile</strong>.
+                            Dalla ricerca all’implementazione di nuove tecnologie, <strong>ogni partnership è un'opportunità </strong> per sviluppare strumenti concreti e strategie avanzate. Ed è grazie a queste sinergie che riusciamo a <strong>supportare le aziende agricole con soluzioni all’avanguardia</strong>.
+                        </div>
+                        <p class="services-text text-center mt-4 fw-bold mb-0">
+                            <strong>Ecco i nostri partner e le realtà con cui costruiamo il futuro del settore:</strong>
+                        </p>
+                    </div>
+                    <div class="container text-center fade-scroll mb-8" style="display: none;">
+                        <div class="row text-center collab-cards-spacing">
+                            <!-- Logo 1 -->
+                            <div class="col-lg-3 d-flex justify-content-center">
+                                <div class="logo-card">
+                                    <img src="static/css/img/erba_logo.png" alt="Erba logo" class="partner-logo">
+                                </div>
+                            </div>
+                            <!-- Logo 2 -->
+                            <div class="col-lg-3 d-flex justify-content-center">
+                                <div class="logo-card">
+                                    <img src="static/css/img/ismea_logo.png" alt="Ismea logo" class="partner-logo">
+                                </div>
+                            </div>
+                            <!-- Logo 3 -->
+                            <div class="col-lg-3 d-flex justify-content-center">
+                                <div class="logo-card">
+                                    <img src="static/css/img/crea_logo.png" alt="Crea logo" class="partner-logo">
+                                </div>
+                            </div>
+                            <!-- Logo 4 -->
+                            <div class="col-lg-3 d-flex justify-content-center">
+                                <div class="logo-card">
+                                    <img src="static/css/img/fimiav_logo.png" alt="Fimiav logo" class="partner-logo">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="services" id="servizi">
-                <div class="product-card-container fade-in">
-                    <div class="text-center">
-                        <div class="services-title">
-                            Dalla Visione alla Realizzazione:<br><strong><span class="services-title-font">Servizi che Fanno la Differenza</span></strong>
+
+            <!-- Contact Section -->
+            <section class="whyus fade-scroll" id="contatti">
+                <h2 class="label-padding-whyus fade-scroll">MONETHICAL CONSULTING | <span class="label-color-2">PERCHÉ NOI</span></h2>
+                <div class="container">
+                    <!-- Why Choose Us Section -->
+                    <div class="whyus-spacing">
+                        <div class="fade-scroll">
+                            <h3 class="whyus-title">Perché sceglierci</h3>
+                            <p class="whyus-subtitle">
+                                Il nostro obiettivo non è solo sviluppare strumenti digitali,
+                                ma creare <strong>soluzioni integrate, costruite attorno alle vere necessità delle imprese agricole</strong>.
+                                Ogni progetto nasce dall’ascolto del settore agroalimentare, dall’analisi delle sue sfide quotidiane e dalla volontà di fornire strumenti
+                                che semplifichino il lavoro, senza complicarlo.
+                            </p>
+                            <p class="whyus-subtitle-ticks">
+                                Crediamo che l’innovazione debba essere <strong>concreta e misurabile</strong>. Per questo, lavoriamo fianco a fianco con le aziende agricole per:
+                            </p>
+                            <ul class="whyus-subtitle">
+                                <li><i class="bi bi-toggle-on whyus-tick"></i><strong>Ottimizzare i processi produttivi</strong>, riducendo costi e inefficienze.</li>
+                                <li><i class="bi bi-toggle-on whyus-tick"></i><strong>Aumentare la sostenibilità</strong>, valorizzando risorse e riducendo gli sprechi.</li>
+                                <li><i class="bi bi-toggle-on whyus-tick"></i><strong>Facilitare la transizione digitale</strong>, con strumenti accessibili, intuitivi e realmente utili.</li>
+                            </ul>
+                            <p class="whyus-subtitle">
+                                Sceglierci significa investire in un futuro agricolo più <strong>intelligente, efficiente e connesso</strong>,
+                                dove la tecnologia diventa un alleato strategico e non un ostacolo.
+                            </p>
                         </div>
-                        <div class="controller-container">
-                            <div class="controller active" onclick="toggleCard('card1')">Reportistica</div>
-                            <div class="controller" onclick="toggleCard('card2')">Consulenza</div>
-                            <div class="controller" onclick="toggleCard('card3')">Formazione</div>
-                        </div>
-                        <div>
-                            <div class="card card1 service-card">
-                                <div class="services-title-card">
-                                    Reportistica
-                                </div>
-                                <div class="services-subtitle" style="color:black; margin-top:1vh; margin-bottom:1vh;">
-                                    <p>
-                                        Coniughiamo e semplifichiamo l'analisi delle aziende del settore primario mediante lo sviluppo di una reportistica avanzata in grado di facilitare la lettura dei dati aziendali.
-                                        <br><br>
-                                        Il nostro report è <span class="highlight-pink" style="font-weight: 500;">MODULARE</span> e <span class="highlight-pink" style="font-weight: 500;">TAILOR-MADE</span> e quindi facilmente integrabile nei sistemi interni già presenti.
-                                        <br><br>
-                                        Creaimo un report basato su dati <span style="font-weight:bold">oggettivi e certificati</span>, partendo dal fascicolo aziendale e dai dichiarativi, e lo adattiamo alle richieste, alle necessità ed ai processi decisionali del cliente.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="card card2 service-card" style="display:none;">
-                                <div class="services-title-card">
-                                    Consulenza
-                                </div>
-                                <div class="services-subtitle" style="color:black; margin-top:1vh; margin-bottom:1vh;">
-                                    <p>
-                                        Offriamo un servizio di consulenza completo che si estende trasversalmente dal settore agricolo a quello finanziario.
-                                        <br><br>
-                                        <span class="highlight-pink-long" style="font-weight: 500;">Operatori finanziari:</span>
-                                        <br><br>
-                                        Aiutiamo a rendere più <span style="font-weight:bold">rapido, trasparente ed attendibile</span> il processo di valutazione aziendale al fine di incrementare le performance e ridurre i rischi, apportando benefici tangibili all'intero settore primario.
-                                        <br><br>
-                                        <span class="highlight-pink-long" style="font-weight: 500;">Aziende agricole:</span>
-                                        <br><br>
-                                        Sfruttando appieno il nostro knowhow ed i nostri database, proponiamo <span style="font-weight:bold">alternative colturali e rotative</span> per migliorare la resa e massimizzare i contributi.
-                                        <br><br>
-                                        Forniamo servizi di digitalizzazione e miglioramento tecnologico, proponendo solo soluzioni con un alto rapporto tra benefici ottenuti e i costi da sostenere.
-                                        <br><br>
-                                        <span style="font-weight:bold">Progetti di filiera, sistemi decentralizzati, sensoristica e di rilevazione della qualità</span>, progettati, sviluppati e consegnati chiavi in mano che possono trasformare radicalmente l'attività aumentando l'utile societario.
-                                        <br><br>
-                                        <span class="highlight-pink-long" style="font-weight: 500;">Associazioni di settore:</span>
-                                        <br><br>Il ruolo consulenziale svolto dalle associazioni di settore, impone un <span style="font-weight:bold;">continuo sviluppo</span> di competenze in ambito regolamentare e tecnologico.
-                                        <br><br>Per rendere più agile un <span style="font-weight:bold;">cambiamento innovativo</span> del settore primario, forniamo un <span style="font-weight:bold;">ventaglio di soluzioni pratiche e facilmente attuabili</span> dalle aziende agroalimentari, garantendo professionalità ed assistenza continuativa.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="card card3 service-card" style="display:none;">
-                                <div class="services-title-card">
-                                    Formazione
-                                </div>
-                                <div class="services-subtitle" style="color:black; margin-top:1vh; margin-bottom:1vh;">
-                                    <p>
-                                        Ogni servizio che offriamo culmina in un <span style="font-weight: bold;">percorso formativo e in un supporto continuativo.</span>
-                                        <br><br>Tramite il nostro <span class="highlight-pink-long" style="font-weight: 500;">centro di ricerca,</span> ci dedichiamo a formare le aziende e gli esperti del settore primario sia dal punto di vista <span class="highlight-pink" style="font-weight: 500;">finanziario</span> che <span class="highlight-pink" style="font-weight: 500;">tecnologico</span>. Forniamo gli strumenti necessari per sfruttare completamente le potenzialità presenti e per migliorare l'efficienza delle attività lavorative.
-                                        <br><br>La velocità dello sviluppo tecnologico richiede un aggiornamento costante per <span style="font-weight:bold">ottenere e mantenere un vantaggio competitivo nel lungo termine.</span> È altresì essenziale comprendere a fondo le implicazioni degli strumenti utilizzati, comprenderne i vantaggi e conoscere i rischi intrinsechi.
-                                        <br><br>Il nostro impegno formativo mira a <span style="font-weight:bold">creare una base solida</span> per affrontare le sfide del mondo contemporaneo, garantendo che le competenze acquisite siano al passo con le ultime innovazioni e che la consapevolezza degli strumenti utilizzati sia completa.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                    </div>
+                    <!-- Contact Button -->
+                    <div class="d-flex justify-content-center fade-scroll contact-spacing">
+                        <a href="mailto:info@monethicalconsulting.com" class="btn btn-primary contact-button" style="font-weight: 800;">
+                            CONTATTACI
+                        </a>
                     </div>
                 </div>
             </section>
-            <section class="contacts" id="contatti">
-                <div class="product-card-container fade-in" style="padding-top:3%;">
+
+            <footer class="footer_bg">
+                <div>
                     <div class="row">
-                        <div class="col-sm-6 d-flex align-items-center contacts-padding">
-                            <div>
-                                <span class="contacts-font-title">AGRI-INNOVATION-AS-A-SERVICE</span><br>
-                                <i class="bi bi-flower3" style="color:#AE6DA6ff; font-size: 0.75rem;"></i><span class="contacts-font-subtitle"> Lavoriamo insieme per raggiungere i tuoi obiettivi</span><br>
-                                <i class="bi bi-flower3" style="color: #A58CB9ff; font-size: 0.75rem;"></i><span class="contacts-font-subtitle"> Lasciaci trasformare le tue idee in azioni concrete</span><br>
-                                <i class="bi bi-flower3" style="color:#93CADFff; font-size: 0.75rem;"></i><span class="contacts-font-subtitle"> Condividi con noi la tua visione</span>
+                        <!-- Colonna Sinistra: Call to Action -->
+                        <div class="col-12 col-md-12 col-lg-4">
+                            <div class="footer-call-spacing">
+                                <h3 class="footer-call-title">AGRI•INNOVATION•AS•A•SERVICE</h3>
+                                <p class="footer-call-subtitle">
+                                    <i class="bi bi-flower3"></i> Contattaci e condividi con noi la tua visione e le tue necessità <br>
+                                    <i class="bi bi-flower3"></i> Lavoriamo insieme per raggiungere i tuoi obiettivi <br>
+                                    <i class="bi bi-flower3"></i> Trasformiamo le tue idee in azioni concrete
+                                </p>
                             </div>
                         </div>
-                        <div class="col-sm-4" style="padding-top:4%;">
-                            <div class="text-center">
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <a href="tel:+39 3426432140">
-                                            <i class="bi bi-phone-vibrate" style="font-size: 2rem; color: #A58CB9ff; margin-bottom: 10px;"></i>
-                                        </a>
-                                        <p class="contacts-font-subtitle" style="margin-bottom: 10px;">+39 3426432140</p>
-                                    </li>
-                                    <li>
-                                        <a href="mailto:info@monethicalconsulting.com" style="color: white;">
-                                            <i class="bi bi-envelope" style="font-size: 1.7rem; color: #8AE9F2ff;"></i>
-                                        </a>
-                                        <p style="margin: 0;">
-                                            <a href="mailto:info@monethicalconsulting.com" class="contacts-font-subtitle" style="color:white;">info@monethicalconsulting.com</a>
-                                        </p>
-                                    </li>
-                                </ul>
-                                <br>
+
+                        <!-- Colonna Centrale: Logo & Menu -->
+                        <div class="col-12 col-md-12 col-lg-4 text-center">
+                            <div class="d-flex flex-column align-items-center">
+                                <a href="https://monethicalconsulting.com#home">
+                                    <img src="static/css/img/bg_agrisolutions_adesivo.png" alt="Logo" class="img-width">
+                                </a>
+                                <p class="copyright">Monethical Consulting © <span id="current-year"></span></p>
+                                <p class="footer-menu-spacing">
+                                    <a href="https://monethicalconsulting.com#home" class="link-primary">Home</a> |
+                                    <a href="https://monethicalconsulting.com#mission" class="link-primary">Mission</a> |
+                                    <a href="https://monethicalconsulting.com#servizi" class="link-primary">Servizi</a> |
+                                    <a href="https://monethicalconsulting.com#contatti" class="link-primary">Perché Noi</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Colonna Destra: Social & Crediti -->
+                        <div class="col-12 col-md-12 col-lg-4">
+                            <div class="credit-spacing">
+                                <p class="seguici-text">Seguici su:</p>
+                                <a href="#" class="footer-social"><i class="bi bi-facebook"></i></a>
+                                <a href="#" class="footer-social"><i class="bi bi-twitter-x"></i></a>
+                                <a href="#" class="footer-social"><i class="bi bi-linkedin"></i></a>
+                                <p class="credit-style">
+                                    <a href="https://www.monethicalconsulting.com" title="vision, expertise and dedication">Vision, expertise and dedication by ourselves - Monethical</a>
+                                </p>
+                                <p class="credit-style mt-0">
+                                    <a href="https://www.flaticon.com/free-animated-icons/ecosystem" title="ecosystem animated icons">Ecosystem animated icons by Freepik - Flaticon</a>
+                                </p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <footer class="mt-auto">
-                <div class="circle" style="text-align: center;padding-top:2%;">
-                    <a href="https://monethicalconsulting.com#home">
-                        <img src="static/css/img/lastimg.png" alt="Logo del sito" class="contacts-image">
-                    </a>
-                </div>
-                <div class="max-w-screen-md mx-auto" style="margin-top: 5px">
-                    <p class="copyright">
-                        Monethical Consulting ©
-                        <span id="current-year"></span>
-                    </p>
-                </div>
-                <div class="footer-left">
-                    <p class="footer-links">
-                        <a class="link-primary" href="https://monethicalconsulting.com#home" style="color: #B74E93ff;">Home</a>
-                        <i class="bi bi-flower3" style="color:white; font-size: 0.75rem;"></i>
-                        <a class="link-primary" href="https://monethicalconsulting.com#mission" style="color: #AE6DA6ff;">Mission</a>
-                        <i class="bi bi-flower3" style="color:white; font-size: 0.75rem;"></i>
-                        <a class="link-primary" href="https://monethicalconsulting.com#agrianalyticsinsight" style="color: #A58CB9ff;">Agri-analytics Insight</a>
-                        <i class="bi bi-flower3" style="color:white; font-size: 0.75rem;"></i>
-                        <a class="link-primary" href="https://monethicalconsulting.com#servizi" style="color: #93CADFff;">Servizi</a>
-                        <i class="bi bi-flower3" style="color:white; font-size: 0.75rem;"></i>
-                        <a class="link-primary" href="https://monethicalconsulting.com#contatti" style="color: #8AE9F2ff;">Contatti</a>
-                    </p>
-                </div>
-                <div class="footer-left">
-                    <p class="footer-links">
-                        <a href="#" class="footer-icons" style="color: #AE6DA6ff;"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="footer-icons" style="color: #9CABCCff;"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#" class="footer-icons" style="color: #8AE9F2ff;"><i class="bi bi-linkedin"></i></a>
+
+                    <hr style="border-color: white; margin-top: 2%; width: 100%;">
+                    <p class="sub-footer">
+                        Monethical Consulting Srl - P.IVA 01671430559 |
+                        <a href="tel:+39 3426432140" style="display: inline-flex; align-items: center;">
+                            <span>+39 3426432140</span>
+                        </a>
+                         |
+                        <a href="mailto:info@monethicalconsulting.com" class="email">
+                            info@monethicalconsulting.com
+                        </a>
+                        |
+                        <a href="#" id="open-terms">Termini e Condizioni</a>
+                        |
+                        <a href="#" id="open-privacy">Privacy Policy</a>
                     </p>
                 </div>
             </footer>
+
+            <!-- Modale per Termini e Condizioni -->
+            <div id="terms-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2 class="modal-title">Termini e Condizioni</h2><br>
+                    <p style="font-style: italic">Ultimo aggiornamento: <strong>Marzo 2025</strong></p><br>
+                    <p>Benvenuto su <strong>www.monethicalconsulting.com</strong>.<br> Accedendo a questo sito, accetti i seguenti Termini e Condizioni.</p>
+
+                    <h3>1. Scopo del sito</h3>
+                    <p>Il sito <strong>www.monethicalconsulting.com</strong> fornisce informazioni sui servizi offerti da <strong>Monethical Consulting Srl</strong>.</p>
+
+                    <h3>2. Uso del sito</h3>
+                    <p>L'utente può navigare liberamente nel sito, ma non è consentito:</p>
+                    <ul>
+                        <li>- Copiare o modificare i contenuti senza autorizzazione.</li>
+                        <li>- Utilizzare il sito per scopi illegali o fraudolenti.</li>
+                    </ul>
+
+                    <h3>3. Limitazione di responsabilità</h3>
+                    <p>Forniamo i contenuti "così come sono" senza garanzie di accuratezza o disponibilità continua.</p>
+
+                    <h3>4. Modifiche ai Termini</h3>
+                    <p>Ci riserviamo il diritto di aggiornare questi Termini senza preavviso.</p>
+
+                    <p>📩 Per informazioni: <a href="mailto:info@monethicalconsulting.com">info@monethicalconsulting.com</a></p><br>
+                </div>
+            </div>
+
+            <!-- Modale per Privacy Policy -->
+            <div id="privacy-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2 class="modal-title">Privacy Policy</h2><br>
+                    <p style="font-style: italic">Ultimo aggiornamento: <strong>Marzo 2025</strong></p><br>
+                    <p>Questa Privacy Policy spiega che <strong>non raccogliamo dati personali né utilizziamo cookie</strong>.</p>
+
+                    <h3>1. Nessuna raccolta di dati personali</h3>
+                    <p>Non raccogliamo, archiviamo o elaboriamo dati personali degli utenti.</p>
+
+                    <h3>2. Nessun uso di cookie</h3>
+                    <p>Il nostro sito non utilizza cookie o tecnologie di tracciamento.</p>
+
+                    <h3>3. Link a siti esterni</h3>
+                    <p>Il sito potrebbe contenere link a servizi di terze parti. Non siamo responsabili per le loro pratiche di privacy.</p>
+
+                    <h3>4. Contatti</h3>
+                    <p>📩 Per qualsiasi domanda, puoi scriverci a: <a href="mailto:info@monethicalconsulting.com">info@monethicalconsulting.com</a></p><br>
+                </div>
+            </div>
+
         </div>
 
         <script src="static/js/jquery-slim.js"></script>
         <script src="static/js/popper.js"></script>
         <script src="static/js/bootstrap.js"></script>
         <script>
+
+            document.addEventListener("DOMContentLoaded", function () {
+
+                const elements = document.querySelectorAll('.fade-scroll');
+
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        } else {
+                            entry.target.classList.remove('visible');
+                        }
+                    });
+                }, { threshold: 0.15 });
+
+                elements.forEach(element => observer.observe(element));
+            });
 
             window.onload = function () {
                 function showWebsiteContent() {
@@ -344,16 +772,27 @@
                 showWebsiteContent();
             };
 
+            document.addEventListener("DOMContentLoaded", function() {
+                var options = {
+                  strings: ["Analisi", "Reportistica", "Consulenza", "Formazione", "Soluzioni IT", "Progettazione", "Marketing", "Comunicazione"],
+                  typeSpeed: 100,
+                  backSpeed: 50,
+                  backDelay: 1000,
+                  startDelay: 500,
+                  loop: true,
+                };
+
+                // Inizializzazione di Typed.js
+                var typed = new Typed(".typing-machine", options);
+            });
 
             document.getElementById('current-year').innerText = new Date().getFullYear();
-
 
             function redirectTo(url) {
                 window.location.href = url;
             }
 
             $(document).ready(function () {
-                // Chiudi il menu a tendina quando un link viene cliccato
                 $('.navbar-nav a').on('click', function () {
                     $('.navbar-collapse').collapse('hide');
                 });
@@ -368,7 +807,7 @@
                         const targetElement = document.getElementById(targetId);
 
                         if (targetElement) {
-                            const offset = 40; // Adjust the value as needed
+                            const offset = 35; // Adjust the value as needed
                             const targetPosition = targetElement.offsetTop - offset;
 
                             window.scrollTo({
@@ -380,52 +819,38 @@
                 });
             });
 
-            document.addEventListener("DOMContentLoaded", function () {
-                const cardContainers = document.querySelectorAll(".product-card-container");
-
-                const observer = new IntersectionObserver(entries => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add("is-visible");
-                        }
-                    });
-                }, { threshold: 0.1 });
-
-                cardContainers.forEach(cardContainer => {
-                    observer.observe(cardContainer);
-                });
-            });
-
-            document.getElementById('toggleButton').addEventListener('click', function() {
-                var missionSection = document.getElementById('hide');
-                if (missionSection.style.display === 'none') {
-                    missionSection.style.display = 'block';
-                } else {
-                    missionSection.style.display = 'none';
-                }
-            });
-
-
-            function toggleCard(cardId) {
-                document.querySelectorAll('.service-card').forEach(function (card) {
-                    card.style.display = 'none';
-                });
-
-                var cardToShow = document.querySelector('.' + cardId);
-                if (cardToShow) {
-                    cardToShow.style.display = 'block';
-                }
-
-                document.querySelectorAll('.controller').forEach(function (controller) {
-                    controller.classList.remove('active');
-                });
-
-                var clickedController = document.querySelector('[onclick="toggleCard(\'' + cardId + '\')"]');
-                if (clickedController) {
-                    clickedController.classList.add('active');
-                }
+            function openModal(modalId) {
+                document.getElementById(modalId).style.display = "flex";
             }
 
+            function closeModal() {
+                document.querySelectorAll('.modal').forEach(modal => {
+                    modal.style.display = "none";
+                });
+            }
+
+            document.getElementById("open-terms").addEventListener("click", function () {
+                openModal("terms-modal");
+            });
+
+            document.getElementById("open-privacy").addEventListener("click", function () {
+                openModal("privacy-modal");
+            });
+
+            document.querySelectorAll(".close").forEach(button => {
+                button.addEventListener("click", closeModal);
+            });
+
+            window.addEventListener("click", function (event) {
+                document.querySelectorAll(".modal").forEach(modal => {
+                    if (event.target === modal) {
+                        modal.style.display = "none";
+                    }
+                });
+            });
+
         </script>
+
     </body>
+
 </html>

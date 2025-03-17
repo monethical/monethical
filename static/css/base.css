@@ -1,10 +1,18 @@
 /* General */
 
+:root {
+    --first: #00798A;
+    --second: #3F9481;
+    --third: #7DAE77;
+    --fourth: #BCC96E;
+    --fifth: #FAE364;
+}
+
 html body {
     position: relative;
     background-color: black;
     color: white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Bitter', serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -15,30 +23,16 @@ html body {
     opacity: 0;
 }
 
-#gifContainer {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 1;
-    transition: opacity 1s ease-out;
-}
-
-#gifContainer.hidden {
-    opacity: 0;
-}
-
 .section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2%;
+    padding-right: 2%;
     opacity: 0.7;
     transition: opacity 0.6s ease-in;
-}
-
-p {
-    font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -49,14 +43,37 @@ h4 {
     margin: 0 !important;
 }
 
-.link-primary {
-    font-size: 0.85rem;
-    padding: 5px;
+a:hover, link-primary:hover {
+    color: var(--fifth) !important;
+    text-decoration: none !important;
 }
 
-.link-primary:hover {
-    color: white !important;
-    text-decoration: none;
+.label-padding {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    padding-left: 2.5%;
+}
+
+.label-padding-whyus {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    padding-left: 2.5%;
+}
+
+.label-color-1 {
+    color: var(--first);
+    font-weight: bold;
+}
+
+.label-color-2 {
+    color: var(--fifth);
+    font-weight: 300;
+}
+
+.col-md-4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Navigator */
@@ -67,11 +84,509 @@ nav {
 }
 
 .nav-size {
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 .navbar-toggler-icon{
-    font-size: 0.85rem;
+    font-size: 1rem;
+}
+
+.nav-link {
+    position: relative;
+    font-size: 1.em;
+}
+
+.nav-item .nav-link:hover {
+    color: white !important;
+}
+
+.nav-title-1 {
+    font-size: 18pt !important;
+    color: white;
+}
+
+.nav-title-2 {
+    color: var(--first);
+    font-weight: 400;
+    font-size: 18pt;
+}
+
+.nav-button {
+    position: absolute;
+    top: 5px;
+    right: 2px;
+}
+
+.nav-padding {
+    left: 0;
+    right: auto;
+}
+
+.nav-home {
+    background: linear-gradient(135deg, var(--first), var(--second));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+.nav-mission {
+    background: linear-gradient(135deg, var(--second), var(--third));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+.nav-servizi {
+    background: linear-gradient(135deg, var(--third), var(--fourth));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+.nav-perche {
+    background: linear-gradient(135deg, var(--fourth), var(--fifth));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+.nav-home:hover, .nav-mission:hover, .nav-servizi:hover, .nav-perche:hover {
+    -webkit-text-fill-color: white;
+    text-fill-color: white;
+    background-image: none;
+}
+
+/* Home section */
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background:
+        url("img/bg_agrisolutions_home.png") no-repeat center center / cover,
+        linear-gradient(135deg, rgba(0, 121, 138, 0.7), rgba(50, 142, 130, 0.7));
+    background-blend-mode: soft-light;
+    color: black;
+}
+
+.home-title {
+    font-size: 5.2rem !important;
+    color: black;
+    padding: 0;
+    text-shadow: 0 0 0rem black;
+    font-family: 'DM Serif Display', serif;
+    font-weight: 200;
+}
+
+.home-subtitle {
+    font-size: 3.8rem;
+    text-shadow: 0 0 0rem black;
+    font-family: 'Monserrat', serif;
+    font-weight: bold;
+    color: white;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.home-suptitle {
+    color:black;
+    font-size: 2.3rem;
+    text-shadow: 0 0 0rem black;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+
+.h-spacing {
+    padding-top: 5%;
+}
+
+.typing-machine {
+    white-space: nowrap;
+}
+
+.home-buttons {
+    padding: 0.5rem 1rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+    gap: 25px;
+}
+
+.home-button {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.4rem !important;
+    margin-top: 4%;
+}
+
+.home-button:hover {
+    color: black !important;
+    text-decoration: none !important;
+}
+
+/* Mission section */
+
+.mission {
+    position: relative;
+    background-color: black;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 0rem;
+    padding-bottom: 5rem;
+    max-width: 100%;
+}
+
+.mission-title {
+    color: white;
+    padding: 0;
+    font-size: 2.6rem;
+    font-family: 'DM Serif Display', serif;
+    font-weight: 200;
+    margin-left: 7%;
+    margin-right: 2%;
+    margin-bottom: 0rem;
+    margin-top: 2%;
+    text-align: left;
+}
+
+.mission-subtitle {
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 3%;
+    padding-top: 3%;
+    padding-right: 1%;
+    border-radius: 0;
+    margin-left: 8%;
+    margin-right: 3%;
+}
+
+.mission-image {
+    padding-right: 20%;
+    padding-left: 0%;
+    padding-top: 2rem;
+    width: 100%;
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Services section */
+
+.services {
+    position: relative;
+    background: url("img/bg_agrisolutions_services.png");
+    background-color: #f8f9fa;
+    text-align: left;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    padding: 2%;
+    margin-top: 2rem;
+    padding-bottom: 5rem;
+}
+
+.services-title h2 {
+    font-size: 2rem;
+    color: #00798A;
+}
+
+.services-title p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.services-title {
+    position: relative;
+    color: black;
+    font-family: 'DM Serif Display'; serif;
+    font-weight: 300;
+    padding: 0;
+    border-radius: 0;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+    padding-top: 2%;
+    z-index: 1;
+    font-size: 2.4rem;
+}
+
+.services-title-font {
+    font-family: 'DM Serif Display'; serif;
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: #00798A;
+}
+
+.services-subtitle {
+    font-family: 'DM Serif Display', serif;
+    color: black;
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-top: 0.2rem;
+}
+
+.services-text {
+    text-align: left;
+    margin-top: 2.5rem;
+    margin-bottom: 4rem;
+    line-height: 1.6;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.services-text-left {
+    padding-left: 20%;
+    padding-right: 0.5%;
+}
+
+.services-text-right {
+    padding-left: 0.5%;
+    padding-right: 20%;
+}
+
+.service-title-font-1 {
+    font-family: 'DM Serif Display'; serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #005F6B;
+    z-index: 0;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+
+.service-title-font-2 {
+    font-family: 'DM Serif Display'; serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #005F6B;
+    z-index: 0;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+}
+
+.services-row-style {
+    padding-left:10%;
+    padding-right:10%;
+    padding-bottom: 1.7rem;
+}
+
+.service-title-single {
+    font-size: 1.2rem;
+    font-weight:500;
+    color: black;
+    margin-bottom: 0.5rem;
+}
+
+.service-text {
+    font-size: 1rem;
+    color: black;
+    line-height: 1.5;
+}
+
+.service-image-single {
+    max-width: 100%;
+    padding: 1rem;
+    object-fit: contain;
+    display: block;
+    max-height: 12rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.flip-card {
+    width: 100%;
+    height: 18rem;
+    perspective: 100rem;
+}
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(to bottom, #EEF1FC, #EEF1FC)
+}
+
+.title-container {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    z-index: 100;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.content-container {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    align-items: center;
+    height: 100%;
+    font-family: 'Bitter'; serif;
+    font-size: 1.1rem;
+    font-weight: 200;
+}
+
+.flip-card-back p {
+    margin-top: 1rem;
+    padding: 1rem;
+    text-align: left;
+}
+
+.collab-spacing {
+    color: black;
+    padding-top: 5rem;
+    padding-left: 15%;
+    padding-right: 15%;
+    line-height: 1.6;
+}
+
+.collab-text {
+    text-align: left;
+    margin-top: 2.5rem;
+    margin-bottom: 4rem;
+    line-height: 1.6;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: left;
+}
+
+.collab-cards-spacing {
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.logo-card {
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
+
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.partner-logo {
+    width: 100%;
+    height: 100%;
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+/* Perché Noi section */
+
+.whyus {
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    padding: 2%;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.whyus-title {
+    color: white;
+    padding: 0;
+    font-size: 2.5rem;
+    font-family: 'DM Serif Display', serif;
+    font-weight: 200;
+    margin-bottom: 3%;
+    margin-top: 2%;
+    text-align: left;
+}
+
+.whyus-subtitle {
+    font-size: 1.2rem;
+    font-weight: 400;
+    border-radius: 0;
+    line-height: 1.8;
+    color: white;
+    text-align: left;
+    padding-bottom: 1rem;
+}
+
+.whyus-subtitle-ticks {
+    font-size: 1.2rem;
+    font-weight: 400;
+    border-radius: 0;
+    line-height: 1.8;
+    color: white;
+    text-align: left;
+}
+
+.whyus-spacing {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+.whyus-tick {
+    padding-right: 0.8rem;
+    color: #FAE364;
+}
+
+.contact-spacing {
+    margin-bottom: 18rem;
+}
+
+.contact-button {
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+    gap: 25px;
+    font-family: 'League Spartan', sans-serif;
+    color: #FAE364 !important;
+    background-color: black !important;
+    text-decoration: none !important;
+}
+
+.contact-button:hover {
+    color: black !important;
+    background-color: #FAE364 !important;
+    text-decoration: none !important;
 }
 
 /* Footer */
@@ -81,17 +596,48 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 140px;
-    background-color: black;
-    padding-left: 20px;
-    padding-right: 20px;
+    height: auto;
     color: #63f4fd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+
+.footer-container {
+    width: 100%;
+}
+
+.footer-left {
+    text-align: left;
+    padding-left: 0;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-right {
+    text-align: right;
+    padding-right: 0;
+}
+
+.footer-links a, .footer-icons {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+}
+
+.footer-icons i {
+    font-size: 1.2rem;
 }
 
 .copyright {
     text-align: center;
     color: white;
-    font-size: 0.85rem;
+    font-weight: 400;
+    font-size: 1.1rem;
 }
 
 .footer-links {
@@ -109,398 +655,133 @@ footer {
     color: white;
 }
 
-/* Home section */
-
-.home {
-    position: relative;
-    background-image: url("img/homepage.png");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    left: 0;
-    right: 0;
-    top: 0vh;
-    max-width: 100%;
-    padding: 5%;
-    padding-top: 0vh;
-    padding-bottom: 5%
+.link-primary {
+    font-size: 1rem;
+    padding: 0.5rem;
+    font-weight: 400;
 }
 
-.home-title {
-    color: black;
-    padding: 0;
-    font-size: 3rem;
-    text-shadow: 0 0 20vw black;
-    transform: translateY(20%);
-    font-family: 'DM Serif Display', serif;
-    font-weight: 200;
-    margin-left: 3vw;
-    margin-top: 9vh;
-}
-
-.card-hp {
-    @extend .class;
-    min-height: 100%;
-    padding-top:10vh;
-}
-
-.hp-card-container {
-    margin-top: 10vh;
-    margin-left: 3vw;
-    margin-right: 0vw;
-    border: none !important;
-}
-
-.hp-card {
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    color:black;
-}
-
-.hp-card-title {
-    font-size: 1.25rem;
-}
-
-/* Mission section */
-
-.mission {
-    position: relative;
-    background-color: #090909;
-    left: 0;
-    right: 0;
-    top: 0;
-    max-width: 100%;
-    padding: 10vh;
-}
-
-.mission-title {
+.footer_bg {
+    background:
+        url("img/bg_agrisolutions_home.png") no-repeat center center / cover,
+        linear-gradient(135deg, rgba(0, 121, 138, 0.7), rgba(50, 142, 130, 0.7));
+    background-blend-mode: soft-light;
     color: white;
-    padding: 0;
-    font-size: 2.5rem;
-    font-family: 'DM Serif Display', serif;
-    font-weight: 200;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    margin-bottom: 5vh;
-    margin-top: 7vh;
-    text-align: left;
+    width: 100%;
+    padding-top: 1rem;
 }
 
-.mission-subtitle {
-    font-size: 1rem;
-    font-weight: 400;
-    padding: 3%;
-    padding-right: 1%;
-    border-radius: 0;
-    margin-left: 5vw;
-    margin-right: 5vw;
-}
-
-.mission-image {
-    padding-top: 2vh;
-    padding-right: 7vw;
-    max-width: 80%;
-    opacity: 1;
-}
-
-.img-col {
-    margin-left: 0vw;
-    margin-right: 0vw;
-    padding:0;
-}
-
-/* Product section */
-
-.product {
-    position: relative;
-    background-color: white;
-    margin-top: 10vh;
-    max-width: 100%;
-    padding: 10vh;
-}
-
-.product-title {
-    position: relative;
-    font-family: 'Montserrat', sans-serif;
-    color: black;
-    font-size: 1rem;
-    font-weight: 300;
-    border-radius: 0;
-    margin-left: 5%;
+.footer-call-spacing {
     margin-top: 5%;
-    margin-bottom: 0;
-    z-index: 1;
+    margin-left: 10%;
 }
 
-.product-subtitle {
-    position: relative;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    color: black;
-    font-size: 0.95rem;
-    font-weight: 400;
-    padding: 3%;
-    border-radius: 0;
-    margin: 5%;
-    margin-bottom: 0%;
-    margin-left: 7%;
-    margin-top: 7%;
-    padding-bottom: 0%;
-    z-index: 1;
+.footer-call-title {
+    font-family: 'League Spartan'; serif;
+    font-size: 1.4rem;
+    color: #efefef;
+    padding: 0;
+    margin-bottom: 0px;
 }
 
-.product-subtitle-2 {
-    position: relative;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    color: black;
-    font-size: 0.95rem;
-    font-weight: 400;
-    padding: 3%;
-    padding-bottom: 1%;
-    border-radius: 0;
-    margin: 8%;
-    margin-bottom:3%;
-    margin-top:3%;
-    z-index: 1;
+.footer-call-subtitle {
+    font-size: 0.7rem;
+    color: #efefef;
 }
 
-.product-image {
-    max-width: 80%;
-    margin-top: 7%;
-    margin-left: 25%;
+.footer-menu-spacing {
+    font-size: 1rem;
+    margin-top: 0.6rem;
 }
 
-.product-image-width {
-    width:4rem;
+.adesivo {
+    max-width: 75%;
+    max-height: 75%;
+    object-fit: contain;
 }
 
-.padding-cards {
-    padding: 5%;
-    padding-top: 3%;
+.credit-spacing {
+    text-align: right;
+    margin-top: 3%;
+    padding-right: 10%;
 }
 
-.product-card-container {
-    margin-top: 0vh;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 0vh;
-    border: none !important;
-    max-width: 100%;
-    opacity: 0.7;
-    transform: translateY(50px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+.footer-social {
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.6rem;
 }
 
-.product-card-container.fade-in.is-visible {
-    opacity: 1;
-    transform: translateY(0);
+.credit-style {
+    color: white;
+    font-size: 0.8rem;
+    margin-top: 15px;
 }
 
-.card-font {
-    font-size: 0.75rem;
-}
-
-.card-hover:hover {
-    transform: scale(1.1);
-}
-
-.img-card {
+.img-width {
     max-width: 4rem;
-    padding-right: 1vw;
-}
-
-/* Services section */
-
-.services {
-    position: relative;
-    background-color: #eaecf3;
-    background-image: url("img/services.png");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    left: 0;
-    right: 0;
-    top: 0;
-    width: 100vw;
     height: auto;
-    padding: 0vh;
-    padding-top: 2%;
-    padding-bottom: 2%;
 }
 
-.services-title {
-    position: relative;
-    color: black;
-    font-weight: 400;
-    padding: 0;
-    border-radius: 0;
-    margin-bottom: 0%;
-    padding-bottom: 0%;
-    z-index: 1;
-    font-size: 1.5rem;
-    padding-top: 5%;
+.sub-footer {
+    text-align: center;
+    font-weight: 300;
+    color: white;
 }
 
-.services-title-font {
-    font-size: 1.8rem;
-}
-
-.services-subtitle {
-    position: relative;
-    color: black;
-    font-size: 0.85rem;
-    font-weight: 400;
-    padding: 0;
-    border-radius: 0;
-    margin-bottom: 0%;
-    padding-bottom: 0%;
-    z-index: 1;
-}
-
-.services-title-card {
-    color: black;
-    padding: 0;
-    font-size: 2vw;
-    text-shadow: 0 0 20vw black;
-    transform: translateY(20%);
-    font-family: 'DM Serif Display', serif;
-    font-weight: 200;
-    margin-top: 0vh;
-    margin-bottom: 3vh;
-    text-align: left;
-}
-
-.service-card {
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-bottom: 10%;
-}
-
-.controller-container {
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-bottom: 5vh;
-    margin-top: 1vh;
-}
-
-.controller {
-    cursor: pointer;
-    padding: 10px;
-    background-color: transparent;
-    color: white;
-    font-size: 1rem;
+    align-items: center;
     color:black;
-    transition: background-color 0.3s ease;
+    font-weight: 300;
 }
 
-.controller:hover, .controller.active {
-    background-image: url("img/markpink.png");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    color: white;
-}
-
-.card1 {
-    background-color: white;
-    border-radius: 0 !important;
-    box-shadow: 0px 10px 10px #A58CB9ff;
-    opacity: 1;
-    font-size: 0.8rem;
-    font-weight: bold;
-    padding: 3%;
+.modal-content {
+    background: url("img/bg_agrisolutions_services.png");
+    background-color: #f8f9fa;
+    padding: 20px;
+    width: 50%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     text-align: left;
 }
 
-.card2 {
-    background-color: white;
-    border-radius: 0 !important;
-    box-shadow: 0px 10px 10px #A58CB9ff;
-    opacity: 1;
-    font-size: 0.8rem;
+.modal-title {
+    color:black;
     font-weight: bold;
-    padding: 3%;
-    text-align: left;
+    font-size: 1.2rem;
 }
 
-.card3 {
-    background-color: white;
-    border-radius: 0 !important;
-    box-shadow: 0px 10px 10px #A58CB9ff;
-    opacity: 1;
-    font-size: 0.8rem;
-    font-weight: bold;
-    padding: 3%;
-    text-align: left;
-}
-
-/* Contacts section */
-
-.contacts {
-    position: relative;
-    background-color: black;
-    left: 0;
-    right: 0;
-    top: 0;
-    max-width: 100%;
-    padding: 10vh;
-    padding-top: 8vh;
-    padding-bottom: 25vh;
-}
-
-.contacts-image {
-    height: 3rem;
-}
-
-.contacts-title {
-    color: black;
-    padding: 0;
-    font-size: 5vw;
-    text-shadow: 0 0 20vw black;
-    transform: translateY(20%);
-    font-family: 'DM Serif Display', serif;
-    font-weight: 200;
-    margin-top: 2vh;
-    margin-bottom: 3vh;
-    text-align: center;
-}
-
-.contacts-padding {
-    padding-left: 10%;
-    margin-left: 10%;
-    padding-right: 3%;
-    border-right: 1px solid #B74E93ff;
-}
-
-.contacts-font-title {
-    font-family: 'DM Serif Display'; serif;
-    font-size: 2rem;
-    color:#efefef;
-}
-
-.contacts-font-subtitle {
-    font-family: 'Montserrat';
-    font-size: 1.1rem;
-    color:#efefef;
-}
-
-.circle img {
-    transition: 1s ease;
-}
-
-.circle img:hover {
-    content: url('img/lastimghover.png');
-    transition: 1s ease;
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 /* Effects */
 
-.fade-in {
+.fade-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+}
+
+.fade-scroll.visible {
     opacity: 1;
+    transform: translateY(0);
 }
 
 .fade-out {
@@ -517,2327 +798,1144 @@ footer {
     content: "";
     position: absolute;
     top: 0;
-    left: -10px;
-    right: -10px;
+    left: -1.7rem;
+    right: 0rem;;
     width: 105%;
     height: 95%;
-    background-image: url('img/marker-highlight.svg');
+    background-image: url('img/highlighter_giallo.png');
     background-repeat: repeat-x;
     background-size: auto 100%;
     z-index: -1;
 }
 
-.highlight-pink {
+.highlight-text {
     position: relative;
     display: inline-block;
 }
 
-.highlight-pink::before {
+.highlight-text::before {
     content: "";
     position: absolute;
     top: 0;
-    left: -5px;
+    left: -0.5rem;
+    right: 0.5rem;
     width: 105%;
-    height: 90%;
-    background-image: url('img/marker-highlight-pink.svg');
+    height: 95%;
+    background-image: url('img/highlighter_giallo.png');
     background-repeat: repeat-x;
     background-size: auto 100%;
     z-index: -1;
 }
 
-.highlight-pink-long {
+.highlight_verde_thin {
     position: relative;
     display: inline-block;
 }
 
-.highlight-pink-long::before {
+.highlight_verde_thin::before {
     content: "";
     position: absolute;
     top: 0;
-    left: -10px;
-    width: 105%;
-    height: 100%;
-    background-image: url('img/markpink.png');
+    left: -1rem;
+    right: 0rem;
+    width: 107%;
+    height: 95%;
+    background-image: url('img/highlighter_verde.png');
     background-repeat: repeat-x;
     background-size: auto 100%;
     z-index: -1;
 }
 
-.enlarge-on-hover:hover {
-    transform: scale(1.2);
-    transition: transform 0.3s ease;
-}
+@media (max-width: 767px) {
 
-.enlarge-less-on-hover:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-}
+    .label-padding {
+        font-size: 0.8rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 2.5%;
+    }
 
-.flash-on-hover:hover {
-	opacity: 1;
-	-webkit-animation: flash 1.5s;
-	animation: flash 1.5s;
-}
+    .label-padding-whyus {
+        font-size: 0.8rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 3%;
+    }
 
-@-webkit-keyframes flash {
-	0% {
-		opacity: .4;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-@keyframes flash {
-	0% {
-		opacity: .4;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-@media (min-width: 1367px) {
+    /* Navigator */
 
     .nav-size {
         font-size: 1rem;
     }
 
-    .home {
-        padding: 2%;
-        padding-top: 2%;
-        padding-bottom: 5%;
+    .navbar-toggler-icon{
+        font-size: 0.5rem;
+        vertical-align: center;
     }
+
+    .navbar-toggler-icon{
+        font-size: 1rem;
+    }
+
+    .navbar-nav {
+        padding-top: 1rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
+    .nav-title-1 {
+        font-size: 14pt !important;
+    }
+
+    .nav-title-2 {
+        font-weight: 400;
+        font-size: 14pt;
+    }
+
+    .nav-button {
+        top: 1px;
+        right: 1px;
+    }
+
+    .nav-padding {
+        left: 0;
+    }
+
+    /* Home section */
 
     .home-title {
-        font-size: 3.8rem;
-        margin-top: 10%;
-        margin-bottom: 10%;
+        font-size: 3rem !important;
     }
 
-    .hp-card-container {
-        margin-top: 2vh;
-        margin-left: 2vw;
-        margin-right: 0vw;
-        border: none !important;
+    .home-subtitle {
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+    }
+
+    .home-suptitle {
         font-size: 1.2rem;
     }
 
-    .hp-card-title {
-        font-size: 1.8rem;
+    .h-spacing {
+        padding-top: 2%;
     }
 
+    .home-buttons {
+        padding: 0.2rem 0.3rem;
+        line-height: 1;
+        border-radius: 0.3rem;
+        gap: 0.5rem;
+    }
+
+    .home-button {
+        margin-top: 10%;
+        font-size: 1.3rem !important;
+        padding: 0.5rem !important;
+    }
+
+    /* Mission section */
+
     .mission {
-        padding: 2vh;
-        padding-top: 0vh;
-        padding-bottom: 7%;
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 1rem;
+        padding-bottom: 0rem;
     }
 
     .mission-title {
-        font-size: 2.7rem;
-        margin-top: 8%;
-        margin-bottom: 1vh;
-    }
-
-    .mission-subtitle {
-        font-size: 1.2rem;
-        margin-left: 2vw;
-        margin-right: 5vw;
-    }
-
-    .mission-image {
-        padding-top: 0%;
-        padding-right: 20%;
-        padding-left: 0%;
-        max-width: 80%;
-        opacity: 1;
-    }
-
-    .product {
-        position: relative;
-        background-color: white;
-        margin-top: 10vh;
-        max-width: 100%;
-        padding: 3%;
-    }
-
-    .product-subtitle {
-        font-size: 1.2rem;
-    }
-
-    .product-subtitle-2 {
-        font-size: 1.2rem;
-        margin: 5%;
-        margin-top: 1%;
-    }
-
-    .product-card-container {
-        margin-top: 0vh;
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 0vh;
-        border: none !important;
-        max-width: 100%;
-        opacity: 0.7;
-        transform: translateY(50px);
-        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    }
-
-    .product-card-padding {
-        padding-right: 10px !important;
-        padding-left: 10px !important;
-    }
-
-    .product-image-width {
-        width:10rem;
-    }
-
-    .card-font {
-        font-size: 1rem;
-    }
-
-    .card-hover:hover {
-        transform: scale(1.05);
-    }
-
-    .img-card {
-        max-width: 4rem;
-        padding-right: 1vw;
-    }
-
-    .services {
-        padding-top: 0%;
-        padding-bottom: 2%;
-    }
-
-    .services-title {
-        position: relative;
-        color: black;
-        font-weight: 400;
         padding: 0;
-        border-radius: 0;
-        margin-bottom: 0%;
-        padding-bottom: 0%;
-        z-index: 1;
-        font-size: 1.7rem;
-        padding-top: 8%;
-    }
-
-    .services-subtitle {
-        font-size: 1.2rem;
-    }
-
-    .services-title-card {
-        font-size: 1.6rem;
-        margin-bottom: 3%;
+        font-size: 2.3rem;
+        margin-left: 4%;
+        margin-right: 4%;
+        margin-bottom: 1rem;
+        margin-top: 7%;
         text-align: left;
     }
 
-    .services-title-font {
-        font-size: 2.5rem;
+    .mission-subtitle {
+        font-size: 1rem;
+        font-weight: 400;
+        padding: 3%;
+        padding-top: 3%;
+        padding-right: 1%;
+        margin-left: 5%;
+        margin-right: 2%;
     }
 
-    .service-card {
-        margin-left: 10%;
-        margin-right: 10%;
-        margin-bottom: 8%;
+    .mission-image {
+        padding-right: 0%;
+        padding-left: 0%;
+        padding-top: 0rem;
+        opacity: 1;
+        transform: scale(0.8);
     }
 
-    .controller {
-        font-size: 1.4rem;
-    }
+    /* Services section */
 
-    .contacts {
-        position: relative;
-        background-color: black;
+    .services {
         left: 0;
         right: 0;
         top: 0;
-        max-width: 100%;
-        padding: 3%;
-        padding-top: 0%;
-        padding-bottom: 8%;
-    }
-
-    .contacts-image {
-        height: 2rem;
-    }
-
-    .contacts-title {
-        color: black;
-        padding: 0;
-        font-size: 1.7rem;
-        text-shadow: 0 0 20vw black;
-        transform: translateY(20%);
-        font-family: 'DM Serif Display', serif;
-        font-weight: 200;
-        margin-top: 2vh;
-        margin-bottom: 0vh;
-        text-align: center;
-    }
-
-    .contacts-padding {
-        padding-left: 0%;
-        margin-left: 5%;
-        padding-right: 0%;
-        border-right: 1px solid #B74E93ff;
-    }
-
-    .contacts-font-title {
-        font-family: 'DM Serif Display'; serif;
-        font-size: 2.5rem;
-        color:#efefef;
-    }
-
-    .contacts-font-subtitle {
-        font-family: 'Montserrat';
-        font-size: 1.3rem;
-        color:#efefef;
-    }
-
-    .circle img {
-        transition: 1s ease;
-    }
-
-    .circle img:hover {
-        content: url('img/lastimghover.png');
-        transition: 1s ease;
-    }
-
-    .copyright {
-        font-size: 1.2rem;
-    }
-
-    .link-primary {
-        font-size: 1.15rem;
-    }
-}
-
-@media (min-width: 1024px) and (max-width: 1367px) {
-
-    .nav-size {
-        font-size: 1rem;
-    }
-
-    .home {
         padding: 2%;
-        padding-top: 2%;
-        padding-bottom: 5%;
+        margin-top: 1rem;
+        padding-bottom: 5rem;
     }
 
-    .home-title {
-        font-size: 3.5rem;
-        margin-top: 10%;
-        margin-bottom: 10%;
-    }
-
-    .hp-card-container {
-        margin-top: 2vh;
-        margin-left: 2vw;
-        margin-right: 0vw;
-        border: none !important;
-        font-size: 1.1rem;
-    }
-
-    .hp-card-title {
-        font-size: 1.8rem;
-    }
-
-    .mission {
-        padding: 2vh;
-        padding-top: 0vh;
-        padding-bottom: 7%;
-    }
-
-    .mission-title {
-        font-size: 2.7rem;
-        margin-top: 8%;
-        margin-bottom: 1vh;
-    }
-
-    .mission-subtitle {
-        font-size: 1.2rem;
-        margin-left: 2vw;
-        margin-right: 5vw;
-    }
-
-    .mission-image {
-        padding-top: 0%;
-        padding-right: 20%;
-        padding-left: 0%;
-        max-width: 100%;
-        opacity: 1;
-    }
-
-    .product {
-        position: relative;
-        background-color: white;
-        margin-top: 10vh;
-        max-width: 100%;
-        padding: 3%;
-    }
-
-    .product-subtitle {
-        font-size: 1.2rem;
-    }
-
-    .product-subtitle-2 {
-        font-size: 1.2rem;
-        margin: 5%;
-        margin-top: 1%;
-    }
-
-    .product-card-container {
-        margin-top: 0vh;
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 0vh;
-        border: none !important;
-        max-width: 100%;
-        opacity: 0.7;
-        transform: translateY(50px);
-        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    }
-
-    .product-card-padding {
-        padding-right: 10px !important;
-        padding-left: 10px !important;
-    }
-
-    .product-image-width {
-        width:10rem;
-    }
-
-    .card-font {
-        font-size: 1rem;
-    }
-
-    .card-hover:hover {
-        transform: scale(1.05);
-    }
-
-    .img-card {
-        max-width: 4rem;
-        padding-right: 1vw;
-    }
-
-    .services {
-        padding-top: 0%;
-        padding-bottom: 2%;
-    }
-
-    .services-title {
-        position: relative;
-        color: black;
-        font-weight: 400;
-        padding: 0;
-        border-radius: 0;
-        margin-bottom: 0%;
-        padding-bottom: 0%;
-        z-index: 1;
-        font-size: 1.7rem;
-        padding-top: 8%;
-    }
-
-    .services-subtitle {
-        font-size: 1.2rem;
-    }
-
-    .services-title-card {
-        font-size: 1.6rem;
-        margin-bottom: 3%;
-        text-align: left;
-    }
-
-    .services-title-font {
-        font-size: 2.5rem;
-    }
-
-    .service-card {
-        margin-left: 10%;
-        margin-right: 10%;
-        margin-bottom: 8%;
-    }
-
-    .controller {
-        font-size: 1.4rem;
-    }
-
-    .contacts {
-        position: relative;
-        background-color: black;
-        left: 0;
-        right: 0;
-        top: 0;
-        max-width: 100%;
-        padding: 3%;
-        padding-top: 0%;
-        padding-bottom: 11%;
-    }
-
-    .contacts-image {
-        height: 2rem;
-    }
-
-    .contacts-title {
-        color: black;
-        padding: 0;
-        font-size: 1.7rem;
-        text-shadow: 0 0 20vw black;
-        transform: translateY(20%);
-        font-family: 'DM Serif Display', serif;
-        font-weight: 200;
-        margin-top: 2vh;
-        margin-bottom: 0vh;
-        text-align: center;
-    }
-
-    .contacts-padding {
-        padding-left: 0%;
-        margin-left: 5%;
-        padding-right: 0%;
-        border-right: 1px solid #B74E93ff;
-    }
-
-    .contacts-font-title {
-        font-family: 'DM Serif Display'; serif;
-        font-size: 2.5rem;
-        color:#efefef;
-    }
-
-    .contacts-font-subtitle {
-        font-family: 'Montserrat';
-        font-size: 1.3rem;
-        color:#efefef;
-    }
-
-    .circle img {
-        transition: 1s ease;
-    }
-
-    .circle img:hover {
-        content: url('img/lastimghover.png');
-        transition: 1s ease;
-    }
-
-    .copyright {
-        font-size: 1.2rem;
-    }
-
-    .link-primary {
-        font-size: 1.15rem;
-    }
-
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-
-    .home {
-        padding: 2vh;
-        padding-top: 9%;
-
-    }
-
-    .home-title {
+    .services-title h2 {
         font-size: 2rem;
+    }
+
+    .services-title p {
+        font-size: 1.5rem;
+    }
+
+    .services-title {
+        padding: 0;
+        margin-bottom: 0%;
+        padding-bottom: 0%;
+        padding-top: 3%;
+        font-size: 1.5rem;
+    }
+
+    .services-title-font {
+        font-size: 2.7rem;
+        padding: 2%;
+    }
+
+    .services-subtitle {
+        font-size: 1.1rem;
+        margin-top: 0rem;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .services-text {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    .services-text-left {
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 5%;
+    }
+
+    .services-text-right {
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 0%;
+    }
+
+    .service-title-font-1 {
+        font-size: 1.8rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .service-title-font-2 {
+        font-size: 1.8rem;
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+    }
+
+    .services-row-style {
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 0rem;
+    }
+
+    .service-title-single {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .service-text {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .service-image-single {
+        width: 100%;
+        height: auto;
+        padding: 0rem;
+        padding-top: 2rem;
+        object-fit: cover;
+    }
+
+    .flip-card {
+        height: 20rem;
+        perspective: 100rem;
+        padding: 0.5rem;
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+        top: 0;
+        left: 0;
+        padding: 0.5rem;
+    }
+
+    .title-container {
+        top: 2rem;
+        left: 50%;
+        width: 100%;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .content-container {
+        margin-top: 3rem;
+        font-size: 0.95rem;
+    }
+
+    .flip-card-back p {
+        margin-top: 1rem;
+        padding: 1rem;
+    }
+
+    .collab-spacing {
+        padding-top: 4rem;
+        padding-left: 5%;
+        padding-right: 5%;
+        line-height: 1.6;
+    }
+
+    .collab-text {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        line-height: 1.6;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    .collab-cards-spacing {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .logo-card {
+        width: 100%;
+        aspect-ratio: 2 / 1;
+        padding: 1rem;
+        margin: 0.2rem;
+    }
+
+    .partner-logo {
+        width: 100%;
+        height: 100%;
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+    /* Perché Noi section */
+
+    .whyus {
+        left: 0;
+        right: 0;
+        top: 0;
+        padding: 2%;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .whyus-title {
+        padding: 0;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        margin-top: 2.5rem;
+    }
+
+    .whyus-subtitle {
+        font-size: 1rem;
+        border-radius: 0;
+        line-height: 1.8;
+        padding-bottom: 1rem;
+    }
+
+    .whyus-subtitle-ticks {
+        font-size: 1rem;
+        border-radius: 0;
+        line-height: 1.8;
+        padding-bottom: 0.3rem;
+    }
+
+    .whyus-spacing {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    .whyus-tick {
+        padding-right: 0.4rem;
+    }
+
+    .contact-spacing {
+        margin-bottom: 32rem;
+    }
+
+    .contact-button {
+        line-height: 1;
+        border-radius: 0.3rem;
+        font-size: 1rem !important;
+        padding: 0.5rem !important;
+        background-color: black !important;
+    }
+
+    .contact-button:hover {
+        color: #FAE364 !important;
+        text-decoration: none !important;
+    }
+
+    /* Footer */
+
+    footer {
+        bottom: 0;
+        width: 100%;
+        padding-top: 0%;
+        padding-bottom: 0%;
+    }
+
+    .footer-call-spacing {
+        text-align: center !important;
+        justify-content: center !important;
+        margin-left: auto;
+    }
+
+    .footer-left {
+        text-align: center !important;
+        justify-content: center !important;
+    }
+
+    .footer-center {
+        text-align: center;
+    }
+
+    .footer-right {
+        text-align: right;
+        padding-right: 0;
+    }
+
+    .footer-links a, .footer-icons {
+        margin: 0 10px;
+    }
+
+    .footer-icons i {
+        font-size: 0.8rem;
+    }
+
+    .copyright {
+        font-weight: 400;
+        font-size: 1rem;
+    }
+
+    .footer-links {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    .footer-icons {
+        text-align: center;
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    .link-primary {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .footer_bg {
+        padding-top: 0.7rem;
+    }
+
+    .footer-call-spacing {
+        margin-left: 0%;
+    }
+
+    .footer-call-title {
+        font-size: 1.2rem;
+        padding: 0;
+        padding-top: 1rem;
+        margin-bottom: 0px;
+    }
+
+    .footer-call-subtitle {
+        font-size: 0.65rem;
+        padding-bottom: 2rem;
+    }
+
+    .footer-menu-spacing {
+        font-size: 0.9rem;
+        margin-top: 0.4rem;
+    }
+
+    .adesivo {
+        max-width: 20%;
+        max-height: 20%;
+        padding-bottom: 0.7rem;
+    }
+
+    .credit-spacing {
+        text-align: center;
+        padding-bottom: 0.5rem;
         margin-top: 0%;
-        margin-bottom: 8%;
+        padding-right: 0%;
     }
 
-    .hp-card-container {
-        margin-top: 2vh;
-        margin-left: 2vw;
-        margin-right: 0vw;
-        border: none !important;
-        font-size: 0.75rem;
+    .seguici-text {
+        font-size: 0.9rem;
+        padding-top: 1rem;
     }
 
-    .hp-card-title {
-        font-size: 1.05rem;
+    .footer-social {
+        font-size: 0.9rem;
+        padding-bottom: 0rem;
     }
 
-    .card-hp {
-        padding-top: 2vh;
+    .credit-style {
+        font-size: 0.8rem;
     }
+
+    .img-width {
+        max-width: 4rem;
+    }
+
+    .sub-footer {
+        padding-top: 0rem;
+        font-size: 0.9rem;
+    }
+
+    .modal-content {
+        padding: 10px;
+        width: 90% !important;
+        max-width: 600px;
+        text-align: left;
+        font-size: 0.9rem;
+    }
+
+    .modal-title {
+        font-size: 1rem;
+    }
+
+    .close {
+        right: 20px;
+        top: 10px;
+        font-size: 12px;
+    }
+
+    /* Effects */
+
+    .highlight {
+        position: relative;
+        display: inline-block;
+    }
+
+    .highlight::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -0.5rem;
+        right: 0rem;;
+        width: 105%;
+        height: 95%;
+        background-image: url('img/highlighter_giallo.png');
+        background-repeat: repeat-x;
+        background-size: auto 100%;
+        z-index: -1;
+    }
+
+    .highlight-text {
+        position: relative;
+        display: inline-block;
+    }
+
+    .highlight-text::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -0.3rem;
+        right: 0.5rem;
+        width: 105%;
+        height: 95%;
+        background-image: url('img/highlighter_giallo.png');
+        background-repeat: repeat-x;
+        background-size: auto 100%;
+        z-index: -1;
+    }
+
+    .highlight_verde_thin {
+        position: relative;
+        display: inline-block;
+    }
+
+    .highlight_verde_thin::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -0.5rem;
+        right: 0rem;
+        width: 107%;
+        height: 95%;
+        background-image: url('img/highlighter_verde.png');
+        background-repeat: repeat-x;
+        background-size: auto 100%;
+        z-index: -1;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1032px) {
+
+    .label-padding {
+        font-size: 1rem;
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+        padding-left: 2.5%;
+    }
+
+    .label-padding-whyus {
+        font-size: 1rem;
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+        padding-left: 3%;
+    }
+
+    /* Navigator */
+
+    .nav-size {
+        font-size: 1.5rem;
+    }
+
+    .navbar-toggler-icon{
+        font-size: 1.5rem;
+        vertical-align: center;
+    }
+
+    .navbar-toggler-icon{
+        font-size: 1.5rem;
+    }
+
+    .navbar-nav {
+        padding-top: 0.5rem;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+    }
+
+    .nav-title-1 {
+        font-size: 20pt !important;
+    }
+
+    .nav-title-2 {
+        font-weight: 400;
+        font-size: 20pt;
+    }
+
+    .nav-button {
+        top: 1px;
+        right: 1px;
+    }
+
+    .nav-padding {
+        left: 0;
+    }
+
+    /* Home section */
+
+    .home-title {
+        font-size: 5rem !important;
+    }
+
+    .home-subtitle {
+        font-size: 3rem;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+    }
+
+    .home-suptitle {
+        font-size: 2rem;
+    }
+
+    .h-spacing {
+        padding-top: 2%;
+    }
+
+    .home-buttons {
+        padding: 0.2rem 0.3rem;
+        line-height: 1;
+        border-radius: 0.3rem;
+        gap: 1rem;
+    }
+
+    .home-button {
+        margin-top: 7%;
+        font-size: 1.5rem !important;
+        padding: 1rem !important;
+    }
+
+    /* Mission section */
 
     .mission {
-        padding: 2vh;
-        padding-top: 0vh;
-        padding-bottom: 4%;
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 1rem;
+        padding-bottom: 0rem;
     }
 
     .mission-title {
-        font-size: 1.8rem;
-        margin-top: 8%;
-        margin-bottom: 1vh;
+        padding: 0;
+        font-size: 3.5rem;
+        margin-left: 4%;
+        margin-right: 4%;
+        margin-bottom: 1rem;
+        margin-top: 7%;
+        text-align: left;
     }
 
     .mission-subtitle {
-        font-size: 0.8rem;
-        margin-left: 2vw;
-        margin-right: 5vw;
+        font-size: 1.2rem;
+        font-weight: 400;
+        padding: 3%;
+        padding-top: 3%;
+        padding-right: 1%;
+        margin-left: 5%;
+        margin-right: 2%;
     }
 
     .mission-image {
-        padding-top: 5%;
+        padding-right: 0%;
+        padding-left: 0%;
+        padding-top: 0rem;
+        opacity: 1;
+        transform: scale(0.8);
+    }
+
+    /* Services section */
+
+    .services {
+        left: 0;
+        right: 0;
+        top: 0;
+        padding: 2%;
+        margin-top: 1rem;
+        padding-bottom: 5rem;
+    }
+
+    .services-title h2 {
+        font-size: 2rem;
+    }
+
+    .services-title p {
+        font-size: 1.5rem;
+    }
+
+    .services-title {
+        padding: 0;
+        margin-bottom: 0%;
+        padding-bottom: 0%;
+        padding-top: 3%;
+        font-size: 1.5rem;
+    }
+
+    .services-title-font {
+        font-size: 4rem;
+        padding: 2%;
+    }
+
+    .services-subtitle {
+        font-size: 1.5rem;
+        margin-top: 0rem;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .services-text {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+
+    .services-text-left {
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 5%;
+    }
+
+    .services-text-right {
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 0%;
+    }
+
+    .service-title-font-1 {
+        font-size: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .service-title-font-2 {
+        font-size: 2rem;
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+    }
+
+    .services-row-style {
+        padding-left: 20%;
         padding-right: 20%;
-        padding-left: 0%;
-        max-width: 100%;
-        opacity: 1;
+        padding-bottom: 0rem;
     }
 
-    .product {
-        position: relative;
-        background-color: white;
-        margin-top: 10vh;
-        max-width: 100%;
-        padding: 3%;
-    }
-
-    .product-subtitle {
-        font-size: 0.9rem;
-    }
-
-    .product-subtitle-2 {
-        font-size: 0.9rem;
-        margin: 5%;
-        margin-top: 2%;
-    }
-
-    .product-card-container {
-        margin-top: 0vh;
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 0vh;
-        border: none !important;
-        max-width: 100%;
-        opacity: 0.7;
-        transform: translateY(50px);
-        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    }
-
-    .product-card-padding {
-        padding-right: 10px !important;
-        padding-left: 10px !important;
-    }
-
-    .product-image-width {
-        width:3.3rem;
-    }
-
-    .card-font {
-        font-size: 0.6rem;
-    }
-
-    .card-hover:hover {
-        transform: scale(1.05);
-    }
-
-    .img-card {
-        max-width: 4rem;
-        padding-right: 1vw;
-    }
-
-    .services {
-        padding-top: 0%;
-        padding-bottom: 2%;
-    }
-
-    .services-title {
-        position: relative;
-        color: black;
-        font-weight: 400;
-        padding: 0;
-        border-radius: 0;
-        margin-bottom: 0%;
-        padding-bottom: 0%;
-        z-index: 1;
-        font-size: 1.3rem;
-        padding-top: 8%;
-    }
-
-    .services-subtitle {
-        font-size: 0.8rem;
-    }
-
-    .services-title-card {
+    .service-title-single {
         font-size: 1.2rem;
-        margin-bottom: 3%;
-        text-align: left;
+        margin-bottom: 0.5rem;
+        padding-left: 15%;
+        padding-right: 15%;
     }
 
-    .service-card {
-        margin-left: 10%;
-        margin-right: 10%;
-        margin-bottom: 8%;
+    .service-text {
+        font-size: 1.15rem;
+        line-height: 1.5;
     }
 
-    .contacts {
-        position: relative;
-        background-color: black;
-        left: 0;
-        right: 0;
+    .service-image-single {
+        width: 100%;
+        height: auto;
+        padding: 0rem;
+        padding-top: 3rem;
+        object-fit: cover;
+    }
+
+    .flip-card {
+        height: 20rem;
+        perspective: 100rem;
+        padding: 0.5rem;
+    }
+
+    .flip-card-front,
+    .flip-card-back {
         top: 0;
-        max-width: 100%;
-        padding: 3%;
-        padding-top: 0%;
-        padding-bottom: 17%;
+        left: 0;
+        padding: 0.5rem;
     }
 
-    .contacts-image {
-        height: 2rem;
-    }
-
-    .contacts-title {
-        color: black;
-        padding: 0;
-        font-size: 1.6rem;
-        text-shadow: 0 0 20vw black;
-        transform: translateY(20%);
-        font-family: 'DM Serif Display', serif;
-        font-weight: 200;
-        margin-top: 2vh;
-        margin-bottom: 0vh;
-        text-align: center;
-    }
-
-    .contacts-padding {
+    .title-container {
+        top: 2rem;
+        left: 50%;
+        width: 100%;
         padding-left: 0%;
-        margin-left: 5%;
         padding-right: 0%;
-        border-right: 1px solid #B74E93ff;
     }
 
-    .contacts-font-title {
-        font-family: 'DM Serif Display'; serif;
-        font-size: 1.5rem;
-        color:#efefef;
-    }
-
-    .contacts-font-subtitle {
-        font-family: 'Montserrat';
-        font-size: 0.75rem;
-        color:#efefef;
-    }
-
-    .circle img {
-        transition: 1s ease;
-    }
-
-    .circle img:hover {
-        content: url('img/lastimghover.png');
-        transition: 1s ease;
-    }
-
-}
-
-@media (min-width: 700px) and (max-width: 767px) {
-
-    .home {
-        padding: 2.5vh;
-        padding-top: 0vh;
-    }
-
-    .home-title {
-        font-size: 3rem;
-        margin-top: 10%;
-        margin-bottom: 4%;
-    }
-
-    .hp-card-container {
-        margin-top: 0vh;
-        margin-left: 2vw;
-        margin-right: 0vw;
-        border: none !important;
+    .content-container {
+        margin-top: 3.5rem;
         font-size: 1rem;
     }
 
-    .hp-card-title {
-        font-size: 1.5rem;
+    .flip-card-back p {
+        margin-top: 1rem;
+        padding: 1rem;
     }
 
-    .card-hp {
-        padding-top: 0%;
+    .collab-spacing {
+        padding-top: 4rem;
+        padding-left: 5%;
+        padding-right: 5%;
+        line-height: 1.6;
     }
 
-    .mission {
-        padding: 1vh;
-        padding-top: 0vh;
-        padding-bottom: 5vh;
-    }
-
-    .mission-title {
-        font-size: 2rem;
-        padding: 2%;
-        margin-top: 5%;
-        margin-right: 4%;
-        margin-bottom: 0%;
-    }
-
-    .mission-subtitle {
-        font-size: 0.9rem;
-    }
-
-    .mission-image {
-        padding-top: 5vh;
-        padding-right: 2vw;
-        max-width: 50%;
-        opacity: 1;
-    }
-
-    .product {
-        position: relative;
-        background-color: white;
-        margin-top: 10vh;
-        max-width: 100%;
-        padding: 3%;
-    }
-
-    .product-image {
-        max-width: 100%;
-        margin-left: 10%;
-    }
-
-    .product-subtitle {
-        font-size: 0.9rem;
-    }
-
-    .product-subtitle-2 {
-        font-size: 0.9rem;
-        margin: 5%;
-        margin-top: 2%;
-    }
-
-    .product-card-container {
-        margin-top: 0vh;
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 0vh;
-        border: none !important;
-        max-width: 100%;
-        opacity: 0.7;
-        transform: translateY(50px);
-        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    }
-
-    .product-card-padding {
-        padding-right: 10px !important;
-        padding-top: 7px !important;
-        padding-left: 10px !important;
-        padding-bottom: 7px !important;
-    }
-
-    .product-image-width {
-        width:4rem;
-    }
-
-    .padding-cards {
-        padding-left: 1%;
-        padding-right: 4%;
-        padding-top: 3%;
-        padding-bottom: 3%;
-    }
-
-    .card-font {
-        font-size: 0.85rem;
-    }
-
-    .card-hover:hover {
-        transform: scale(1.05);
-    }
-
-    .img-card {
-        max-width: 6rem;
-        padding-right: 1vw;
-    }
-
-    .services {
-        padding-top: 0%;
-        padding-bottom: 2%;
-    }
-
-    .services-title {
-        position: relative;
-        color: black;
-        font-weight: 400;
-        padding: 0;
-        border-radius: 0;
-        margin-bottom: 0%;
-        padding-bottom: 0%;
-        z-index: 1;
-        font-size: 1.3rem;
-        padding-top: 8%;
-    }
-
-    .services-subtitle {
-        font-size: 0.8rem;
-    }
-
-    .services-title-card {
+    .collab-text {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        line-height: 1.6;
         font-size: 1.2rem;
-        margin-bottom: 3%;
-        text-align: left;
+        font-weight: 300;
     }
 
-    .service-card {
-        margin-left: 10%;
-        margin-right: 10%;
-        margin-bottom: 8%;
+    .collab-cards-spacing {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        padding-left: 10%;
+        padding-right: 10%;
     }
 
-    .contacts {
-        position: relative;
-        background-color: black;
+    .logo-card {
+        width: 70%;
+        aspect-ratio: 2 / 1;
+        padding: 1rem;
+        margin: 0.2rem;
+    }
+
+    .partner-logo {
+        width: 100%;
+        height: 100%;
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+    /* Perché Noi section */
+
+    .whyus {
         left: 0;
         right: 0;
         top: 0;
-        max-width: 100%;
-        padding: 3%;
-        padding-top: 0%;
-        padding-bottom: 19%;
-    }
-
-    .contacts-image {
-        height: 2rem;
-    }
-
-    .contacts-title {
-        color: black;
-        padding: 0;
-        font-size: 1.6rem;
-        text-shadow: 0 0 20vw black;
-        transform: translateY(20%);
-        font-family: 'DM Serif Display', serif;
-        font-weight: 200;
-        margin-top: 2vh;
-        margin-bottom: 0vh;
-        text-align: center;
-    }
-
-    .contacts-padding {
-        padding-left: 0%;
-        margin-left: 5%;
-        padding-right: 0%;
-        border-right: 1px solid #B74E93ff;
-    }
-
-    .contacts-font-title {
-        font-family: 'DM Serif Display'; serif;
-        font-size: 1.2rem;
-        color:#efefef;
-    }
-
-    .contacts-font-subtitle {
-        font-family: 'Montserrat';
-        font-size: 0.7rem;
-        color:#efefef;
-    }
-
-    .circle img {
-        transition: 1s ease;
-    }
-
-    .circle img:hover {
-        content: url('img/lastimghover.png');
-        transition: 1s ease;
-    }
-
-}
-
-@media (min-width: 600px) and (max-width: 700px) {
-
-    .home {
-        padding: 2.5vh;
-        padding-top: 0vh;
-    }
-
-    .home-title {
-        font-size: 2.5rem;
-        margin-top: 10%;
-        margin-bottom: 4%;
-    }
-
-    .hp-card-container {
-        margin-top: 0vh;
-        margin-left: 2vw;
-        margin-right: 0vw;
-        border: none !important;
-        font-size: 0.85rem;
-    }
-
-    .hp-card-title {
-        font-size: 1.3rem;
-    }
-
-    .card-hp {
-        padding-top: 0%;
-    }
-
-    .mission {
-        padding: 1vh;
-        padding-top: 0vh;
-        padding-bottom: 5vh;
-    }
-
-    .mission-title {
-        font-size: 1.7rem;
         padding: 2%;
-        margin-top: 5%;
-        margin-right: 4%;
-        margin-bottom: 0%;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
     }
 
-    .mission-subtitle {
-        font-size: 0.85rem;
-    }
-
-    .mission-image {
-        padding-top: 5vh;
-        padding-right: 2vw;
-        max-width: 55%;
-        opacity: 1;
-    }
-
-    .product {
-        position: relative;
-        background-color: white;
-        margin-top: 10vh;
-        max-width: 100%;
-        padding: 3%;
-        padding-bottom: 10%;
-    }
-
-    .product-image {
-        max-width: 100%;
-        margin-left: 10%;
-    }
-
-    .product-subtitle {
-        font-size: 0.85rem;
-    }
-
-    .product-subtitle-2 {
-        font-size: 0.85rem;
-        margin: 5%;
-        margin-top: 2%;
-    }
-
-    .product-card-container {
-        margin-top: 0vh;
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 0vh;
-        border: none !important;
-        max-width: 100%;
-        opacity: 0.7;
-        transform: translateY(50px);
-        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    }
-
-    .product-card-padding {
-        padding-right: 10px !important;
-        padding-top: 7px !important;
-        padding-left: 10px !important;
-        padding-bottom: 7px !important;
-    }
-
-    .product-image-width {
-        width:4rem;
-    }
-
-    .padding-cards {
-        padding-left: 1%;
-        padding-right: 4%;
-        padding-top: 3%;
-        padding-bottom: 3%;
-    }
-
-    .card-font {
-        font-size: 0.8rem;
-    }
-
-    .card-hover:hover {
-        transform: scale(1.05);
-    }
-
-    .img-card {
-        max-width: 6rem;
-        padding-right: 1vw;
-    }
-
-    .services {
-        padding-top: 0%;
-        padding-bottom: 10%;
-    }
-
-    .services-title {
-        position: relative;
-        color: black;
-        font-weight: 400;
+    .whyus-title {
         padding: 0;
-        border-radius: 0;
-        margin-bottom: 0%;
-        padding-bottom: 0%;
-        z-index: 1;
-        font-size: 1.3rem;
-        padding-top: 8%;
-    }
-
-    .services-subtitle {
-        font-size: 0.75rem;
-    }
-
-    .services-title-card {
-        font-size: 1rem;
-        margin-bottom: 3%;
-        text-align: left;
-    }
-
-    .services-title-font {
-        font-size: 1.5rem;
-    }
-
-    .service-card {
-        margin-left: 10%;
-        margin-right: 10%;
-        margin-bottom: 8%;
-    }
-
-    .contacts {
-        position: relative;
-        background-color: black;
-        left: 0;
-        right: 0;
-        top: 0;
-        max-width: 100%;
-        padding: 3%;
-        padding-top: 0%;
-        padding-bottom: 21%;
-    }
-
-    .contacts-image {
-        height: 2rem;
-    }
-
-    .contacts-title {
-        color: black;
-        padding: 0;
-        font-size: 1.6rem;
-        text-shadow: 0 0 20vw black;
-        transform: translateY(20%);
-        font-family: 'DM Serif Display', serif;
-        font-weight: 200;
-        margin-top: 2vh;
-        margin-bottom: 0vh;
-        text-align: center;
-    }
-
-    .contacts-padding {
-        padding-left: 0%;
-        margin-left: 5%;
-        padding-right: 0%;
-        border-right: 1px solid #B74E93ff;
-    }
-
-    .contacts-font-title {
-        font-family: 'DM Serif Display'; serif;
-        font-size: 1.2rem;
-        color:#efefef;
-    }
-
-    .contacts-font-subtitle {
-        font-family: 'Montserrat';
-        font-size: 0.65rem;
-        color:#efefef;
-    }
-
-    .circle img {
-        transition: 1s ease;
-    }
-
-    .circle img:hover {
-        content: url('img/lastimghover.png');
-        transition: 1s ease;
-    }
-
-}
-
-@media (min-width: 431px) and (max-width: 600px) {
-
-    .home {
-        padding: 2%;
-        padding-top: 0vh;
-    }
-
-    .home-title {
-        font-size: 3rem;
-        margin-top: 10%;
-        margin-bottom: 4%;
-    }
-
-    .hp-card-container {
-        margin-top: 0vh;
-        margin-left: 2vw;
-        margin-right: 0vw;
-        border: none !important;
-        font-size: 0.95rem;
-    }
-
-    .hp-card-title {
-        font-size: 1.5rem;
-    }
-
-    .card-hp {
-        padding-top: 0%;
-    }
-
-    .mission {
-        padding: 2%;
-        padding-top: 0vh;
-        padding-bottom: 10%;
-    }
-
-    .mission-title {
-        font-size: 2rem;
-        padding: 1.5%;
-        margin-top: 5%;
-        margin-right: 2%;
-        margin-bottom: 2%;
-    }
-
-    .mission-subtitle {
-        font-size: 0.9rem;
-        padding: 1%;
-    }
-
-    .mission-image {
-        padding-top: 5vh;
-        padding-right: 2vw;
-        max-width: 55%;
-        opacity: 1;
-    }
-
-    .product {
-        position: relative;
-        background-color: white;
-        margin-top: 10vh;
-        max-width: 100%;
-        padding: 0%;
-        padding-bottom: 10%;
-    }
-
-    .product-image {
-        max-width: 60%;
-        margin: 7% auto 0 8%; /* top, right, bottom, left */
-    }
-
-    .product-subtitle {
-        font-size: 0.9rem;
-        padding: 0%;
-        margin: 4%;
-    }
-
-    .product-subtitle-2 {
-        font-size: 0.9rem;
-        padding: 3.2%;
-        margin: 4%;
-    }
-
-    .product-card-container {
-        margin-top: 0vh;
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 0vh;
-        border: none !important;
-        max-width: 100%;
-        opacity: 0.7;
-        transform: translateY(50px);
-        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    }
-
-    .product-card-padding {
-        padding-right: 10px !important;
-        padding-top: 7px !important;
-        padding-left: 10px !important;
-        padding-bottom: 7px !important;
-    }
-
-    .product-image-width {
-        width:4rem;
-    }
-
-    .padding-cards {
-        padding-left: 1%;
-        padding-right: 4%;
-        padding-top: 3%;
-        padding-bottom: 3%;
-    }
-
-    .card-font {
-        font-size: 0.6rem;
-    }
-
-    .card-hover:hover {
-        transform: scale(1.05);
-    }
-
-    .img-card {
-        max-width: 4rem;
-        padding-right: 1vw;
-    }
-
-    .services {
-        padding-top: 0%;
-        padding-bottom: 10%;
-    }
-
-    .services-title {
-        position: relative;
-        color: black;
-        font-weight: 400;
-        padding: 0;
-        border-radius: 0;
-        margin-bottom: 0%;
-        padding-bottom: 0%;
-        z-index: 1;
-        font-size: 1.3rem;
-        padding-top: 8%;
-    }
-
-    .services-subtitle {
-        font-size: 0.8rem;
-    }
-
-    .services-title-card {
-        font-size: 1.2rem;
-        margin-bottom: 3%;
-        text-align: left;
-    }
-
-    .service-card {
-        margin-left: 5%;
-        margin-right: 5%;
-        margin-bottom: 8%;
-    }
-
-    .contacts {
-        position: relative;
-        background-color: black;
-        left: 0;
-        right: 0;
-        top: 0;
-        max-width: 100%;
-        padding: 3%;
-        padding-top: 5%;
-        padding-bottom: 25%;
-    }
-
-    .contacts-image {
-        height: 2rem;
-    }
-
-    .contacts-title {
-        color: black;
-        padding: 0;
-        font-size: 1.6rem;
-        text-shadow: 0 0 20vw black;
-        transform: translateY(20%);
-        font-family: 'DM Serif Display', serif;
-        font-weight: 200;
-        margin-top: 2%;
-        margin-left: 8%;
-        margin-bottom: 5vh;
-        text-align: center;
-    }
-
-    .contacts-padding {
-        padding-left: 0%;
-        margin-left: 15%;
-        padding-top: 10%;
-        padding-bottom: 5%;
-    }
-
-    .contacts-font-title {
-        font-family: 'DM Serif Display'; serif;
-        font-size: 1.5rem;
-        color:#efefef;
-    }
-
-    .contacts-font-subtitle {
-        font-family: 'Montserrat';
-        font-size: 0.75rem;
-        color:#efefef;
-    }
-
-    .circle img {
-        transition: 1s ease;
-    }
-
-    .circle img:hover {
-        content: url('img/lastimghover.png');
-        transition: 1s ease;
-    }
-
-}
-
-@media (min-width: 400px) and (max-width: 430px) {
-
-    .home {
-        padding: 2%;
-        padding-top: 0vh;
-    }
-
-    .home-title {
-        font-size: 2.6rem;
-        margin-top: 18%;
-        margin-bottom: 10%;
-    }
-
-    .hp-card-container {
-        margin-top: 0vh;
-        margin-left: 2vw;
-        margin-right: 0vw;
-        border: none !important;
-        font-size: 0.95rem;
-    }
-
-    .hp-card-title {
-        font-size: 1.5rem;
-    }
-
-    .card-hp {
-        padding-top: 0%;
-    }
-
-    .mission {
-        padding: 2%;
-        padding-top: 8%;
-        padding-bottom: 10%;
-    }
-
-    .mission-title {
-        font-size: 2rem;
-        padding: 1.5%;
-        margin-top: 5%;
-        margin-right: 2%;
-        margin-bottom: 2%;
-    }
-
-    .mission-subtitle {
-        font-size: 0.9rem;
-        padding: 1%;
-    }
-
-    .mission-image {
-        padding-top: 5vh;
-        padding-right: 2vw;
-        max-width: 55%;
-        opacity: 1;
-    }
-
-    .product {
-        position: relative;
-        background-color: white;
-        margin-top: 10vh;
-        max-width: 100%;
-        padding: 0%;
-        padding-bottom: 10%;
-    }
-
-    .product-image {
-        max-width: 60%;
-        margin: 7% auto 0 8%; /* top, right, bottom, left */
-    }
-
-    .product-subtitle {
-        font-size: 0.9rem;
-        padding: 0%;
-        margin: 4%;
-    }
-
-    .product-subtitle-2 {
-        font-size: 0.9rem;
-        padding: 3.2%;
-        margin: 4%;
-    }
-
-    .product-card-container {
-        margin-top: 0vh;
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 0vh;
-        border: none !important;
-        max-width: 100%;
-        opacity: 0.7;
-        transform: translateY(50px);
-        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    }
-
-    .product-card-padding {
-        padding-right: 10px !important;
-        padding-top: 7px !important;
-        padding-left: 10px !important;
-        padding-bottom: 7px !important;
-    }
-
-    .product-image-width {
-        width:4rem;
-    }
-
-    .padding-cards {
-        padding-left: 1%;
-        padding-right: 4%;
-        padding-top: 3%;
-        padding-bottom: 3%;
-    }
-
-    .card-font {
-        font-size: 0.6rem;
-    }
-
-    .card-hover:hover {
-        transform: scale(1.05);
-    }
-
-    .img-card {
-        max-width: 4rem;
-        padding-right: 1vw;
-    }
-
-    .services {
-        padding-top: 8%;
-        padding-bottom: 10%;
-    }
-
-    .services-title {
-        position: relative;
-        color: black;
-        font-weight: 400;
-        padding: 0;
-        border-radius: 0;
-        margin-bottom: 0%;
-        padding-bottom: 0%;
-        z-index: 1;
-        font-size: 1rem;
-        padding-top: 8%;
-    }
-
-    .services-subtitle {
-        font-size: 0.8rem;
-    }
-
-    .services-title-card {
-        font-size: 1.2rem;
-        margin-bottom: 3%;
-        text-align: left;
-    }
-
-    .services-title-font {
-        font-size: 1.3rem;
-    }
-
-    .controller {
-        cursor: pointer;
-        padding: 10px;
-        background-color: transparent;
-        color: white;
-        font-size: 0.9rem;
-        color:black;
-        transition: background-color 0.3s ease;
-    }
-
-    .controller-container {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin-bottom: 2vh;
-        margin-top: 0vh;
-    }
-
-    .service-card {
-        margin-left: 5%;
-        margin-right: 5%;
-        margin-bottom: 8%;
-    }
-
-    .contacts {
-        position: relative;
-        background-color: black;
-        left: 0;
-        right: 0;
-        top: 0;
-        max-width: 100%;
-        padding: 3%;
-        padding-top: 5%;
-        padding-bottom: 33%;
-    }
-
-    .contacts-image {
-        height: 2rem;
-    }
-
-    .contacts-title {
-        color: black;
-        padding: 0;
-        font-size: 1.6rem;
-        text-shadow: 0 0 20vw black;
-        transform: translateY(20%);
-        font-family: 'DM Serif Display', serif;
-        font-weight: 200;
-        margin-top: 2%;
-        margin-left: 8%;
-        margin-bottom: 5vh;
-        text-align: center;
-    }
-
-    .contacts-padding {
-        padding-left: 0%;
-        margin-left: 7%;
-        padding-top: 10%;
-        padding-bottom: 5%;
-    }
-
-    .contacts-font-title {
-        font-family: 'DM Serif Display'; serif;
-        font-size: 1.4rem;
-        color:#efefef;
-    }
-
-    .contacts-font-subtitle {
-        font-family: 'Montserrat';
-        font-size: 0.75rem;
-        color:#efefef;
-    }
-
-    .circle img {
-        transition: 1s ease;
-    }
-
-    .circle img:hover {
-        content: url('img/lastimghover.png');
-        transition: 1s ease;
-    }
-
-}
-
-@media (min-width: 361px) and (max-width: 400px) {
-
-    .home {
-        padding: 2%;
-        padding-top: 5%;
-    }
-
-    .home-title {
-        font-size: 2.4rem;
-        margin-top: 18%;
-        margin-bottom: 10%;
-    }
-
-    .hp-card-container {
-        margin-top: 0vh;
-        margin-left: 2vw;
-        margin-right: 0vw;
-        border: none !important;
-        font-size: 1rem;
-    }
-
-    .hp-card-title {
-        font-size: 1.3rem;
-    }
-
-    .card-hp {
-        padding-top: 0%;
-    }
-
-    .mission {
-        padding: 2%;
-        padding-top: 8%;
-        padding-bottom: 10%;
-    }
-
-    .mission-title {
-        font-size: 2rem;
-        padding: 1.5%;
-        margin-top: 5%;
-        margin-right: 2%;
-        margin-bottom: 2%;
-    }
-
-    .mission-subtitle {
-        font-size: 0.9rem;
-        padding: 1%;
-    }
-
-    .mission-image {
-        padding-top: 5vh;
-        padding-right: 2vw;
-        max-width: 55%;
-        opacity: 1;
-    }
-
-    .product {
-        position: relative;
-        background-color: white;
-        margin-top: 10vh;
-        max-width: 100%;
-        padding: 0%;
-        padding-bottom: 10%;
-    }
-
-    .product-image {
-        max-width: 60%;
-        margin: 7% auto 0 8%; /* top, right, bottom, left */
-    }
-
-    .product-subtitle {
-        font-size: 0.9rem;
-        padding: 0%;
-        margin: 4%;
-    }
-
-    .product-subtitle-2 {
-        font-size: 0.9rem;
-        padding: 3.2%;
-        margin: 4%;
-    }
-
-    .product-card-container {
-        margin-top: 0vh;
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 0vh;
-        border: none !important;
-        max-width: 100%;
-        opacity: 0.7;
-        transform: translateY(50px);
-        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    }
-
-    .product-card-padding {
-        padding-right: 10px !important;
-        padding-top: 7px !important;
-        padding-left: 10px !important;
-        padding-bottom: 7px !important;
-    }
-
-    .product-image-width {
-        width:4rem;
-    }
-
-    .padding-cards {
-        padding-left: 1%;
-        padding-right: 4%;
-        padding-top: 3%;
-        padding-bottom: 3%;
-    }
-
-    .card-font {
-        font-size: 0.6rem;
-    }
-
-    .card-hover:hover {
-        transform: scale(1.05);
-    }
-
-    .img-card {
-        max-width: 4rem;
-        padding-right: 1vw;
-    }
-
-    .services {
-        padding-top: 8%;
-        padding-bottom: 10%;
-    }
-
-    .services-title {
-        position: relative;
-        color: black;
-        font-weight: 400;
-        padding: 0;
-        border-radius: 0;
-        margin-bottom: 0%;
-        padding-bottom: 0%;
-        z-index: 1;
-        font-size: 1rem;
-        padding-top: 8%;
-    }
-
-    .services-subtitle {
-        font-size: 0.8rem;
-    }
-
-    .services-title-card {
-        font-size: 1.2rem;
-        margin-bottom: 3%;
-        text-align: left;
-    }
-
-    .services-title-font {
-        font-size: 1.3rem;
-    }
-
-    .controller {
-        cursor: pointer;
-        padding: 10px;
-        background-color: transparent;
-        color: white;
-        font-size: 0.9rem;
-        color:black;
-        transition: background-color 0.3s ease;
-    }
-
-    .controller-container {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin-bottom: 2vh;
-        margin-top: 0vh;
-    }
-
-    .service-card {
-        margin-left: 5%;
-        margin-right: 5%;
-        margin-bottom: 8%;
-    }
-
-    .contacts {
-        position: relative;
-        background-color: black;
-        left: 0;
-        right: 0;
-        top: 0;
-        max-width: 100%;
-        padding: 3%;
-        padding-top: 5%;
-        padding-bottom: 35%;
-    }
-
-    .contacts-image {
-        height: 2rem;
-    }
-
-    .contacts-title {
-        color: black;
-        padding: 0;
-        font-size: 1.6rem;
-        text-shadow: 0 0 20vw black;
-        transform: translateY(20%);
-        font-family: 'DM Serif Display', serif;
-        font-weight: 200;
-        margin-top: 2%;
-        margin-left: 8%;
-        margin-bottom: 5vh;
-        text-align: center;
-    }
-
-    .contacts-padding {
-        padding-left: 0%;
-        margin-left: 7%;
-        padding-top: 10%;
-        padding-bottom: 5%;
-    }
-
-    .contacts-font-title {
-        font-family: 'DM Serif Display'; serif;
-        font-size: 1.3rem;
-        color:#efefef;
-    }
-
-    .contacts-font-subtitle {
-        font-family: 'Montserrat';
-        font-size: 0.7rem;
-        color:#efefef;
-    }
-
-    .circle img {
-        transition: 1s ease;
-    }
-
-    .circle img:hover {
-        content: url('img/lastimghover.png');
-        transition: 1s ease;
-    }
-
-}
-
-@media (min-width: 321px) and (max-width: 360px) {
-
-    .home {
-        padding: 2%;
-        padding-top: 5%;
-    }
-
-    .home-title {
         font-size: 2.2rem;
-        margin-top: 20%;
-        margin-bottom: 10%;
+        margin-bottom: 1rem;
+        margin-top: 2.5rem;
     }
 
-    .hp-card-container {
-        margin-top: 0vh;
-        margin-left: 2vw;
-        margin-right: 0vw;
-        border: none !important;
-        font-size: 0.9rem;
-    }
-
-    .hp-card-title {
-        font-size: 1.3rem;
-    }
-
-    .card-hp {
-        padding-top: 0%;
-    }
-
-    .mission {
-        padding: 2%;
-        padding-top: 8%;
-        padding-bottom: 5vh;
-    }
-
-    .mission-title {
-        font-size: 1.8rem;
-        padding: 1.5%;
-        margin-top: 5%;
-        margin-right: 2%;
-        margin-bottom: 2%;
-    }
-
-    .mission-subtitle {
-        font-size: 0.9rem;
-        padding: 1%;
-    }
-
-    .mission-image {
-        padding-top: 5vh;
-        padding-right: 2vw;
-        max-width: 55%;
-        opacity: 1;
-    }
-
-    .product {
-        position: relative;
-        background-color: white;
-        margin-top: 15vh;
-        max-width: 100%;
-        padding: 0%;
-        padding-bottom: 10%;
-    }
-
-    .product-image {
-        max-width: 60%;
-        margin: 7% auto 0 8%; /* top, right, bottom, left */
-    }
-
-    .product-subtitle {
-        font-size: 0.9rem;
-        padding: 0%;
-        margin: 4%;
-    }
-
-    .product-subtitle-2 {
-        font-size: 0.9rem;
-        padding: 3.2%;
-        margin: 4%;
-        margin-top: 2%;
-    }
-
-    .product-card-container {
-        margin-top: 0vh;
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 0vh;
-        border: none !important;
-        max-width: 100%;
-        opacity: 0.7;
-        transform: translateY(50px);
-        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    }
-
-    .product-card-padding {
-        padding-right: 10px !important;
-        padding-top: 7px !important;
-        padding-left: 10px !important;
-        padding-bottom: 7px !important;
-    }
-
-    .product-image-width {
-        width:4rem;
-    }
-
-    .padding-cards {
-        padding-left: 1%;
-        padding-right: 4%;
-        padding-top: 3%;
-        padding-bottom: 3%;
-    }
-
-    .card-font {
-        font-size: 0.6rem;
-    }
-
-    .card-hover:hover {
-        transform: scale(1.05);
-    }
-
-    .img-card {
-        max-width: 4rem;
-        padding-right: 1vw;
-    }
-
-    .services {
-        padding-top: 15%;
-        padding-bottom: 10%;
-    }
-
-    .services-title {
-        position: relative;
-        color: black;
-        font-weight: 400;
-        padding: 0;
+    .whyus-subtitle {
+        font-size: 1.2rem;
         border-radius: 0;
-        margin-bottom: 0%;
+        line-height: 1.8;
+        padding-bottom: 1rem;
+    }
+
+    .whyus-subtitle-ticks {
+        font-size: 1.2rem;
+        border-radius: 0;
+        line-height: 1.8;
+        padding-bottom: 0.3rem;
+    }
+
+    .whyus-spacing {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    .whyus-tick {
+        padding-right: 0.4rem;
+    }
+
+    .contact-spacing {
+        margin-bottom: 37rem;
+    }
+
+    .contact-button {
+        line-height: 1;
+        border-radius: 0.3rem;
+        font-size: 1rem !important;
+        padding: 0.5rem !important;
+        background-color: black !important;
+    }
+
+    .contact-button:hover {
+        color: #FAE364 !important;
+        text-decoration: none !important;
+    }
+
+    /* Footer */
+
+    footer {
+        bottom: 0;
+        width: 100%;
+        padding-top: 0%;
         padding-bottom: 0%;
-        z-index: 1;
-        font-size: 0.9rem;
-        padding-top: 8%;
     }
 
-    .services-subtitle {
-        font-size: 0.8rem;
+    .footer-left {
+        text-align: center !important;
+        justify-content: center !important;
     }
 
-    .services-title-card {
-        font-size: 1.2rem;
-        margin-bottom: 3%;
-        text-align: left;
-    }
-
-    .services-title-font {
-        font-size: 1.2rem;
-    }
-
-    .controller {
-        cursor: pointer;
-        padding: 10px;
-        background-color: transparent;
-        color: white;
-        font-size: 0.75rem;
-        color:black;
-        transition: background-color 0.3s ease;
-    }
-
-    .controller-container {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin-bottom: 2vh;
-        margin-top: 0vh;
-    }
-
-    .service-card {
-        margin-left: 5%;
-        margin-right: 5%;
-        margin-bottom: 8%;
-    }
-
-    .contacts {
-        position: relative;
-        background-color: black;
-        left: 0;
-        right: 0;
-        top: 0;
-        max-width: 100%;
-        padding: 3%;
-        padding-top: 5%;
-        padding-bottom: 38%;
-    }
-
-    .contacts-image {
-        height: 2rem;
-    }
-
-    .contacts-title {
-        color: black;
-        padding: 0;
-        font-size: 1.6rem;
-        text-shadow: 0 0 20vw black;
-        transform: translateY(20%);
-        font-family: 'DM Serif Display', serif;
-        font-weight: 200;
-        margin-top: 2%;
-        margin-left: 8%;
-        margin-bottom: 5vh;
+    .footer-center {
         text-align: center;
     }
 
-    .contacts-padding {
-        padding-left: 0%;
-        margin-left: 7%;
-        padding-top: 10%;
-        padding-bottom: 5%;
+    .footer-right {
+        text-align: right;
+        padding-right: 0;
     }
 
-    .contacts-font-title {
-        font-family: 'DM Serif Display'; serif;
+    .footer-links a, .footer-icons {
+        margin: 0 10px;
+    }
+
+    .footer-icons i {
+        font-size: 1rem;
+    }
+
+    .copyright {
+        font-weight: 400;
         font-size: 1.2rem;
-        color:#efefef;
     }
 
-    .contacts-font-subtitle {
-        font-family: 'Montserrat';
-        font-size: 0.65rem;
-        color:#efefef;
-    }
-
-    .circle img {
-        transition: 1s ease;
-    }
-
-    .circle img:hover {
-        content: url('img/lastimghover.png');
-        transition: 1s ease;
-    }
-
-}
-
-@media (max-width: 320px) {
-
-    .home {
-        padding: 2%;
-        padding-top: 5%;
-    }
-
-    .home-title {
-        font-size: 2rem;
-        margin-top: 20%;
-        margin-bottom: 10%;
-    }
-
-    .hp-card-container {
-        margin-top: 0vh;
-        margin-left: 2vw;
-        margin-right: 0vw;
-        border: none !important;
-        font-size: 0.8rem;
-    }
-
-    .hp-card-title {
+    .footer-links {
+        text-align: center;
         font-size: 1.1rem;
     }
 
-    .card-hp {
-        padding-top: 0%;
+    .footer-icons {
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 5px;
     }
 
-    .mission {
-        padding: 2%;
-        padding-top: 8%;
-        padding-bottom: 10%;
+    .link-primary {
+        font-size: 1.2rem;
+        padding: 0.5rem;
     }
 
-    .mission-title {
-        font-size: 1.6rem;
-        padding: 1.5%;
-        margin-top: 5%;
-        margin-left: 7%;
-        margin-right: 2%;
-        margin-bottom: 2%;
+    .footer_bg {
+        padding-top: 0.9rem;
     }
 
-    .mission-subtitle {
-        font-size: 0.8rem;
-        padding: 1%;
+    .footer-call-spacing {
+        text-align: center !important;
+        justify-content: center !important;
+        margin: auto;
     }
 
-    .mission-image {
-        padding-top: 5vh;
-        padding-right: 2vw;
-        max-width: 45%;
-        opacity: 1;
-    }
-
-    .product {
-        position: relative;
-        background-color: white;
-        margin-top: 15vh;
-        max-width: 100%;
-        padding: 0%;
-        padding-bottom: 10%;
-    }
-
-    .product-image {
-        max-width: 60%;
-        margin: 7% auto 0 8%; /* top, right, bottom, left */
-    }
-
-    .product-subtitle {
-        font-size: 0.8rem;
-        padding: 0%;
-        margin: 4%;
-    }
-
-    .product-subtitle-2 {
-        font-size: 0.8rem;
-        padding: 3.2%;
-        margin: 4%;
-    }
-
-    .product-card-container {
-        margin-top: 0vh;
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 0vh;
-        border: none !important;
-        max-width: 100%;
-        opacity: 0.7;
-        transform: translateY(50px);
-        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    }
-
-    .product-card-padding {
-        padding-right: 10px !important;
-        padding-top: 7px !important;
-        padding-left: 10px !important;
-        padding-bottom: 7px !important;
-    }
-
-    .product-image-width {
-        width:4rem;
-    }
-
-    .padding-cards {
-        padding-left: 1%;
-        padding-right: 4%;
-        padding-top: 3%;
-        padding-bottom: 3%;
-    }
-
-    .card-font {
-        font-size: 0.6rem;
-    }
-
-    .card-hover:hover {
-        transform: scale(1.05);
-    }
-
-    .img-card {
-        max-width: 4rem;
-        padding-right: 1vw;
-    }
-
-    .services {
-        padding-top: 15%;
-        padding-bottom: 10%;
-    }
-
-    .services-title {
-        position: relative;
-        color: black;
-        font-weight: 400;
+    .footer-call-title {
+        font-size: 2rem;
         padding: 0;
-        border-radius: 0;
-        margin-bottom: 0%;
-        padding-bottom: 0%;
-        z-index: 1;
-        font-size: 0.85rem;
-        padding-top: 8%;
+        padding-top: 1rem;
+        margin-bottom: 0px;
     }
 
-    .services-subtitle {
-        font-size: 0.7rem;
+    .footer-call-subtitle {
+        font-size: 1.1rem;
+        padding-bottom: 3rem;
     }
 
-    .services-title-card {
+    .footer-menu-spacing {
+        font-size: 1.1rem;
+        margin-top: 0.4rem;
+    }
+
+    .adesivo {
+        max-width: 20%;
+        max-height: 20%;
+        padding-bottom: 0.7rem;
+    }
+
+    .credit-spacing {
+        text-align: center;
+        padding-bottom: 0.5rem;
+        margin-top: 0%;
+        padding-right: 0%;
+    }
+
+    .seguici-text {
+        font-size: 1.1rem;
+        padding-top: 1rem;
+    }
+
+    .footer-social {
+        font-size: 1.1rem;
+        padding-bottom: 0rem;
+    }
+
+    .credit-style {
         font-size: 1rem;
-        margin-bottom: 3%;
-        text-align: left;
     }
 
-    .services-title-font {
+    .img-width {
+        max-width: 4rem;
+    }
+
+    .sub-footer {
+        padding-top: 0rem;
+        font-size: 1.1rem;
+    }
+
+    .modal-content {
+        padding: 10px;
+        width: 90% !important;
+        max-width: 600px;
+        text-align: left;
+        font-size: 1.1rem;
+    }
+
+    .modal-title {
         font-size: 1.2rem;
     }
 
-    .controller {
-        cursor: pointer;
-        padding: 8px;
-        background-color: transparent;
-        color: white;
-        font-size: 0.7rem;
-        color:black;
-        transition: background-color 0.3s ease;
+    .close {
+        right: 20px;
+        top: 10px;
+        font-size: 12px;
     }
 
-    .controller-container {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin-bottom: 2vh;
-        margin-top: 0vh;
-    }
+    /* Effects */
 
-    .service-card {
-        margin-left: 5%;
-        margin-right: 5%;
-        margin-bottom: 8%;
-    }
-
-    .contacts {
+    .highlight {
         position: relative;
-        background-color: black;
-        left: 0;
-        right: 0;
+        display: inline-block;
+    }
+
+    .highlight::before {
+        content: "";
+        position: absolute;
         top: 0;
-        max-width: 100%;
-        padding: 3%;
-        padding-top: 5%;
-        padding-bottom: 42%;
+        left: -0.5rem;
+        right: 0rem;;
+        width: 105%;
+        height: 95%;
+        background-image: url('img/highlighter_giallo.png');
+        background-repeat: repeat-x;
+        background-size: auto 100%;
+        z-index: -1;
     }
 
-    .contacts-image {
-        height: 2rem;
+    .highlight-text {
+        position: relative;
+        display: inline-block;
     }
 
-    .contacts-title {
-        color: black;
-        padding: 0;
-        font-size: 1.6rem;
-        text-shadow: 0 0 20vw black;
-        transform: translateY(20%);
-        font-family: 'DM Serif Display', serif;
-        font-weight: 200;
-        margin-top: 2%;
-        margin-left: 8%;
-        margin-bottom: 5vh;
-        text-align: center;
+    .highlight-text::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -0.3rem;
+        right: 0.5rem;
+        width: 105%;
+        height: 95%;
+        background-image: url('img/highlighter_giallo.png');
+        background-repeat: repeat-x;
+        background-size: auto 100%;
+        z-index: -1;
     }
 
-    .contacts-padding {
-        padding-left: 0%;
-        margin-left: 7%;
-        padding-top: 10%;
-        padding-bottom: 5%;
+    .highlight_verde_thin {
+        position: relative;
+        display: inline-block;
     }
 
-    .contacts-font-title {
-        font-family: 'DM Serif Display'; serif;
-        font-size: 1.05rem;
-        color:#efefef;
-    }
-
-    .contacts-font-subtitle {
-        font-family: 'Montserrat';
-        font-size: 0.55rem;
-        color:#efefef;
-    }
-
-    .circle img {
-        transition: 1s ease;
-    }
-
-    .circle img:hover {
-        content: url('img/lastimghover.png');
-        transition: 1s ease;
+    .highlight_verde_thin::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -0.5rem;
+        right: 0rem;
+        width: 107%;
+        height: 95%;
+        background-image: url('img/highlighter_verde.png');
+        background-repeat: repeat-x;
+        background-size: auto 100%;
+        z-index: -1;
     }
 
 }
