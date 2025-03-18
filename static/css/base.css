@@ -65,7 +65,7 @@ a:hover, link-primary:hover {
 
 .label-color-1 {
     color: var(--first);
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .label-color-2 {
@@ -87,28 +87,34 @@ nav {
     overflow-x: hidden;
     display: flex;
     align-items: center;
-    border-bottom: 0.5px solid transparent;
-    border-image: linear-gradient(to right, var(--first), var(--fifth)) 0.8;
+    padding: 0;
+}
+
+.navbar {
+    padding: 0.3rem 1rem !important;
 }
 
 .nav-size {
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .navbar-toggler {
-    border: none;
-    background: none;
+    border: none !important;
+    background: none !important;
+    outline: none !important;
     padding: 0;
 }
+
 .navbar-toggler-img {
     width: 1.5rem;
+    border: none;
     height: auto;
     cursor: pointer;
 }
 
 .nav-link {
     position: relative;
-    font-size: 1.em;
+    font-size: 1em;
 }
 
 .nav-item .nav-link:hover {
@@ -116,18 +122,20 @@ nav {
 }
 
 .nav-title-1 {
-    font-size: 18pt !important;
+    font-size: 17pt !important;
     color: white;
 }
 
 .nav-title-2 {
+    padding-left: 0.1rem;
     color: var(--first);
     font-weight: 400;
-    font-size: 18pt;
+    font-size: 17pt;
 }
 
 .nav-button {
     position: absolute;
+    border: 0;
     top: 5px;
     right: 2px;
 }
@@ -235,11 +243,11 @@ nav {
 /* Mission section */
 
 .mission {
-    position: relative;
-    background-color: black;
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-top: 2rem;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 2%;
+    margin-top: 1rem;
     padding-bottom: 5rem;
     max-width: 100%;
 }
@@ -434,13 +442,13 @@ nav {
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    text-align: center;
     background: #fff;
     border-radius: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .flip-card-back {
+    text-align: left;
     transform: rotateY(180deg);
     background: linear-gradient(to bottom, #EEF1FC, #EEF1FC)
 }
@@ -451,29 +459,44 @@ nav {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    text-align: center;
     font-weight: bold;
     z-index: 100;
-    padding-left: 10%;
-    padding-right: 10%;
 }
 
 .content-container {
-    margin-top: 2.5rem;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    max-width: 90%;
+}
+
+.content-title {
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+    max-height: 12rem;
+    padding: 0rem;
+    margin-top: -0.5rem !important;
     color: black;
-    align-items: center;
-    height: 100%;
+    text-align: center;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.content-text {
+    font-size: 1rem;
+    line-height: 1.5;
     font-family: 'Bitter'; serif;
-    font-size: 1.1rem;
     font-weight: 200;
+    color:black;
+    text-align: left;
+    padding-left: 5% !important;
+    padding-right: 5% !important;
 }
 
 .flip-card-back p {
     margin-top: 1rem;
-    padding: 1rem;
-    text-align: left;
+    padding: 0rem;
 }
 
 .collab-spacing {
@@ -541,7 +564,7 @@ nav {
 .whyus-title {
     color: white;
     padding: 0;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-family: 'DM Serif Display', serif;
     font-weight: 200;
     margin-bottom: 3%;
@@ -573,8 +596,8 @@ nav {
     padding-left: 15px;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    margin-left: 7%;
-    margin-right: 7%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .whyus-tick {
@@ -598,7 +621,7 @@ nav {
     text-decoration: none !important;
 }
 
-.contact-button:hover {
+.contact-button:hover, .contact-button:active {
     color: black !important;
     background-color: #FAE364 !important;
     text-decoration: none !important;
@@ -833,7 +856,7 @@ footer {
     position: absolute;
     top: 0;
     left: -0.5rem;
-    right: 0.5rem;
+    right: 0.7rem;
     width: 105%;
     height: 95%;
     background-image: url('img/highlighter_giallo.png');
@@ -861,7 +884,7 @@ footer {
     z-index: -1;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 854px) {
 
     .label-padding {
         font-size: 0.8rem;
@@ -895,11 +918,11 @@ footer {
     }
 
     .navbar-nav {
-        padding-top: 1rem;
+        padding-top: 0rem;
     }
 
     .nav-link {
-        font-size: 1rem;
+        font-size: 0.85rem;
     }
 
     .nav-title-1 {
@@ -1091,33 +1114,42 @@ footer {
 
     .flip-card {
         height: 20rem;
-        perspective: 100rem;
         padding: 0.5rem;
     }
 
     .flip-card-front,
     .flip-card-back {
-        top: 0;
-        left: 0;
+        padding: 0.5rem;
+        border-radius: 1rem;
+    }
+
+    .flip-card-back p {
+        margin-top: 0rem;
         padding: 0.5rem;
     }
 
     .title-container {
-        top: 2rem;
-        left: 50%;
-        width: 100%;
-        padding-left: 0%;
-        padding-right: 0%;
+        padding-left: 7%;
+        padding-right: 7%;
     }
 
     .content-container {
-        margin-top: 3rem;
+        margin-top: 0rem;
         font-size: 0.95rem;
     }
 
-    .flip-card-back p {
-        margin-top: 1rem;
-        padding: 1rem;
+    .content-title {
+        max-height: 12rem;
+        padding: 0rem;
+        margin-top: 0rem !important;
+        padding-bottom: 0px;
+        padding-top: 0px;
+    }
+
+    .content-text {
+        font-size: 1rem;
+        padding-left: 5% !important;
+        padding-right: 5% !important;
     }
 
     .collab-spacing {
@@ -1170,9 +1202,9 @@ footer {
     .whyus-title {
         padding: 0;
         margin-bottom: 0%;
-        padding-bottom: 0%;
+        padding-bottom: 3%;
         padding-top: 0%;
-        font-size: 2rem;
+        font-size: 2.1rem;
     }
 
     .whyus-subtitle {
@@ -1419,7 +1451,7 @@ footer {
 
 }
 
-@media (min-width: 768px) and (max-width: 1245px) {
+@media (min-width: 855px) and (max-width: 1245px) {
 
     .label-padding {
         font-size: 1rem;
@@ -1454,11 +1486,11 @@ footer {
     }
 
     .navbar-nav {
-        padding-top: 0.5rem;
+        padding-top: 0rem;
     }
 
     .nav-link {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .nav-title-1 {
@@ -1515,10 +1547,12 @@ footer {
     /* Mission section */
 
     .mission {
-        padding-left: 3%;
-        padding-right: 3%;
-        padding-top: 1rem;
-        padding-bottom: 0rem;
+        left: 0;
+        right: 0;
+        top: 0;
+        padding: 2%;
+        margin-top: 1rem;
+        padding-bottom: 5rem;
         max-width: 100%;
         overflow-x: hidden;
     }
@@ -1665,8 +1699,8 @@ footer {
         top: 2rem;
         left: 50%;
         width: 100%;
-        padding-left: 0%;
-        padding-right: 0%;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
     .content-container {
