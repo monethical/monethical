@@ -57,7 +57,7 @@
                     <div class="collapse navbar-collapse custom-navbar-collapse nav-padding" id="navbarNav">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-link nav-home" href="https://monethicalconsulting.com#home">Home</a>
+                                <a class="nav-link nav-home" href="#home">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link nav-mission" href="#mission">Mission</a>
@@ -111,9 +111,10 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-12 col-lg-4">
-                            <div>
+                            <picture>
+                                <source srcset="static/css/img/agri_circle.webp" type="image/webp">
                                 <img src="static/css/img/agri_circle.gif" alt="La nostra mission" class="d-block mission-image">
-                            </div>
+                            </picture>
                         </div>
                     </div>
                 </div>
@@ -146,9 +147,9 @@
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div class="fade-scroll">
                         <div>
-                            <h3 class="service-title-font-1 text-center fade-scroll">
+                            <h3 class="service-title-font-1 text-center">
                                 Agrianalytics
                             </h3>
                         </div>
@@ -464,7 +465,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <!-- Card 2 -->
                             <div class="col-12 col-md-12 col-lg-4 services-row-style text-center">
                                 <div class="flip-card">
@@ -486,7 +486,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <!-- Card 3 -->
                             <div class="col-12 col-md-12 col-lg-4 services-row-style text-center">
                                 <div class="flip-card">
@@ -714,36 +713,44 @@
 
         <script>
 
-            document.querySelectorAll('.navbar-nav .nav-link').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    const targetId = this.getAttribute('href').split('#')[1];
-                    const target = document.getElementById(targetId);
+            document.querySelectorAll('.navbar-nav .nav-link, .home-button').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href').split('#')[1];
+        const target = document.getElementById(targetId);
 
-                    if (target) {
-                        e.preventDefault();
+        if (target) {
+            e.preventDefault();
 
-                        requestAnimationFrame(() => {
-                            const navbarHeight = document.querySelector('nav').offsetHeight || 0;
+            requestAnimationFrame(() => {
+                const navbar = document.querySelector('nav');
+                const navbarHeight = navbar ? navbar.getBoundingClientRect().height : 0;
 
-                            // 🔹 Imposta un offset diverso per mobile e desktop
-                            const isMobile = window.innerWidth <= 768;
-                            const offset = isMobile ? -150 : 0;
+                const isMobile = window.innerWidth <= 768;
+                const isHomeButton = this.classList.contains('home-button');
 
-                            const targetPosition = target.offsetTop - navbarHeight - offset;
+                let offset;
+                if (isMobile) {
+                    offset = isHomeButton ? -3 : -150; // 🔹 Offset più piccolo per home-button
+                } else {
+                    offset = 0;
+                }
 
-                            window.scrollTo({
-                                top: targetPosition,
-                                behavior: 'instant'
-                            });
+                const targetPosition = target.offsetTop - navbarHeight - offset;
 
-                            const navbarCollapse = document.querySelector('.navbar-collapse');
-                            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-                                navbarCollapse.classList.remove('show');
-                            }
-                        });
-                    }
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'instant'
                 });
+
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                    navbarCollapse.classList.remove('show');
+                }
             });
+        }
+    });
+});
+
 
 
             document.addEventListener("DOMContentLoaded", function () {
