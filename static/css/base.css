@@ -897,7 +897,7 @@ body.modal-open {
     z-index: -1;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1280px) {
 
     .label-padding {
         font-size: 0.8rem;
@@ -960,17 +960,17 @@ body.modal-open {
     /* Home section */
 
     .home-title {
-        font-size: 4rem !important;
+        font-size: 3rem !important;
     }
 
     .home-subtitle {
-        font-size: 2rem;
+        font-size: 1.6rem;
         padding-bottom: 1rem;
         padding-top: 1rem;
     }
 
     .home-suptitle {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
 
     .h-spacing {
@@ -985,8 +985,8 @@ body.modal-open {
     }
 
     .home-button {
-        margin-top: 7%;
-        font-size: 1.2rem !important;
+        margin-top: 5%;
+        font-size: 1rem !important;
         padding: 0.25rem !important;
     }
 
@@ -1144,30 +1144,36 @@ body.modal-open {
 
     .flip-card-back p {
         margin-top: 0rem;
-        padding: 0.5rem;
+        padding: 0.25rem;
     }
 
     .title-container {
-        top: 1rem;
+        top: 1.5rem;
+        margin-bottom: 0;
+        padding-bottom: 0;
         padding-left: 5%;
         padding-right: 5%;
     }
 
     .content-container {
         margin-top: 0rem;
-        font-size: 0.85rem;
+        font-size: 0.77rem;
     }
 
     .content-title {
+        font-size: 0.85rem;
         max-height: 10rem;
         padding: 0rem;
         margin-top: 0rem !important;
+        margin-bottom: 0;
         padding-bottom: 0px;
         padding-top: 0px;
     }
 
     .content-text {
-        font-size: 0.7rem;
+        font-size: 0.77rem;
+        padding-top: 0;
+        margin-top: 0;
         padding-left: 5% !important;
         padding-right: 5% !important;
     }
