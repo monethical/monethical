@@ -897,6 +897,573 @@ body.modal-open {
     z-index: -1;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .label-padding {
+        font-size: 0.8rem;
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+        padding-left: 5%;
+    }
+
+    .label-padding-whyus {
+        font-size: 0.8rem;
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+        padding-left: 5%;
+    }
+
+    /* Navigator */
+
+    .nav-size {
+        font-size: 1.2rem;
+    }
+
+    .navbar-toggler {
+        border: none;
+        background: none;
+        padding: 0;
+    }
+
+    .navbar-toggler-img {
+        width: 1.2rem;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .navbar-nav {
+        padding-top: 0rem;
+    }
+
+    .nav-link {
+        font-size: 0.8rem;
+    }
+
+    .nav-title-1 {
+        font-size: 16pt !important;
+    }
+
+    .nav-title-2 {
+        font-weight: 400;
+        font-size: 16pt;
+    }
+
+    .nav-button {
+        top: 1px;
+        right: 1px;
+    }
+
+    .nav-padding {
+        left: 0;
+    }
+
+    /* Home section */
+
+    .home-title {
+        font-size: 4rem !important;
+    }
+
+    .home-subtitle {
+        font-size: 2rem;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+    }
+
+    .home-suptitle {
+        font-size: 1.7rem;
+    }
+
+    .h-spacing {
+        padding-top: 2%;
+    }
+
+    .home-buttons {
+        padding: 0.2rem 0.3rem;
+        line-height: 1;
+        border-radius: 0.3rem;
+        gap: 1rem;
+    }
+
+    .home-button {
+        margin-top: 7%;
+        font-size: 1.2rem !important;
+        padding: 0.25rem !important;
+    }
+
+    /* Mission section */
+
+    .mission {
+        left: 0;
+        right: 0;
+        top: 0;
+        padding: 2%;
+        margin-top: 1rem;
+        padding-bottom: 5rem;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .mission-title {
+        padding: 0;
+        font-size: 2.5rem;
+        margin-left: 6%;
+        margin-right: 4%;
+        margin-bottom: 1rem;
+        margin-top: 7%;
+        text-align: left;
+    }
+
+    .mission-subtitle {
+        font-size: 1rem;
+        font-weight: 400;
+        padding: 3%;
+        padding-top: 0%;
+        padding-right: 1%;
+        padding-bottom: 2%;
+        margin-left: 5%;
+        margin-right: 2%;
+    }
+
+    .mission-image {
+        padding-right: 0%;
+        padding-left: 0%;
+        padding-top: 2rem;
+        opacity: 1;
+        margin: auto auto;
+        width: 30%;
+    }
+
+    /* Services section */
+
+    .services {
+        left: 0;
+        right: 0;
+        top: 0;
+        padding: 2%;
+        margin-top: 1rem;
+        padding-bottom: 5rem;
+    }
+
+    .services-title h2 {
+        font-size: 1.5rem;
+    }
+
+    .services-title p {
+        font-size: 1.2rem;
+    }
+
+    .services-title {
+        padding: 0;
+        margin-bottom: 0%;
+        padding-bottom: 0%;
+        padding-top: 3%;
+        font-size: 1.2rem;
+    }
+
+    .services-title-font {
+        font-size: 3rem;
+        padding: 2%;
+    }
+
+    .services-subtitle {
+        font-size: 1.2rem;
+        margin-top: 0rem;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .services-text {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    .services-text-left {
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 5%;
+    }
+
+    .services-text-right {
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 0%;
+    }
+
+    .service-title-font-1 {
+        font-size: 1.5rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    .service-title-font-2 {
+        font-size: 1.5rem;
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+    }
+
+    .services-row-style {
+        padding-left: 20%;
+        padding-right: 20%;
+        padding-bottom: 0rem;
+    }
+
+    .service-title-single {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .service-text {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .service-image-single {
+        max-width: 80%;
+        object-fit: contain;
+        display: block;
+        margin: auto;
+        padding-top: 3rem;
+        object-fit: contain;
+    }
+
+    .flip-card {
+        height: 10rem;
+        padding: 0.5rem;
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+        padding: 0.5rem;
+        border-radius: 1rem;
+    }
+
+    .flip-card-back p {
+        margin-top: 0rem;
+        padding: 0.5rem;
+    }
+
+    .title-container {
+        top: 1rem;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .content-container {
+        margin-top: 0rem;
+        font-size: 0.85rem;
+    }
+
+    .content-title {
+        max-height: 10rem;
+        padding: 0rem;
+        margin-top: 0rem !important;
+        padding-bottom: 0px;
+        padding-top: 0px;
+    }
+
+    .content-text {
+        font-size: 0.7rem;
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+    }
+
+    .collab-spacing {
+        padding-top: 4rem;
+        padding-left: 5%;
+        padding-right: 5%;
+        line-height: 1.6;
+    }
+
+    .collab-text {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        line-height: 1.6;
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+
+    .collab-cards-spacing {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .logo-card {
+        width: 70%;
+        aspect-ratio: 2 / 1;
+        padding: 1rem;
+        margin: 0.2rem;
+    }
+
+    .partner-logo {
+        width: 100%;
+        height: 100%;
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+    /* Perché Noi section */
+
+    .whyus {
+        left: 0;
+        right: 0;
+        top: 0;
+        padding: 2%;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .whyus-title {
+        padding: 0;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        margin-top: 2.5rem;
+    }
+
+    .whyus-subtitle {
+        font-size: 1rem;
+        border-radius: 0;
+        line-height: 1.8;
+        padding-bottom: 1rem;
+    }
+
+    .whyus-subtitle-ticks {
+        font-size: 1rem;
+        border-radius: 0;
+        line-height: 1.8;
+        padding-bottom: 0.3rem;
+    }
+
+    .whyus-spacing {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    .whyus-tick {
+        padding-right: 0.4rem;
+    }
+
+    .contact-spacing {
+        margin-bottom: 37rem;
+    }
+
+    .contact-button {
+        line-height: 1;
+        border-radius: 0.3rem;
+        font-size: 0.8rem !important;
+        padding: 0.5rem !important;
+        background-color: black !important;
+    }
+
+    .contact-button:hover {
+        color: #FAE364 !important;
+        text-decoration: none !important;
+    }
+
+    /* Footer */
+
+    footer {
+        bottom: 0;
+        width: 100%;
+        padding-top: 0%;
+        padding-bottom: 0%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .footer-left {
+        text-align: center !important;
+        justify-content: center !important;
+    }
+
+    .footer-center {
+        text-align: center;
+    }
+
+    .footer-right {
+        text-align: right;
+        padding-right: 0;
+    }
+
+    .footer-links a, .footer-icons {
+        margin: 0 10px;
+    }
+
+    .footer-icons i {
+        font-size: 0.8rem;
+    }
+
+    .copyright {
+        font-weight: 400;
+        font-size: 1rem;
+    }
+
+    .footer-links {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    .footer-icons {
+        text-align: center;
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    .link-primary {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .footer_bg {
+        padding-top: 0.9rem;
+    }
+
+    .footer-call-spacing {
+        text-align: center !important;
+        justify-content: center !important;
+        margin: auto;
+    }
+
+    .footer-call-title {
+        font-size: 1.6rem;
+        padding: 0;
+        padding-top: 2rem;
+        margin-bottom: 0px;
+    }
+
+    .footer-call-subtitle {
+        font-size: 1rem;
+        padding-bottom: 3rem;
+    }
+
+    .footer-menu-spacing {
+        font-size: 0.9rem;
+        margin-top: 0.4rem;
+    }
+
+    .adesivo {
+        max-width: 20%;
+        max-height: 20%;
+        padding-bottom: 0.7rem;
+    }
+
+    .credit-spacing {
+        text-align: center;
+        padding-bottom: 0.5rem;
+        margin-top: 0%;
+        padding-right: 0%;
+    }
+
+    .seguici-text {
+        font-size: 0.9rem;
+        padding-top: 1rem;
+    }
+
+    .footer-social {
+        font-size: 0.9rem;
+        padding-bottom: 0rem;
+    }
+
+    .credit-style {
+        font-size: 0.8rem;
+    }
+
+    .img-width {
+        max-width: 4rem;
+    }
+
+    .sub-footer {
+        padding-top: 0rem;
+        font-size: 0.9rem;
+    }
+
+    .modal-content {
+        padding: 10px;
+        width: 90% !important;
+        max-width: 600px;
+        text-align: left;
+        font-size: 0.9rem;
+    }
+
+    .modal-title {
+        font-size: 1rem;
+    }
+
+    .close {
+        right: 20px;
+        top: 10px;
+        font-size: 12px;
+    }
+
+    /* Effects */
+
+    .highlight {
+        position: relative;
+        display: inline-block;
+    }
+
+    .highlight::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -0.5rem;
+        right: 0rem;;
+        width: 105%;
+        height: 95%;
+        background-image: url('img/highlighter_giallo.png');
+        background-repeat: repeat-x;
+        background-size: auto 100%;
+        z-index: -1;
+    }
+
+    .highlight-text {
+        position: relative;
+        display: inline-block;
+    }
+
+    .highlight-text::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -0.3rem;
+        right: 0.5rem;
+        width: 105%;
+        height: 95%;
+        background-image: url('img/highlighter_giallo.png');
+        background-repeat: repeat-x;
+        background-size: auto 100%;
+        z-index: -1;
+    }
+
+    .highlight_verde_thin {
+        position: relative;
+        display: inline-block;
+    }
+
+    .highlight_verde_thin::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -0.5rem;
+        right: 0rem;
+        width: 107%;
+        height: 95%;
+        background-image: url('img/highlighter_verde.png');
+        background-repeat: repeat-x;
+        background-size: auto 100%;
+        z-index: -1;
+    }
+
+}
+
 @media (max-width: 767px) {
 
     .label-padding {
@@ -1467,4 +2034,3 @@ body.modal-open {
     }
 
 }
-
