@@ -129,7 +129,7 @@ nav {
 .nav-title-2 {
     padding-left: 0.1rem;
     color: var(--first);
-    font-weight: 500;
+    font-weight: 400;
     font-size: 17pt;
 }
 
@@ -944,7 +944,7 @@ body.modal-open {
     }
 
     .nav-title-2 {
-        font-weight: 500;
+        font-weight: 400;
         font-size: 15pt;
     }
 
@@ -1515,7 +1515,7 @@ body.modal-open {
     }
 
     .nav-title-2 {
-        font-weight: 500;
+        font-weight: 400;
         font-size: 20pt;
     }
 
