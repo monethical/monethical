@@ -971,6 +971,7 @@ body.modal-open {
 
     .home-suptitle {
         font-size: 1.5rem;
+        padding-bottom: 0rem;
     }
 
     .h-spacing {
@@ -985,7 +986,7 @@ body.modal-open {
     }
 
     .home-button {
-        margin-top: 5%;
+        margin-top: 3%;
         font-size: 1rem !important;
         padding: 0.25rem !important;
     }
