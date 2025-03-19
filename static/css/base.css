@@ -1468,17 +1468,17 @@ body.modal-open {
 
 }
 
-@media (min-width: 768px) and (max-width: 1245px) {
+@media (min-width: 768px) and (max-width: 1024px) { }
 
     .label-padding {
-        font-size: 1rem;
+        font-size: 0.8rem;
         padding-top: 3rem;
         padding-bottom: 1rem;
         padding-left: 5%;
     }
 
     .label-padding-whyus {
-        font-size: 1rem;
+        font-size: 0.8rem;
         padding-top: 3rem;
         padding-bottom: 1rem;
         padding-left: 5%;
@@ -1487,7 +1487,7 @@ body.modal-open {
     /* Navigator */
 
     .nav-size {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .navbar-toggler {
@@ -1497,7 +1497,7 @@ body.modal-open {
     }
 
     .navbar-toggler-img {
-        width: 1.5rem;
+        width: 1.2rem;
         height: auto;
         cursor: pointer;
     }
@@ -1507,16 +1507,16 @@ body.modal-open {
     }
 
     .nav-link {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .nav-title-1 {
-        font-size: 20pt !important;
+        font-size: 16pt !important;
     }
 
     .nav-title-2 {
         font-weight: 400;
-        font-size: 20pt;
+        font-size: 16pt;
     }
 
     .nav-button {
@@ -1531,17 +1531,17 @@ body.modal-open {
     /* Home section */
 
     .home-title {
-        font-size: 5rem !important;
+        font-size: 4rem !important;
     }
 
     .home-subtitle {
-        font-size: 3rem;
+        font-size: 2rem;
         padding-bottom: 1rem;
         padding-top: 1rem;
     }
 
     .home-suptitle {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
     .h-spacing {
@@ -1557,8 +1557,8 @@ body.modal-open {
 
     .home-button {
         margin-top: 7%;
-        font-size: 1.5rem !important;
-        padding: 1rem !important;
+        font-size: 1.2rem !important;
+        padding: 0.25rem !important;
     }
 
     /* Mission section */
@@ -1576,8 +1576,8 @@ body.modal-open {
 
     .mission-title {
         padding: 0;
-        font-size: 3.5rem;
-        margin-left: 4%;
+        font-size: 2.5rem;
+        margin-left: 6%;
         margin-right: 4%;
         margin-bottom: 1rem;
         margin-top: 7%;
@@ -1585,11 +1585,12 @@ body.modal-open {
     }
 
     .mission-subtitle {
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 400;
         padding: 3%;
-        padding-top: 3%;
+        padding-top: 0%;
         padding-right: 1%;
+        padding-bottom: 2%;
         margin-left: 5%;
         margin-right: 2%;
     }
@@ -1597,9 +1598,10 @@ body.modal-open {
     .mission-image {
         padding-right: 0%;
         padding-left: 0%;
-        padding-top: 0rem;
+        padding-top: 2rem;
         opacity: 1;
-        transform: scale(0.8);
+        margin: auto auto;
+        width: 30%;
     }
 
     /* Services section */
@@ -1614,11 +1616,11 @@ body.modal-open {
     }
 
     .services-title h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .services-title p {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .services-title {
@@ -1626,16 +1628,16 @@ body.modal-open {
         margin-bottom: 0%;
         padding-bottom: 0%;
         padding-top: 3%;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .services-title-font {
-        font-size: 4rem;
+        font-size: 3rem;
         padding: 2%;
     }
 
     .services-subtitle {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         margin-top: 0rem;
         padding-left: 3%;
         padding-right: 3%;
@@ -1645,7 +1647,7 @@ body.modal-open {
         margin-top: 2rem;
         margin-bottom: 2rem;
         line-height: 1.6;
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 300;
     }
 
@@ -1662,13 +1664,13 @@ body.modal-open {
     }
 
     .service-title-font-1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         padding-top: 1rem;
         padding-bottom: 2rem;
     }
 
     .service-title-font-2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         padding-top: 3rem;
         padding-bottom: 2rem;
     }
@@ -1680,27 +1682,28 @@ body.modal-open {
     }
 
     .service-title-single {
-        font-size: 1.05rem;
+        font-size: 0.9rem;
         margin-bottom: 0.5rem;
-        padding-left: 15%;
-        padding-right: 15%;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
     .service-text {
-        font-size: 1.rem;
+        font-size: 0.85rem;
         line-height: 1.5;
     }
 
     .service-image-single {
-        width: 100%;
-        height: auto;
-        padding: 0rem;
+        max-width: 80%;
+        object-fit: contain;
+        display: block;
+        margin: auto;
         padding-top: 3rem;
-        object-fit: cover;
+        object-fit: contain;
     }
 
     .flip-card {
-        height: 20rem;
+        height: 10rem;
         padding: 0.5rem;
     }
 
@@ -1716,17 +1719,18 @@ body.modal-open {
     }
 
     .title-container {
+        top: 1rem;
         padding-left: 5%;
         padding-right: 5%;
     }
 
     .content-container {
         margin-top: 0rem;
-        font-size: 1rem;
+        font-size: 0.85rem;
     }
 
     .content-title {
-        max-height: 12rem;
+        max-height: 10rem;
         padding: 0rem;
         margin-top: 0rem !important;
         padding-bottom: 0px;
@@ -1734,7 +1738,7 @@ body.modal-open {
     }
 
     .content-text {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         padding-left: 5% !important;
         padding-right: 5% !important;
     }
@@ -1788,20 +1792,20 @@ body.modal-open {
 
     .whyus-title {
         padding: 0;
-        font-size: 2.2rem;
+        font-size: 2rem;
         margin-bottom: 1rem;
         margin-top: 2.5rem;
     }
 
     .whyus-subtitle {
-        font-size: 1.2rem;
+        font-size: 1rem;
         border-radius: 0;
         line-height: 1.8;
         padding-bottom: 1rem;
     }
 
     .whyus-subtitle-ticks {
-        font-size: 1.2rem;
+        font-size: 1rem;
         border-radius: 0;
         line-height: 1.8;
         padding-bottom: 0.3rem;
@@ -1825,7 +1829,7 @@ body.modal-open {
     .contact-button {
         line-height: 1;
         border-radius: 0.3rem;
-        font-size: 1rem !important;
+        font-size: 0.8rem !important;
         padding: 0.5rem !important;
         background-color: black !important;
     }
@@ -1865,27 +1869,27 @@ body.modal-open {
     }
 
     .footer-icons i {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .copyright {
         font-weight: 400;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .footer-links {
         text-align: center;
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
 
     .footer-icons {
         text-align: center;
-        font-size: 1.2rem;
+        font-size: 1rem;
         padding: 5px;
     }
 
     .link-primary {
-        font-size: 1.2rem;
+        font-size: 1rem;
         padding: 0.5rem;
     }
 
@@ -1900,19 +1904,19 @@ body.modal-open {
     }
 
     .footer-call-title {
-        font-size: 2.1rem;
+        font-size: 1.6rem;
         padding: 0;
-        padding-top: 1rem;
+        padding-top: 2rem;
         margin-bottom: 0px;
     }
 
     .footer-call-subtitle {
-        font-size: 1.25rem;
+        font-size: 1rem;
         padding-bottom: 3rem;
     }
 
     .footer-menu-spacing {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
         margin-top: 0.4rem;
     }
 
@@ -1930,17 +1934,17 @@ body.modal-open {
     }
 
     .seguici-text {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
         padding-top: 1rem;
     }
 
     .footer-social {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
         padding-bottom: 0rem;
     }
 
     .credit-style {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .img-width {
@@ -1949,7 +1953,7 @@ body.modal-open {
 
     .sub-footer {
         padding-top: 0rem;
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
 
     .modal-content {
@@ -1957,11 +1961,11 @@ body.modal-open {
         width: 90% !important;
         max-width: 600px;
         text-align: left;
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
 
     .modal-title {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .close {
