@@ -657,6 +657,7 @@
             <div id="terms-modal" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
+                    <img src="static/css/img/bg_agrisolutions_adesivo.png" alt="Logo" class="img-width"><br>
                     <h2 class="modal-title">Termini e Condizioni</h2><br>
                     <p style="font-style: italic">Ultimo aggiornamento: <strong>Marzo 2025</strong></p><br>
                     <p>Benvenuto su <strong>www.monethicalconsulting.com</strong>.<br> Accedendo a questo sito, accetti i seguenti Termini e Condizioni.</p>
@@ -685,6 +686,7 @@
             <div id="privacy-modal" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
+                    <img src="static/css/img/bg_agrisolutions_adesivo.png" alt="Logo" class="img-width"><br>
                     <h2 class="modal-title">Privacy Policy</h2><br>
                     <p style="font-style: italic">Ultimo aggiornamento: <strong>Marzo 2025</strong></p><br>
                     <p>Questa Privacy Policy spiega che <strong>non raccogliamo dati personali né utilizziamo cookie</strong>.</p>
@@ -713,44 +715,42 @@
         <script>
 
             document.querySelectorAll('.navbar-nav .nav-link, .home-button').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        const targetId = this.getAttribute('href').split('#')[1];
-        const target = document.getElementById(targetId);
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href').split('#')[1];
+                    const target = document.getElementById(targetId);
 
-        if (target) {
-            e.preventDefault();
+                    if (target) {
+                        e.preventDefault();
 
-            requestAnimationFrame(() => {
-                const navbar = document.querySelector('nav');
-                const navbarHeight = navbar ? navbar.getBoundingClientRect().height : 0;
+                        requestAnimationFrame(() => {
+                            const navbar = document.querySelector('nav');
+                            const navbarHeight = navbar ? navbar.getBoundingClientRect().height : 0;
 
-                const isMobile = window.innerWidth <= 768;
-                const isHomeButton = this.classList.contains('home-button');
+                            const isMobile = window.innerWidth <= 768;
+                            const isHomeButton = this.classList.contains('home-button');
 
-                let offset;
-                if (isMobile) {
-                    offset = isHomeButton ? -3 : -150; // 🔹 Offset più piccolo per home-button
-                } else {
-                    offset = 0;
-                }
+                            let offset;
+                            if (isMobile) {
+                                offset = isHomeButton ? -3 : -150; // 🔹 Offset più piccolo per home-button
+                            } else {
+                                offset = 0;
+                            }
 
-                const targetPosition = target.offsetTop - navbarHeight - offset;
+                            const targetPosition = target.offsetTop - navbarHeight - offset;
 
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'instant'
+                            window.scrollTo({
+                                top: targetPosition,
+                                behavior: 'instant'
+                            });
+
+                            const navbarCollapse = document.querySelector('.navbar-collapse');
+                            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                                navbarCollapse.classList.remove('show');
+                            }
+                        });
+                    }
                 });
-
-                const navbarCollapse = document.querySelector('.navbar-collapse');
-                if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-                    navbarCollapse.classList.remove('show');
-                }
             });
-        }
-    });
-});
-
-
 
             document.addEventListener("DOMContentLoaded", function () {
                 const elements = document.querySelectorAll('.fade-scroll');
@@ -811,6 +811,7 @@
             });
 
             function openModal(modalId) {
+                event.preventDefault();
                 document.getElementById(modalId).style.display = "flex";
             }
 
