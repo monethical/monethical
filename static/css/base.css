@@ -218,14 +218,12 @@ nav {
     padding-top: 5%;
 }
 
-/* Contenitore del testo */
 .typing-container {
     white-space: nowrap;
     border-right: 5px solid black;
     animation: blinkCursor 0.7s infinite;
 }
 
-/* Lampeggio cursore */
 @keyframes blinkCursor {
     50% { border-color: transparent; }
 }
