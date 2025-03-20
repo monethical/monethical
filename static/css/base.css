@@ -218,8 +218,15 @@ nav {
     padding-top: 5%;
 }
 
-.typing-machine {
+/* Contenitore del testo */
+.typing-container {
     white-space: nowrap;
+    animation: blinkCursor 0.7s infinite;
+}
+
+/* Lampeggio cursore */
+@keyframes blinkCursor {
+    50% { border-color: transparent; }
 }
 
 .home-buttons {

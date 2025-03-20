@@ -90,7 +90,7 @@
                             </p>
                             <h1 class="home-title text-center">
                                 <strong>
-                                    <span class="typing-machine highlight"></span><br>
+                                    <span class="typing-container highlight"></span><br>
                                     al servizio del settore <span class="highlight">agroalimentare</span>
                                 </strong>
                             </h1>
@@ -726,6 +726,37 @@
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 
+        <script defer>
+
+            const words = ["Analisi", "Reportistica", "Consulenza", "Formazione", "Sviluppo IT", "Progettazione", "Marketing", "Comunicazione"];
+            let wordIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            const typingContainer = document.querySelector(".typing-container");
+
+            function typeEffect() {
+                const currentWord = words[wordIndex];
+                const displayedText = currentWord.substring(0, charIndex);
+
+                typingContainer.textContent = displayedText;
+
+                if (!isDeleting && charIndex < currentWord.length) {
+                    charIndex++;
+                    setTimeout(typeEffect, 100);
+                } else if (isDeleting && charIndex > 0) {
+                    charIndex--;
+                    setTimeout(typeEffect, 50);
+                } else {
+                    isDeleting = !isDeleting;
+                    if (!isDeleting) wordIndex = (wordIndex + 1) % words.length;
+                        setTimeout(typeEffect, 1000);
+                    }
+                }
+
+            document.addEventListener("DOMContentLoaded", typeEffect);
+
+        </script>
+
         <script>
 
             window.onload = function () {
@@ -802,32 +833,6 @@
 
                 elements.forEach(element => observer.observe(element));
             });
-
-            document.addEventListener("DOMContentLoaded", function () {
-                var typingElement = document.querySelector(".typing-machine");
-
-                if (typingElement) {
-                    // Pre-print the first word immediately for faster loading
-                    typingElement.textContent = "Monethical";
-
-                    setTimeout(function () {
-                        var options = {
-                            strings: ["Analisi", "Reportistica", "Consulenza", "Formazione", "Soluzioni IT", "Progettazione", "Marketing", "Comunicazione"],
-                            typeSpeed: 100,
-                            backSpeed: 50,
-                            backDelay: 1000,
-                            startDelay: 1500, // Wait before backspacing to make it feel natural
-                            loop: true,
-                            showCursor: true, // Cursor remains visible
-                            smartBackspace: false, // Ensures full erasing before typing the next word
-                        };
-
-                        // Initialize Typed.js after a small delay
-                        var typed = new Typed(".typing-machine", options);
-                    }, 500); // Delay before Typed.js starts (allows pre-printed text to be seen)
-                }
-            });
-
 
             document.getElementById('current-year').innerText = new Date().getFullYear();
 
