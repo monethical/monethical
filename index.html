@@ -52,6 +52,7 @@
     </head>
 
     <body class="d-flex flex-column min-vh-100">
+
         <div id="website-content" style="display: none">
             <nav class="navbar navbar-expand-md navbar-dark fixed-top nav-size" style="background-color: black;">
                 <div class="container-fluid" style="max-width: 100%">
@@ -727,6 +728,28 @@
 
         <script>
 
+            window.onload = function () {
+
+                // Show website content
+                function showWebsiteContent() {
+                    var websiteContent = document.getElementById('website-content');
+                    if (websiteContent) {
+                        websiteContent.style.display = 'block';
+
+                        var opacity = 0;
+                        var fadeInInterval = setInterval(function () {
+                            opacity += 0.1;
+                            websiteContent.style.opacity = opacity;
+
+                            if (opacity >= 1) {
+                                clearInterval(fadeInInterval);
+                            }
+                        }, 5);
+                    }
+                }
+                showWebsiteContent();
+            };
+
             document.querySelectorAll('.navbar-nav .nav-link, .home-button').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     const targetId = this.getAttribute('href').split('#')[1];
@@ -780,36 +803,31 @@
                 elements.forEach(element => observer.observe(element));
             });
 
-            window.onload = function () {
-                function showWebsiteContent() {
-                    document.getElementById('website-content').style.display = 'block';
+            document.addEventListener("DOMContentLoaded", function () {
+                var typingElement = document.querySelector(".typing-machine");
 
-                    var opacity = 0;
-                    var fadeInInterval = setInterval(function () {
-                        opacity += 0.1;
-                        document.getElementById('website-content').style.opacity = opacity;
+                if (typingElement) {
+                    // Pre-print the first word immediately for faster loading
+                    typingElement.textContent = "Monethical";
 
-                        if (opacity >= 1) {
-                            clearInterval(fadeInInterval);
-                        }
-                    }, 50);
+                    setTimeout(function () {
+                        var options = {
+                            strings: ["Analisi", "Reportistica", "Consulenza", "Formazione", "Soluzioni IT", "Progettazione", "Marketing", "Comunicazione"],
+                            typeSpeed: 100,
+                            backSpeed: 50,
+                            backDelay: 1000,
+                            startDelay: 1500, // Wait before backspacing to make it feel natural
+                            loop: true,
+                            showCursor: true, // Cursor remains visible
+                            smartBackspace: false, // Ensures full erasing before typing the next word
+                        };
+
+                        // Initialize Typed.js after a small delay
+                        var typed = new Typed(".typing-machine", options);
+                    }, 500); // Delay before Typed.js starts (allows pre-printed text to be seen)
                 }
-                showWebsiteContent();
-            };
-
-            document.addEventListener("DOMContentLoaded", function() {
-                var options = {
-                  strings: ["Analisi", "Reportistica", "Consulenza", "Formazione", "Soluzioni IT", "Progettazione", "Marketing", "Comunicazione"],
-                  typeSpeed: 100,
-                  backSpeed: 50,
-                  backDelay: 1000,
-                  startDelay: 500,
-                  loop: true,
-                };
-
-                // Inizializzazione di Typed.js
-                var typed = new Typed(".typing-machine", options);
             });
+
 
             document.getElementById('current-year').innerText = new Date().getFullYear();
 
