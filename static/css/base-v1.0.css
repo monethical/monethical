@@ -1,5 +1,66 @@
 /* General */
 
+/* Bitter_Thin (100) */
+@font-face {
+    font-family: 'Bitter';
+    src: url('../fonts/Bitter/Bitter-Thin.woff2') format('woff2'),
+         url('../fonts/Bitter/Bitter-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* Bitter_Light (200) */
+@font-face {
+    font-family: 'Bitter';
+    src: url('../fonts/Bitter/Bitter-Light.woff2') format('woff2'),
+         url('../fonts/Bitter/Bitter-Light.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* Bitter_Regular (400) */
+@font-face {
+    font-family: 'Bitter';
+    src: url('../fonts/Bitter/Bitter-Regular.woff2') format('woff2'),
+         url('../fonts/Bitter/Bitter-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Bitter_Medium (500) */
+@font-face {
+    font-family: 'Bitter';
+    src: url('../fonts/Bitter/Bitter-Medium.woff2') format('woff2'),
+         url('../fonts/Bitter/Bitter-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* DM_Serif_Display */
+@font-face {
+    font-family: 'DM Serif Display';
+    src: url('../fonts/DM_Serif_Display/DMSerifDisplay-Regular.woff2') format('woff2'),
+         url('../fonts/DM_Serif_Display/DMSerifDisplay-Regular.woff') format('woff');
+    font-style: normal;
+}
+
+/* DM_Serif_Text */
+@font-face {
+    font-family: 'DM Serif Display';
+    src: url('../fonts/DM_Serif_Text/DMSerifText-Regular.woff2') format('woff2'),
+         url('../fonts/DM_Serif_Text/DMSerifText-Regular.woff') format('woff');
+    font-style: normal;
+}
+
+/* League_Spartan */
+@font-face {
+    font-family: 'League Spartan';
+    src: url('../fonts/League_Spartan/LeagueSpartan-Black.woff2') format('woff2'),
+         url('../fonts/League_Spartan/LeagueSpartan-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
 :root {
     --first: #00798A;
     --second: #3F9481;
@@ -128,8 +189,8 @@ nav {
 
 .nav-title-2 {
     padding-left: 0.1rem;
-    color: var(--first);
-    font-weight: 400;
+    color: white;
+    font-weight: 200;
     font-size: 17pt;
 }
 
@@ -220,12 +281,23 @@ nav {
 
 .typing-container {
     white-space: nowrap;
-    border-right: 5px solid black;
+    display: inline-block;
+    position: relative;
+}
+
+.typing-container::after {
+    content: "";
+    position: absolute;
+    top: 18%;
+    bottom: 18%;
+    right: -5px;
+    width: 2px;
+    background-color: black;
     animation: blinkCursor 0.7s infinite;
 }
 
 @keyframes blinkCursor {
-    50% { border-color: transparent; }
+    50% { opacity: 0; }
 }
 
 .home-buttons {
