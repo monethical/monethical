@@ -5,12 +5,16 @@
     <head>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-TFNHLCFLTM"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
 
-          gtag('config', 'G-TFNHLCFLTM');
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            // Funzione per caricare Google Analytics solo dopo il consenso
+            function loadAnalytics() {
+                gtag('config', 'G-TFNHLCFLTM');
+            }
         </script>
 
         <meta charset="utf-8">
@@ -795,31 +799,25 @@
 
         <script>
 
-            window.addEventListener('load', function () {
-                // Il sito si carica subito
-                var websiteContent = document.getElementById('website-content');
-                if (websiteContent) {
-                    websiteContent.style.display = 'block';  // Il contenuto del sito è visibile subito
-                    websiteContent.style.opacity = 1;  // Imposta l'opacità a 1 per farlo essere visibile subito
-                }
+            <!-- Visualizzazione del contenuto del sito senza dipendenza dal consenso -->
+            <div id="website-content" style="display: none;"> <!-- Nascondi fino al caricamento completo -->
+                <!-- Il tuo contenuto principale va qui -->
+            </div>
 
-                // Verifica il consenso dei cookie
-                window.addEventListener('CookieConsentDeclaration', function () {
-                    // Se l'utente ha dato il consenso per le statistiche (Google Analytics)
+            <!-- Cookie consent -->
+            <script src="https://consent.cookiebot.com/uc.js" data-cbid="YOUR-CBID" type="text/javascript" async>
+
+        </script>
+
+        <script>
+            // Mostra il contenuto subito
+            document.getElementById('website-content').style.display = 'block';
+
+            // Aggiungi l'ascoltatore di evento per il consenso dei cookie
+            window.addEventListener('load', function() {
+                window.addEventListener('CookieConsentDeclaration', function() {
                     if (CookieConsent && CookieConsent.consents.given && CookieConsent.consents.given.includes('statistics')) {
-
-                        // Carica Google Analytics solo dopo che l'utente ha accettato il consenso
-                        var script = document.createElement('script');
-                        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-TFNHLCFLTM';
-                        script.async = true;
-                        document.head.appendChild(script);
-
-                        script.onload = function () {
-                            window.dataLayer = window.dataLayer || [];
-                            function gtag() { dataLayer.push(arguments); }
-                            gtag('js', new Date());
-                            gtag('config', 'G-TFNHLCFLTM');
-                        };
+                        loadAnalytics();  // Carica Google Analytics solo dopo il consenso
                     }
                 });
             });
