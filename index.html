@@ -3,11 +3,9 @@
 <html lang="it">
 
     <head>
+
         <!-- Usercentrics CMP loader script (without autoblocker.js) -->
         <script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="AJ5wIIzgO9Rt3R" async></script>
-
-        <!-- Your other scripts (make sure they are after the Usercentrics CMP script) -->
-        <script src="https://www.googletagmanager.com/gtag/js?id=G-TFNHLCFLTM" async></script>
 
         <script>
             window.addEventListener('load', function () {
@@ -17,21 +15,13 @@
                     if (typeof CookieConsent !== 'undefined') {
                         // Check if the user has consented to statistics
                         if (CookieConsent.consents.given && CookieConsent.consents.given.includes('statistics')) {
-                            // Dynamically load Google Analytics script
-                            var script = document.createElement('script');
-                            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-TFNHLCFLTM';
-                            script.async = true;
-                            document.head.appendChild(script);
-
-                            script.onload = function () {
-                                // Initialize Google Analytics
-                                window.dataLayer = window.dataLayer || [];
-                                function gtag() {
-                                    dataLayer.push(arguments);
-                                }
-                                gtag('js', new Date());
-                                gtag('config', 'G-TFNHLCFLTM');
-                            };
+                            // Initialize Google Analytics if consent is given
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag() {
+                                dataLayer.push(arguments);
+                            }
+                            gtag('js', new Date());
+                            gtag('config', 'G-TFNHLCFLTM');
                         }
                     } else {
                         console.error('CookieConsent object is not defined');
