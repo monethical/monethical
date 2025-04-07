@@ -784,29 +784,34 @@
 
         <script>
             window.addEventListener('load', function () {
-                // Verifica il consenso dei cookie
-                window.addEventListener('CookieConsentDeclaration', function () {
-                    // Se l'utente ha dato il consenso per le statistiche
-                    if (CookieConsent && CookieConsent.consents.given && CookieConsent.consents.given.includes('statistics')) {
+                // Ensure CookieConsent object is available before proceeding
+                if (typeof CookieConsent !== 'undefined') {
+                    // Listen for changes in the user's consent status
+                    window.addEventListener('CookieConsentDeclaration', function () {
+                        // Check if the user has consented to statistics cookies
+                        if (CookieConsent.consents.given && CookieConsent.consents.given.includes('statistics')) {
 
-                        // Carica Google Analytics solo dopo il consenso
-                        var script = document.createElement('script');
-                        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-TFNHLCFLTM';
-                        script.async = true;
-                        document.head.appendChild(script);
+                            // Dynamically load Google Analytics only after consent
+                            var script = document.createElement('script');
+                            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-TFNHLCFLTM';
+                            script.async = true;
+                            document.head.appendChild(script);
 
-                        script.onload = function () {
-                            window.dataLayer = window.dataLayer || [];
-                            function gtag() { dataLayer.push(arguments); }
-                            gtag('js', new Date());
-                            gtag('config', 'G-TFNHLCFLTM');
-                        };
-                    }
-                });
+                            script.onload = function () {
+                                // Initialize Google Analytics
+                                window.dataLayer = window.dataLayer || [];
+                                function gtag() {
+                                    dataLayer.push(arguments);
+                                }
+                                gtag('js', new Date());
+                                gtag('config', 'G-TFNHLCFLTM');
+                            };
+                        }
+                    });
+                }
             });
 
             window.onload = function () {
-
                 // Show website content
                 function showWebsiteContent() {
                     var websiteContent = document.getElementById('website-content');
