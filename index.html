@@ -796,33 +796,34 @@
         <script>
 
             window.addEventListener('load', function () {
+                // Il sito si carica subito
+                var websiteContent = document.getElementById('website-content');
+                if (websiteContent) {
+                    websiteContent.style.display = 'block';  // Il contenuto del sito è visibile subito
+                    websiteContent.style.opacity = 1;  // Imposta l'opacità a 1 per farlo essere visibile subito
+                }
+
                 // Verifica il consenso dei cookie
-                window.addEventListener('CookieConsentDeclaration', function() {
-                    // Se l'utente ha accettato i cookie, mostra il contenuto
+                window.addEventListener('CookieConsentDeclaration', function () {
+                    // Se l'utente ha dato il consenso per le statistiche (Google Analytics)
                     if (CookieConsent && CookieConsent.consents.given && CookieConsent.consents.given.includes('statistics')) {
-                        // Funzione per mostrare il contenuto con effetto fade-in
-                        function showWebsiteContent() {
-                            var websiteContent = document.getElementById('website-content');
-                            if (websiteContent) {
-                                websiteContent.style.display = 'block';
 
-                                var opacity = 0;
-                                var fadeInInterval = setInterval(function () {
-                                    opacity += 0.1;
-                                    websiteContent.style.opacity = opacity;
+                        // Carica Google Analytics solo dopo che l'utente ha accettato il consenso
+                        var script = document.createElement('script');
+                        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-TFNHLCFLTM';
+                        script.async = true;
+                        document.head.appendChild(script);
 
-                                    if (opacity >= 1) {
-                                        clearInterval(fadeInInterval);
-                                    }
-                                }, 5);
-                            }
-                        }
-
-                        // Mostra il contenuto solo dopo che è stato accettato il consenso
-                        showWebsiteContent();
+                        script.onload = function () {
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag() { dataLayer.push(arguments); }
+                            gtag('js', new Date());
+                            gtag('config', 'G-TFNHLCFLTM');
+                        };
                     }
                 });
             });
+
 
             document.querySelectorAll('.navbar-nav .nav-link, .home-button').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
