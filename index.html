@@ -6,6 +6,22 @@
         <!-- Usercentrics CMP loader script (without autoblocker.js) -->
         <script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="AJ5wIIzgO9Rt3R" async></script>
 
+        <!-- Your other scripts (make sure they are after the Usercentrics CMP script) -->
+        <script src="https://www.googletagmanager.com/gtag/js?id=G-TFNHLCFLTM" async></script>
+
+        <script>
+            // Your custom script that interacts with CookieConsent
+            window.addEventListener('load', function () {
+                window.addEventListener('CookieConsentDeclaration', function () {
+                    if (typeof CookieConsent !== 'undefined') {
+                        console.log(CookieConsent);  // Now CookieConsent should be defined
+                    } else {
+                        console.error('CookieConsent object is not defined.');
+                    }
+                });
+            });
+        </script>
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
