@@ -3,28 +3,37 @@
 <html lang="it">
 
     <head>
-        <!-- Google tag (gtag.js) -->
+        <!-- Google Tag (gtag.js) setup, but will only activate after consent -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-TFNHLCFLTM"></script>
-
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            // Funzione per caricare Google Analytics solo dopo il consenso
             function loadAnalytics() {
                 gtag('config', 'G-TFNHLCFLTM');
             }
+        </script>
+
+        <!-- Usercentrics CMP loader script (without autoblocker.js) -->
+        <script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="AJ5wIIzgO9Rt3R" async></script>
+
+        <script>
+            window.addEventListener('load', function () {
+                // Listen for the CookieConsentDeclaration event
+                window.addEventListener('CookieConsentDeclaration', function () {
+                    // If consent for statistics is given, load Google Analytics
+                    if (CookieConsent && CookieConsent.consents.given && CookieConsent.consents.given.includes('statistics')) {
+                        loadAnalytics();
+                    }
+                });
+            });
         </script>
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-        <!-- Cookies -->
-        <script src="https://web.cmp.usercentrics.eu/modules/autoblocker.js"></script>
-        <script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="AJ5wIIzgO9Rt3R" async></script>
 
         <!-- SEO Meta Tags -->
         <meta name="description" content="Monethical Consulting offre servizi specializzati per il settore primario, tra cui analisi, reportistica, sviluppo tecnologico, marketing, ESG e formazione per aziende agroalimentari.">
@@ -73,7 +82,7 @@
 
     <body class="d-flex flex-column min-vh-100">
 
-        <div id="website-content">
+        <div id="website-content" style="display: hidden;">
             <nav class="navbar navbar-expand-md navbar-dark fixed-top nav-size" style="background-color: black;">
                 <div class="container-fluid" style="max-width: 100%">
                     <h4 class="mr-auto pr-4 d-flex align-items-center justify-content-center">
@@ -799,15 +808,27 @@
 
         <script>
 
-            // Aggiungi l'ascoltatore di evento per il consenso dei cookie
-            window.addEventListener('load', function() {
-                window.addEventListener('CookieConsentDeclaration', function() {
-                    if (CookieConsent && CookieConsent.consents.given && CookieConsent.consents.given.includes('statistics')) {
-                        loadAnalytics();  // Carica Google Analytics solo dopo il consenso
-                    }
-                });
-            });
+            window.onload = function () {
 
+                // Show website content
+                function showWebsiteContent() {
+                    var websiteContent = document.getElementById('website-content');
+                    if (websiteContent) {
+                        websiteContent.style.display = 'block';
+
+                        var opacity = 0;
+                        var fadeInInterval = setInterval(function () {
+                            opacity += 0.1;
+                            websiteContent.style.opacity = opacity;
+
+                            if (opacity >= 1) {
+                                clearInterval(fadeInInterval);
+                            }
+                        }, 5);
+                    }
+                }
+                showWebsiteContent();
+            };
 
             document.querySelectorAll('.navbar-nav .nav-link, .home-button').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
