@@ -18,9 +18,10 @@
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-        <!-- Cookies -->
+        <!-- Cookies
         <script src="https://web.cmp.usercentrics.eu/modules/autoblocker.js"></script>
         <script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="AJ5wIIzgO9Rt3R" async></script>
+-->
 
         <!-- SEO Meta Tags -->
         <meta name="description" content="Monethical Consulting offre servizi specializzati per il settore primario, tra cui analisi, reportistica, sviluppo tecnologico, marketing, ESG e formazione per aziende agroalimentari.">
@@ -69,7 +70,7 @@
 
     <body class="d-flex flex-column min-vh-100">
 
-        <div id="website-content" style="display: block">
+        <div id="website-content" style="display: hidden;">
             <nav class="navbar navbar-expand-md navbar-dark fixed-top nav-size" style="background-color: black;">
                 <div class="container-fluid" style="max-width: 100%">
                     <h4 class="mr-auto pr-4 d-flex align-items-center justify-content-center">
@@ -692,7 +693,7 @@
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <img src="static/css/img/bg_agrisolutions_adesivo.png" alt="Logo" class="img-width" loading="lazy"><br>
-                    <h2>Termini e Condizioni</h2>
+                    <h2 class="modal-title">Termini e Condizioni</h2><br>
                     <p>Ultimo aggiornamento: <strong>Marzo 2025</strong></p>
 
                     <p>Benvenuto su <strong>www.monethicalconsulting.com</strong>.<br> Accedendo a questo sito, accetti i seguenti Termini e Condizioni.</p>
@@ -725,7 +726,7 @@
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <img src="static/css/img/bg_agrisolutions_adesivo.png" alt="Logo" class="img-width" loading="lazy"><br>
-                    <h2>Privacy Policy</h2>
+                    <h2 class="modal-title">Privacy Policy</h2><br>
                     <p>Ultimo aggiornamento: <strong>Marzo 2025</strong></p>
 
                     <p>Questa Privacy Policy spiega come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali quando visiti il nostro sito web <strong>www.monethicalconsulting.com</strong>.</p>
@@ -795,27 +796,34 @@
 
         <script>
 
-            window.onload = function () {
+            window.addEventListener('load', function () {
+                // Verifica il consenso dei cookie
+                window.addEventListener('CookieConsentDeclaration', function() {
+                    // Se l'utente ha accettato i cookie, mostra il contenuto
+                    if (CookieConsent && CookieConsent.consents.given && CookieConsent.consents.given.includes('statistics')) {
+                        // Funzione per mostrare il contenuto con effetto fade-in
+                        function showWebsiteContent() {
+                            var websiteContent = document.getElementById('website-content');
+                            if (websiteContent) {
+                                websiteContent.style.display = 'block';
 
-                // Show website content
-                function showWebsiteContent() {
-                    var websiteContent = document.getElementById('website-content');
-                    if (websiteContent) {
-                        websiteContent.style.display = 'block';
+                                var opacity = 0;
+                                var fadeInInterval = setInterval(function () {
+                                    opacity += 0.1;
+                                    websiteContent.style.opacity = opacity;
 
-                        var opacity = 0;
-                        var fadeInInterval = setInterval(function () {
-                            opacity += 0.1;
-                            websiteContent.style.opacity = opacity;
-
-                            if (opacity >= 1) {
-                                clearInterval(fadeInInterval);
+                                    if (opacity >= 1) {
+                                        clearInterval(fadeInInterval);
+                                    }
+                                }, 5);
                             }
-                        }, 5);
+                        }
+
+                        // Mostra il contenuto solo dopo che è stato accettato il consenso
+                        showWebsiteContent();
                     }
-                }
-                showWebsiteContent();
-            };
+                });
+            });
 
             document.querySelectorAll('.navbar-nav .nav-link, .home-button').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
