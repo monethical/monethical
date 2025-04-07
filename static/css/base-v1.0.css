@@ -111,10 +111,6 @@ html body {
 
 }
 
-#website-content {
-    opacity: 0;
-}
-
 .section {
     display: flex;
     justify-content: space-between;
