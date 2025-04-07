@@ -10,17 +10,37 @@
         <script src="https://www.googletagmanager.com/gtag/js?id=G-TFNHLCFLTM" async></script>
 
         <script>
-            // Your custom script that interacts with CookieConsent
             window.addEventListener('load', function () {
+                // Wait for the CookieConsentDeclaration event to fire
                 window.addEventListener('CookieConsentDeclaration', function () {
+                    // Ensure CookieConsent object is available
                     if (typeof CookieConsent !== 'undefined') {
-                        console.log(CookieConsent);  // Now CookieConsent should be defined
+                        // Check if the user has consented to statistics
+                        if (CookieConsent.consents.given && CookieConsent.consents.given.includes('statistics')) {
+                            // Dynamically load Google Analytics script
+                            var script = document.createElement('script');
+                            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-TFNHLCFLTM';
+                            script.async = true;
+                            document.head.appendChild(script);
+
+                            script.onload = function () {
+                                // Initialize Google Analytics
+                                window.dataLayer = window.dataLayer || [];
+                                function gtag() {
+                                    dataLayer.push(arguments);
+                                }
+                                gtag('js', new Date());
+                                gtag('config', 'G-TFNHLCFLTM');
+                            };
+                        }
                     } else {
-                        console.error('CookieConsent object is not defined.');
+                        console.error('CookieConsent object is not defined');
                     }
                 });
             });
         </script>
+
+
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -799,33 +819,7 @@
         </script>
 
         <script>
-            window.addEventListener('load', function () {
-                // Ensure CookieConsent object is available before proceeding
-                if (typeof CookieConsent !== 'undefined') {
-                    // Listen for changes in the user's consent status
-                    window.addEventListener('CookieConsentDeclaration', function () {
-                        // Check if the user has consented to statistics cookies
-                        if (CookieConsent.consents.given && CookieConsent.consents.given.includes('statistics')) {
 
-                            // Dynamically load Google Analytics only after consent
-                            var script = document.createElement('script');
-                            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-TFNHLCFLTM';
-                            script.async = true;
-                            document.head.appendChild(script);
-
-                            script.onload = function () {
-                                // Initialize Google Analytics
-                                window.dataLayer = window.dataLayer || [];
-                                function gtag() {
-                                    dataLayer.push(arguments);
-                                }
-                                gtag('js', new Date());
-                                gtag('config', 'G-TFNHLCFLTM');
-                            };
-                        }
-                    });
-                }
-            });
 
             window.onload = function () {
                 // Show website content
