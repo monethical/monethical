@@ -787,6 +787,13 @@
         </script>
 
         <script>
+            window.addEventListener('CookieConsentDeclaration', function() {
+                if (CookieConsent && CookieConsent.consents.given.includes('statistics')) {
+                    console.log("Statistics consent granted!");
+                } else {
+                    console.log("No statistics consent given.");
+                }
+            });
 
             // Listen for the Cookie Consent Declaration (Triggered after user provides consent)
             window.addEventListener('CookieConsentDeclaration', function () {
