@@ -788,27 +788,47 @@
 
         <script>
 
-            // Wait for the user to give consent (Cookie Consent event)
-            document.addEventListener('CookieConsentDeclaration', function () {
-                // Check if the user has consented to 'statistics' cookies
-                if (CookieConsent && CookieConsent.consents.given) {
-                    if (CookieConsent.consents.statistics) {
-                        // Dynamically load the Google Analytics script after consent is given
-                        var script = document.createElement('script');
-                        script.src = "https://www.googletagmanager.com/gtag/js?id=G-TFNHLCFLTM";
-                        script.async = true;
-                        document.head.appendChild(script);
+            // Listen for the Cookie Consent Declaration (Triggered after user provides consent)
+            window.addEventListener('CookieConsentDeclaration', function () {
+                // Check if the CookieConsent object is available
+                console.log("Cookie Consent Declaration event triggered.");
 
-                        // Add the Google Analytics configuration
-                        var configScript = document.createElement('script');
-                        configScript.innerHTML = `
-                            window.dataLayer = window.dataLayer || [];
-                            function gtag(){dataLayer.push(arguments);}
-                            gtag('js', new Date());
-                            gtag('config', 'G-TFNHLCFLTM');
-                        `;
-                        document.head.appendChild(configScript);
+                if (typeof CookieConsent !== "undefined") {
+                    console.log("CookieConsent object exists.");
+
+                    // Check if consent has been given
+                    if (CookieConsent.consents.given) {
+                        console.log("User has provided consent.");
+
+                        // Check if the user has consented to 'statistics' cookies
+                        if (CookieConsent.consents.statistics) {
+                            console.log("User consented to 'statistics' cookies.");
+
+                            // Dynamically load the Google Analytics script only if the user has consented
+                            var script = document.createElement('script');
+                            script.src = "https://www.googletagmanager.com/gtag/js?id=G-TFNHLCFLTM";
+                            script.async = true;
+                            document.head.appendChild(script);
+                            console.log("Google Analytics script loaded.");
+
+                            // Add the Google Analytics configuration script
+                            var configScript = document.createElement('script');
+                            configScript.innerHTML = `
+                                window.dataLayer = window.dataLayer || [];
+                                function gtag(){dataLayer.push(arguments);}
+                                gtag('js', new Date());
+                                gtag('config', 'G-TFNHLCFLTM');
+                            `;
+                            document.head.appendChild(configScript);
+                            console.log("Google Analytics configuration added.");
+                        } else {
+                            console.log("User did not consent to 'statistics' cookies.");
+                        }
+                    } else {
+                        console.log("User has not yet provided consent.");
                     }
+                } else {
+                    console.log("CookieConsent object is undefined.");
                 }
             });
 
