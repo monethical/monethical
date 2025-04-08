@@ -792,25 +792,7 @@
 
         <script>
 
-            window.addEventListener('CookieConsent', function() {
-                console.log('Cookie consent declaration event triggered!');
-                if (typeof CookieConsent !== "undefined") {
-                    console.log("CookieConsent object exists.");
-                    if (CookieConsent && CookieConsent.consents.given) {
-                        console.log("User has provided consent.");
-                        if (CookieConsent.consents.statistics) {
-                            console.log("User consented to 'statistics' cookies.");
-                            //Usercentrics gestisce il caricamento degli script.
-                        } else {
-                            console.log("User did not consent to 'statistics' cookies.");
-                        }
-                    } else {
-                        console.log("User has not yet provided consent.");
-                    }
-                } else {
-                    console.log("CookieConsent object is undefined.");
-                }
-            });
+
 
             window.onload = function () {
                 // Show website content
