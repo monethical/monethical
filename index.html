@@ -4,16 +4,6 @@
 
     <head>
 
-        <script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="AJ5wIIzgO9Rt3R" async></script>
-
-        <script type="text/plain" data-cookieconsent="statistics" src="https://www.googletagmanager.com/gtag/js?id=G-TFNHLCFLTM" async></script>
-        <script type="text/plain" data-cookieconsent="statistics">
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-TFNHLCFLTM');
-        </script>
-
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -54,6 +44,19 @@
         </noscript>
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" media="print" onload="this.onload=null;this.media='all';">
+
+        <script src="https://web.cmp.usercentrics.eu/modules/autoblocker.js"></script>
+        <script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="AJ5wIIzgO9Rt3R" async></script>
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TFNHLCFLTM"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-TFNHLCFLTM');
+        </script>
 
         <!-- Favicons -->
         <link rel="icon" type="image/png" href="/static/css/img/favicon-96x96.png" sizes="96x96" />
@@ -791,52 +794,6 @@
         </script>
 
         <script>
-
-            window.addEventListener('*', function(event) {
-                console.log('Evento catturato:', event.type, event);
-            });
-
-            window.addEventListener('CookieConsent', function(event) {
-                console.log("ciao");
-                if (typeof CookieConsent !== 'undefined' && CookieConsent.consents && CookieConsent.consents.statistics) {
-                    // Consenso per "statistics" dato, carica gli script di Google Analytics
-                    loadGoogleAnalytics();
-                } else {
-                    console.log("Consenso per 'statistics' non dato.");
-                }
-            });
-
-            function loadGoogleAnalytics() {
-                // Verifica se gli script esistono già per evitare duplicati
-                if (!document.getElementById('google-analytics-script')) {
-                    // Crea e aggiungi lo script gtag.js
-                    var gtagScript = document.createElement('script');
-                    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-TFNHLCFLTM';
-                    gtagScript.async = true;
-                    gtagScript.id = 'google-analytics-script'; // Assegna un ID per la verifica successiva
-                    document.head.appendChild(gtagScript);
-
-                    // Crea e aggiungi lo script di configurazione gtag()
-                    var gtagConfigScript = document.createElement('script');
-                    gtagConfigScript.innerHTML = `
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-                        gtag('config', 'G-TFNHLCFLTM');
-                    `;
-                    gtagConfigScript.id = 'google-analytics-config';//assegna un id per la verifica successiva.
-                    document.head.appendChild(gtagConfigScript);
-
-                    console.log("Google Analytics scripts loaded.");
-                } else {
-                    console.log("Google analytics scripts already loaded");
-                }
-            }
-
-            // Verifica se il consenso è già stato dato al caricamento della pagina
-            if (typeof CookieConsent !== 'undefined' && CookieConsent.consents && CookieConsent.consents.statistics) {
-                loadGoogleAnalytics();
-            }
 
             window.onload = function () {
                 // Show website content
