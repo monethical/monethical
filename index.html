@@ -753,45 +753,61 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" data-uc-allowed="true" defer></script>
 
         <script>
-            document.addEventListener('UC_UI_INITIALIZED', function() {
-                window.addEventListener('uc-consent', function (event) {
-                    const consents = event.detail.consents;
+            function loadGoogleAnalytics() {
+                // Carica lo script GA
+                const gaScript = document.createElement('script');
+                gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-TFNHLCFLTM";
+                gaScript.async = true;
+                document.head.appendChild(gaScript);
 
-                    // ✅ Se ha accettato "statistics"
-                    if (consents && consents.statistics) {
-                        console.log("Consent given for statistics. Loading GA...");
-
-                        // Carica GA
-                        const gaScript = document.createElement('script');
-                        gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-TFNHLCFLTM";
-                        gaScript.async = true;
-                        document.head.appendChild(gaScript);
-
-                        gaScript.onload = function () {
-                            window.dataLayer = window.dataLayer || [];
-                            function gtag(){ dataLayer.push(arguments); }
-                            window.gtag = gtag;
-                            gtag('js', new Date());
-                            gtag('config', 'G-TFNHLCFLTM');
-                        };
-                    } else {
-                        console.log("Consent not given. Removing GA cookies...");
-                        // ❌ Rimuovi i cookie di Google Analytics
-                        deleteAnalyticsCookies();
-                    }
-                });
-            });
+                gaScript.onload = function () {
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag() { dataLayer.push(arguments); }
+                    window.gtag = gtag;
+                    gtag('js', new Date());
+                    gtag('config', 'G-TFNHLCFLTM');
+                    console.log("✅ Google Analytics loaded.");
+                };
+            }
 
             function deleteAnalyticsCookies() {
                 const cookies = document.cookie.split(';');
                 cookies.forEach(cookie => {
                     const name = cookie.split('=')[0].trim();
                     if (name.startsWith('_ga') || name.startsWith('_gid') || name.startsWith('_gat')) {
-                        document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;';
-                        console.log('Deleted cookie: ' + name);
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;";
+                        console.log("❌ Deleted cookie: " + name);
                     }
                 });
             }
+
+            // Aspetta che Usercentrics sia inizializzato
+            document.addEventListener("UC_UI_INITIALIZED", () => {
+                console.log("✅ Usercentrics initialized");
+
+                // Verifica consenso attuale
+                const ucConsents = window?.Usercentrics?.getConsents?.();
+                if (ucConsents?.statistics) {
+                    console.log("✅ Consent already given for statistics");
+                    loadGoogleAnalytics();
+                } else {
+                    console.log("❌ No consent for statistics, cookies will be deleted");
+                    deleteAnalyticsCookies();
+                }
+
+                // Ascolta cambi di consenso
+                window.addEventListener("uc-consent", (event) => {
+                    const consents = event.detail.consents;
+
+                    if (consents?.statistics) {
+                        console.log("✅ Consent just given for statistics");
+                        loadGoogleAnalytics();
+                    } else {
+                        console.log("❌ Consent just rejected, cleaning cookies");
+                        deleteAnalyticsCookies();
+                    }
+                });
+            });
 
         </script>
 
