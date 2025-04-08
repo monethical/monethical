@@ -793,6 +793,7 @@
         <script>
 
             window.addEventListener('CookieConsent', function(event) {
+                console.log("ciao");
                 if (typeof CookieConsent !== 'undefined' && CookieConsent.consents && CookieConsent.consents.statistics) {
                     // Consenso per "statistics" dato, carica gli script di Google Analytics
                     loadGoogleAnalytics();
