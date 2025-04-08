@@ -4,17 +4,11 @@
 
     <head>
 
-        <script src="https://web.cmp.usercentrics.eu/modules/autoblocker.js"></script>
         <script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="AJ5wIIzgO9Rt3R" async></script>
 
-        <script type="text/plain" data-cookieconsent="statistics" async src="https://www.googletagmanager.com/gtag/js?id=G-TFNHLCFLTM"></script>
-
-        <script type="text/plain" data-cookieconsent="statistics">
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-TFNHLCFLTM');
-        </script>
+        <!-- Google Analytics Script Placeholder (only loads if consent is given for "statistics") -->
+        <script type="text/plain" data-cookieconsent="statistics" id="google-analytics-script" async></script>
+        <script type="text/plain" data-cookieconsent="statistics" id="google-analytics-config"></script>
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -794,6 +788,29 @@
 
         <script>
 
+            // Wait for the user to give consent (Cookie Consent event)
+            document.addEventListener('CookieConsentDeclaration', function () {
+                // Check if the user has consented to 'statistics' cookies
+                if (CookieConsent && CookieConsent.consents.given) {
+                    if (CookieConsent.consents.statistics) {
+                        // Dynamically load the Google Analytics script after consent is given
+                        var script = document.createElement('script');
+                        script.src = "https://www.googletagmanager.com/gtag/js?id=G-TFNHLCFLTM";
+                        script.async = true;
+                        document.head.appendChild(script);
+
+                        // Add the Google Analytics configuration
+                        var configScript = document.createElement('script');
+                        configScript.innerHTML = `
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag(){dataLayer.push(arguments);}
+                            gtag('js', new Date());
+                            gtag('config', 'G-TFNHLCFLTM');
+                        `;
+                        document.head.appendChild(configScript);
+                    }
+                }
+            });
 
             window.onload = function () {
                 // Show website content
