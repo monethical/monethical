@@ -792,6 +792,10 @@
 
         <script>
 
+            window.addEventListener('*', function(event) {
+                console.log('Evento catturato:', event.type, event);
+            });
+
             window.addEventListener('CookieConsent', function(event) {
                 console.log("ciao");
                 if (typeof CookieConsent !== 'undefined' && CookieConsent.consents && CookieConsent.consents.statistics) {
