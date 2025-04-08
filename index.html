@@ -4,33 +4,17 @@
 
     <head>
 
-        <!-- Usercentrics CMP loader script (without autoblocker.js) -->
+        <script src="https://web.cmp.usercentrics.eu/modules/autoblocker.js"></script>
         <script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="AJ5wIIzgO9Rt3R" async></script>
 
-        <script>
-            window.addEventListener('load', function () {
-                // Wait for the CookieConsentDeclaration event to fire
-                window.addEventListener('CookieConsentDeclaration', function () {
-                    // Ensure CookieConsent object is available
-                    if (typeof CookieConsent !== 'undefined') {
-                        // Check if the user has consented to statistics
-                        if (CookieConsent.consents.given && CookieConsent.consents.given.includes('statistics')) {
-                            // Initialize Google Analytics if consent is given
-                            window.dataLayer = window.dataLayer || [];
-                            function gtag() {
-                                dataLayer.push(arguments);
-                            }
-                            gtag('js', new Date());
-                            gtag('config', 'G-TFNHLCFLTM');
-                        }
-                    } else {
-                        console.error('CookieConsent object is not defined');
-                    }
-                });
-            });
+        <!-- Google Analytics (blocked until consent given for 'statistics') -->
+        <script type="text/plain" data-cookieconsent="statistics" async src="https://www.googletagmanager.com/gtag/js?id=G-TFNHLCFLTM"></script>
+        <script type="text/plain" data-cookieconsent="statistics">
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-TFNHLCFLTM');
         </script>
-
-
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
