@@ -6,14 +6,12 @@
 
         <script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="AJ5wIIzgO9Rt3R" async></script>
 
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TFNHLCFLTM"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-TFNHLCFLTM');
+        <script type="text/plain" data-cookieconsent="statistics" src="https://www.googletagmanager.com/gtag/js?id=G-TFNHLCFLTM" async></script>
+        <script type="text/plain" data-cookieconsent="statistics">
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-TFNHLCFLTM');
         </script>
 
         <meta charset="utf-8">
@@ -794,7 +792,46 @@
 
         <script>
 
+            window.addEventListener('CookieConsent', function(event) {
+                if (typeof CookieConsent !== 'undefined' && CookieConsent.consents && CookieConsent.consents.statistics) {
+                    // Consenso per "statistics" dato, carica gli script di Google Analytics
+                    loadGoogleAnalytics();
+                } else {
+                    console.log("Consenso per 'statistics' non dato.");
+                }
+            });
 
+            function loadGoogleAnalytics() {
+                // Verifica se gli script esistono già per evitare duplicati
+                if (!document.getElementById('google-analytics-script')) {
+                    // Crea e aggiungi lo script gtag.js
+                    var gtagScript = document.createElement('script');
+                    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-TFNHLCFLTM';
+                    gtagScript.async = true;
+                    gtagScript.id = 'google-analytics-script'; // Assegna un ID per la verifica successiva
+                    document.head.appendChild(gtagScript);
+
+                    // Crea e aggiungi lo script di configurazione gtag()
+                    var gtagConfigScript = document.createElement('script');
+                    gtagConfigScript.innerHTML = `
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-TFNHLCFLTM');
+                    `;
+                    gtagConfigScript.id = 'google-analytics-config';//assegna un id per la verifica successiva.
+                    document.head.appendChild(gtagConfigScript);
+
+                    console.log("Google Analytics scripts loaded.");
+                } else {
+                    console.log("Google analytics scripts already loaded");
+                }
+            }
+
+            // Verifica se il consenso è già stato dato al caricamento della pagina
+            if (typeof CookieConsent !== 'undefined' && CookieConsent.consents && CookieConsent.consents.statistics) {
+                loadGoogleAnalytics();
+            }
 
             window.onload = function () {
                 // Show website content
