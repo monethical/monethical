@@ -788,7 +788,7 @@
 
         <script>
             window.addEventListener('load', function() {
-                window.addEventListener('CookieConsentDeclaration', function() {
+                window.addEventListener('CookieConsent', function() {
                     console.log('Cookie consent declaration event triggered!');
                     console.log(CookieConsent);  // See if CookieConsent is properly initialized
                     if (CookieConsent && CookieConsent.consents.given) {
@@ -803,7 +803,7 @@
             });
 
             // Listen for the Cookie Consent Declaration (Triggered after user provides consent)
-            window.addEventListener('CookieConsentDeclaration', function () {
+            window.addEventListener('CookieConsent', function () {
                 // Check if the CookieConsent object is available
                 console.log("Cookie Consent Declaration event triggered.");
 
