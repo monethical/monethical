@@ -958,7 +958,7 @@ body.modal-open {
 }
 
 
-/* Effects */
+/* Effects
 
 .fade-scroll {
     opacity: 0;
@@ -971,6 +971,8 @@ body.modal-open {
     opacity: 1;
     transform: translateY(0);
 }
+
+*/
 
 .fade-out {
     opacity: 0;
